@@ -6,6 +6,7 @@ from ludwig.datasets import ieee_fraud
 model = LudwigModel(
     config='config_concat_sanity_laptop.yaml',
     logging_level=logging.INFO,
+    backend="local",
 )
 
 ieee_fraud_df = ieee_fraud.load()

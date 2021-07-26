@@ -6,6 +6,7 @@ from ludwig.datasets import otto_group_product
 model = LudwigModel(
     config='config_tabnet_sanity_laptop.yaml',
     logging_level=logging.INFO,
+    backend="local",
 )
 
 otto_group_product_df = otto_group_product.load()

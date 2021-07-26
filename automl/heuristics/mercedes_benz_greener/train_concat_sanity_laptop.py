@@ -6,6 +6,7 @@ from ludwig.datasets import mercedes_benz_greener
 model = LudwigModel(
     config='config_concat_sanity_laptop.yaml',
     logging_level=logging.INFO,
+    backend="local",
 )
 
 mercedes_benz_greener_df = mercedes_benz_greener.load()

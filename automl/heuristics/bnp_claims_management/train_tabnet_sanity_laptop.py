@@ -6,6 +6,7 @@ from ludwig.datasets import bnp_claims_management
 model = LudwigModel(
     config='config_tabnet_sanity_laptop.yaml',
     logging_level=logging.INFO,
+    backend="local",
 )
 
 bnp_claims_management_df = bnp_claims_management.load()

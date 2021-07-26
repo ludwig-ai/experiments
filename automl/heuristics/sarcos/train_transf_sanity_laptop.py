@@ -6,6 +6,7 @@ from ludwig.datasets import sarcos
 model = LudwigModel(
     config='config_transf_sanity_laptop.yaml',
     logging_level=logging.INFO,
+    backend="local",
 )
 
 sarcos_df, _, _ = sarcos.load()

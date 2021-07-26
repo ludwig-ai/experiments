@@ -6,6 +6,7 @@ from ludwig.datasets import higgs
 model = LudwigModel(
     config='config_concat_sanity_laptop.yaml',
     logging_level=logging.INFO,
+    backend="local",
 )
 
 higgs_df = higgs.load()

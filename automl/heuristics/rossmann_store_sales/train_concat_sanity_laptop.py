@@ -6,6 +6,7 @@ from ludwig.datasets import rossmann_store_sales
 model = LudwigModel(
     config='config_concat_sanity_laptop.yaml',
     logging_level=logging.INFO,
+    backend="local",
 )
 
 rossmann_store_sales_df = rossmann_store_sales.load()

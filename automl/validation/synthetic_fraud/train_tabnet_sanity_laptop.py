@@ -6,6 +6,7 @@ from ludwig.datasets import synthetic_fraud
 model = LudwigModel(
     config='config_tabnet_sanity_laptop.yaml',
     logging_level=logging.INFO,
+    backend="local",
 )
 
 synthetic_fraud_df = synthetic_fraud.load()

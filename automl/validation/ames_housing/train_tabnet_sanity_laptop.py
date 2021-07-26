@@ -6,6 +6,7 @@ from ludwig.datasets import ames_housing
 model = LudwigModel(
     config='config_tabnet_sanity_laptop.yaml',
     logging_level=logging.INFO,
+    backend="local",
 )
 
 ames_housing_df = ames_housing.load()

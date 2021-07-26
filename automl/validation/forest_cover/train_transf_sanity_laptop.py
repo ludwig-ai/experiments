@@ -6,6 +6,7 @@ from ludwig.datasets import forest_cover
 model = LudwigModel(
     config='config_transf_sanity_laptop.yaml',
     logging_level=logging.INFO,
+    backend="local",
 )
 
 forest_cover_df = forest_cover.load()

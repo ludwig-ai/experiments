@@ -6,6 +6,7 @@ from ludwig.datasets import adult_census_income
 model = LudwigModel(
     config='config_transf_sanity_laptop.yaml',
     logging_level=logging.INFO,
+    backend="local",
 )
 
 adult_census_income_df = adult_census_income.load()

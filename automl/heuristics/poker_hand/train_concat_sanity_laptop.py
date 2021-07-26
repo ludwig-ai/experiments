@@ -6,6 +6,7 @@ from ludwig.datasets import poker_hand
 model = LudwigModel(
     config='config_concat_sanity_laptop.yaml',
     logging_level=logging.INFO,
+    backend="local",
 )
 
 poker_hand_df, _, _ = poker_hand.load()

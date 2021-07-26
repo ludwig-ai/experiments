@@ -6,6 +6,7 @@ from ludwig.datasets import santander_value_prediction
 model = LudwigModel(
     config='config_tabnet_sanity_laptop.yaml',
     logging_level=logging.INFO,
+    backend="local",
 )
 
 santander_value_prediction_df = santander_value_prediction.load()

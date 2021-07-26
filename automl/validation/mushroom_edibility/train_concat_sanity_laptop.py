@@ -6,6 +6,7 @@ from ludwig.datasets import mushroom_edibility
 model = LudwigModel(
     config='config_concat_sanity_laptop.yaml',
     logging_level=logging.INFO,
+    backend="local",
 )
 
 mushroom_edibility_df = mushroom_edibility.load()
