@@ -1,0 +1,142 @@
+output_features:
+  - name: target
+    type: binary
+input_features:
+  - name: ps_ind_01
+    type: numerical
+  - name: ps_ind_02_cat
+    type: category
+  - name: ps_ind_03
+    type: numerical
+  - name: ps_ind_04_cat
+    type: category
+  - name: ps_ind_05_cat
+    type: category
+  - name: ps_ind_06_bin
+    type: binary
+  - name: ps_ind_07_bin
+    type: binary
+  - name: ps_ind_08_bin
+    type: binary
+  - name: ps_ind_09_bin
+    type: binary
+  - name: ps_ind_10_bin
+    type: binary
+  - name: ps_ind_11_bin
+    type: binary
+  - name: ps_ind_12_bin
+    type: binary
+  - name: ps_ind_13_bin
+    type: binary
+  - name: ps_ind_14
+    type: numerical
+  - name: ps_ind_15
+    type: numerical
+  - name: ps_ind_16_bin
+    type: binary
+  - name: ps_ind_17_bin
+    type: binary
+  - name: ps_ind_18_bin
+    type: binary
+  - name: ps_reg_01
+    type: numerical
+  - name: ps_reg_02
+    type: numerical
+  - name: ps_reg_03
+    type: numerical
+  - name: ps_car_01_cat
+    type: category
+  - name: ps_car_02_cat
+    type: category
+  - name: ps_car_03_cat
+    type: category
+  - name: ps_car_04_cat
+    type: category
+  - name: ps_car_05_cat
+    type: category
+  - name: ps_car_06_cat
+    type: category
+  - name: ps_car_07_cat
+    type: category
+  - name: ps_car_08_cat
+    type: category
+  - name: ps_car_09_cat
+    type: category
+  - name: ps_car_10_cat
+    type: category
+  - name: ps_car_11_cat
+    type: category
+  - name: ps_car_11
+    type: numerical
+  - name: ps_car_12
+    type: numerical
+  - name: ps_car_13
+    type: numerical
+  - name: ps_car_14
+    type: numerical
+  - name: ps_car_15
+    type: numerical
+  - name: ps_calc_01
+    type: numerical
+  - name: ps_calc_02
+    type: numerical
+  - name: ps_calc_03
+    type: numerical
+  - name: ps_calc_04
+    type: numerical
+  - name: ps_calc_05
+    type: numerical
+  - name: ps_calc_06
+    type: numerical
+  - name: ps_calc_07
+    type: numerical
+  - name: ps_calc_08
+    type: numerical
+  - name: ps_calc_09
+    type: numerical
+  - name: ps_calc_10
+    type: numerical
+  - name: ps_calc_11
+    type: numerical
+  - name: ps_calc_12
+    type: numerical
+  - name: ps_calc_13
+    type: numerical
+  - name: ps_calc_14
+    type: numerical
+  - name: ps_calc_15_bin
+    type: binary
+  - name: ps_calc_16_bin
+    type: binary
+  - name: ps_calc_17_bin
+    type: binary
+  - name: ps_calc_18_bin
+    type: binary
+  - name: ps_calc_19_bin
+    type: binary
+  - name: ps_calc_20_bin
+    type: binary
+combiner:
+  type: tabnet
+  size: 24  # N_a
+  output_size: 26  # N_d
+  sparsity: 0.000001  # lambda_sparse
+  bn_virtual_divider: 8  # factor to divide batch_size B to get B_v from the paper
+  bn_momentum: 0.6  # m_B
+  num_steps: 5  # N_steps
+  relaxation_factor: 1.5  # gamma
+  use_keras_batch_norm: false
+  bn_virtual_bs: 512  # B_v 
+training:
+  batch_size: 4096 # B
+  eval_batch_size: 4096 # 65536 131072 262144 524288
+  epochs: 1
+  early_stop: 20
+  learning_rate: 0.02
+  optimizer:
+    type: adam
+  decay: true
+  decay_steps: 20000
+  decay_rate: 0.9
+  staircase: true
+  regularization_lambda: 1

@@ -1,0 +1,416 @@
+output_features:
+  - name: target
+    type: binary
+input_features:
+  - name: var_0
+    type: numerical
+  - name: var_1
+    type: numerical
+  - name: var_2
+    type: numerical
+  - name: var_3
+    type: numerical
+  - name: var_4
+    type: numerical
+  - name: var_5
+    type: numerical
+  - name: var_6
+    type: numerical
+  - name: var_7
+    type: numerical
+  - name: var_8
+    type: numerical
+  - name: var_9
+    type: numerical
+  - name: var_10
+    type: numerical
+  - name: var_11
+    type: numerical
+  - name: var_12
+    type: numerical
+  - name: var_13
+    type: numerical
+  - name: var_14
+    type: numerical
+  - name: var_15
+    type: numerical
+  - name: var_16
+    type: numerical
+  - name: var_17
+    type: numerical
+  - name: var_18
+    type: numerical
+  - name: var_19
+    type: numerical
+  - name: var_20
+    type: numerical
+  - name: var_21
+    type: numerical
+  - name: var_22
+    type: numerical
+  - name: var_23
+    type: numerical
+  - name: var_24
+    type: numerical
+  - name: var_25
+    type: numerical
+  - name: var_26
+    type: numerical
+  - name: var_27
+    type: numerical
+  - name: var_28
+    type: numerical
+  - name: var_29
+    type: numerical
+  - name: var_30
+    type: numerical
+  - name: var_31
+    type: numerical
+  - name: var_32
+    type: numerical
+  - name: var_33
+    type: numerical
+  - name: var_34
+    type: numerical
+  - name: var_35
+    type: numerical
+  - name: var_36
+    type: numerical
+  - name: var_37
+    type: numerical
+  - name: var_38
+    type: numerical
+  - name: var_39
+    type: numerical
+  - name: var_40
+    type: numerical
+  - name: var_41
+    type: numerical
+  - name: var_42
+    type: numerical
+  - name: var_43
+    type: numerical
+  - name: var_44
+    type: numerical
+  - name: var_45
+    type: numerical
+  - name: var_46
+    type: numerical
+  - name: var_47
+    type: numerical
+  - name: var_48
+    type: numerical
+  - name: var_49
+    type: numerical
+  - name: var_50
+    type: numerical
+  - name: var_51
+    type: numerical
+  - name: var_52
+    type: numerical
+  - name: var_53
+    type: numerical
+  - name: var_54
+    type: numerical
+  - name: var_55
+    type: numerical
+  - name: var_56
+    type: numerical
+  - name: var_57
+    type: numerical
+  - name: var_58
+    type: numerical
+  - name: var_59
+    type: numerical
+  - name: var_60
+    type: numerical
+  - name: var_61
+    type: numerical
+  - name: var_62
+    type: numerical
+  - name: var_63
+    type: numerical
+  - name: var_64
+    type: numerical
+  - name: var_65
+    type: numerical
+  - name: var_66
+    type: numerical
+  - name: var_67
+    type: numerical
+  - name: var_68
+    type: numerical
+  - name: var_69
+    type: numerical
+  - name: var_70
+    type: numerical
+  - name: var_71
+    type: numerical
+  - name: var_72
+    type: numerical
+  - name: var_73
+    type: numerical
+  - name: var_74
+    type: numerical
+  - name: var_75
+    type: numerical
+  - name: var_76
+    type: numerical
+  - name: var_77
+    type: numerical
+  - name: var_78
+    type: numerical
+  - name: var_79
+    type: numerical
+  - name: var_80
+    type: numerical
+  - name: var_81
+    type: numerical
+  - name: var_82
+    type: numerical
+  - name: var_83
+    type: numerical
+  - name: var_84
+    type: numerical
+  - name: var_85
+    type: numerical
+  - name: var_86
+    type: numerical
+  - name: var_87
+    type: numerical
+  - name: var_88
+    type: numerical
+  - name: var_89
+    type: numerical
+  - name: var_90
+    type: numerical
+  - name: var_91
+    type: numerical
+  - name: var_92
+    type: numerical
+  - name: var_93
+    type: numerical
+  - name: var_94
+    type: numerical
+  - name: var_95
+    type: numerical
+  - name: var_96
+    type: numerical
+  - name: var_97
+    type: numerical
+  - name: var_98
+    type: numerical
+  - name: var_99
+    type: numerical
+  - name: var_100
+    type: numerical
+  - name: var_101
+    type: numerical
+  - name: var_102
+    type: numerical
+  - name: var_103
+    type: numerical
+  - name: var_104
+    type: numerical
+  - name: var_105
+    type: numerical
+  - name: var_106
+    type: numerical
+  - name: var_107
+    type: numerical
+  - name: var_108
+    type: numerical
+  - name: var_109
+    type: numerical
+  - name: var_110
+    type: numerical
+  - name: var_111
+    type: numerical
+  - name: var_112
+    type: numerical
+  - name: var_113
+    type: numerical
+  - name: var_114
+    type: numerical
+  - name: var_115
+    type: numerical
+  - name: var_116
+    type: numerical
+  - name: var_117
+    type: numerical
+  - name: var_118
+    type: numerical
+  - name: var_119
+    type: numerical
+  - name: var_120
+    type: numerical
+  - name: var_121
+    type: numerical
+  - name: var_122
+    type: numerical
+  - name: var_123
+    type: numerical
+  - name: var_124
+    type: numerical
+  - name: var_125
+    type: numerical
+  - name: var_126
+    type: numerical
+  - name: var_127
+    type: numerical
+  - name: var_128
+    type: numerical
+  - name: var_129
+    type: numerical
+  - name: var_130
+    type: numerical
+  - name: var_131
+    type: numerical
+  - name: var_132
+    type: numerical
+  - name: var_133
+    type: numerical
+  - name: var_134
+    type: numerical
+  - name: var_135
+    type: numerical
+  - name: var_136
+    type: numerical
+  - name: var_137
+    type: numerical
+  - name: var_138
+    type: numerical
+  - name: var_139
+    type: numerical
+  - name: var_140
+    type: numerical
+  - name: var_141
+    type: numerical
+  - name: var_142
+    type: numerical
+  - name: var_143
+    type: numerical
+  - name: var_144
+    type: numerical
+  - name: var_145
+    type: numerical
+  - name: var_146
+    type: numerical
+  - name: var_147
+    type: numerical
+  - name: var_148
+    type: numerical
+  - name: var_149
+    type: numerical
+  - name: var_150
+    type: numerical
+  - name: var_151
+    type: numerical
+  - name: var_152
+    type: numerical
+  - name: var_153
+    type: numerical
+  - name: var_154
+    type: numerical
+  - name: var_155
+    type: numerical
+  - name: var_156
+    type: numerical
+  - name: var_157
+    type: numerical
+  - name: var_158
+    type: numerical
+  - name: var_159
+    type: numerical
+  - name: var_160
+    type: numerical
+  - name: var_161
+    type: numerical
+  - name: var_162
+    type: numerical
+  - name: var_163
+    type: numerical
+  - name: var_164
+    type: numerical
+  - name: var_165
+    type: numerical
+  - name: var_166
+    type: numerical
+  - name: var_167
+    type: numerical
+  - name: var_168
+    type: numerical
+  - name: var_169
+    type: numerical
+  - name: var_170
+    type: numerical
+  - name: var_171
+    type: numerical
+  - name: var_172
+    type: numerical
+  - name: var_173
+    type: numerical
+  - name: var_174
+    type: numerical
+  - name: var_175
+    type: numerical
+  - name: var_176
+    type: numerical
+  - name: var_177
+    type: numerical
+  - name: var_178
+    type: numerical
+  - name: var_179
+    type: numerical
+  - name: var_180
+    type: numerical
+  - name: var_181
+    type: numerical
+  - name: var_182
+    type: numerical
+  - name: var_183
+    type: numerical
+  - name: var_184
+    type: numerical
+  - name: var_185
+    type: numerical
+  - name: var_186
+    type: numerical
+  - name: var_187
+    type: numerical
+  - name: var_188
+    type: numerical
+  - name: var_189
+    type: numerical
+  - name: var_190
+    type: numerical
+  - name: var_191
+    type: numerical
+  - name: var_192
+    type: numerical
+  - name: var_193
+    type: numerical
+  - name: var_194
+    type: numerical
+  - name: var_195
+    type: numerical
+  - name: var_196
+    type: numerical
+  - name: var_197
+    type: numerical
+  - name: var_198
+    type: numerical
+  - name: var_199
+    type: numerical
+combiner:
+  type: transformer
+  num_layers: 1
+  num_heads: 8
+  hidden_size: 32
+  dropout: 0.1
+  fc_dropout: 0.2
+  num_fc_layers: 1
+training:
+  batch_size: 256
+  learning_rate: 0.0001
+  epochs: 1
