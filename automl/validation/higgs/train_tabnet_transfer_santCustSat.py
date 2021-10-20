@@ -5,7 +5,8 @@ from ludwig.datasets import higgs
 
 model = LudwigModel(
     config='config_tabnet_transfer_santCustSat.yaml',
-    logging_level=logging.INFO
+    logging_level=logging.INFO,
+    backend="local",
 )
 
 higgs_df = higgs.load()

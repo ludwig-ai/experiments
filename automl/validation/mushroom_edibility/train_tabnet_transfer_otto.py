@@ -5,7 +5,8 @@ from ludwig.datasets import mushroom_edibility
 
 model = LudwigModel(
     config='config_tabnet_transfer_otto.yaml',
-    logging_level=logging.INFO
+    logging_level=logging.INFO,
+    backend="local",
 )
 
 mushroom_edibility_df = mushroom_edibility.load()

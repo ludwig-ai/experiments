@@ -164,10 +164,10 @@ combiner:
   type: tabnet
   size: 128  # N_a
   output_size: 8  # N_d
-  sparsity: 0  # lambda_sparse
+  sparsity: 0.0  # lambda_sparse
   bn_momentum: 0.98  # m_B
   num_steps: 10  # N_steps
-  relaxation_factor: 1  # gamma
+  relaxation_factor: 1.0  # gamma
   bn_virtual_bs: 4096  # B_v 
 training:
   batch_size: 256 # B
