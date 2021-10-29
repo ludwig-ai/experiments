@@ -1,0 +1,53 @@
+output_features:
+  - name: income
+    type: category
+input_features:
+  - name: age
+    type: numerical
+  - name: workclass
+    type: category
+  - name: fnlwgt
+    type: numerical
+  - name: education
+    type: category
+  - name: education-num
+    type: numerical
+  - name: marital-status
+    type: category
+  - name: occupation
+    type: category
+  - name: relationship
+    type: category
+  - name: race
+    type: category
+  - name: sex
+    type: category
+  - name: capital-gain
+    type: numerical
+  - name: capital-loss
+    type: numerical
+  - name: hours-per-week
+    type: numerical
+  - name: native-country
+    type: category
+combiner:
+  type: tabnet
+  size: 8  # N_a
+  output_size: 128  # N_d
+  sparsity: 0.0  # lambda_sparse
+  bn_momentum: 0.6  # m_B
+  num_steps: 3  # N_steps
+  relaxation_factor: 1.0  # gamma
+  bn_virtual_bs: 4096  # B_v 
+training:
+  batch_size: 256 # B
+  eval_batch_size: 0 # 65536 131072 262144 524288
+  epochs: 300
+  early_stop: 30
+  learning_rate: 0.01
+  optimizer:
+    type: adam
+  decay: true
+  decay_steps: 500
+  decay_rate: 0.95
+  regularization_lambda: 1
