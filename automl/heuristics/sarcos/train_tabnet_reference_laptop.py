@@ -1,0 +1,18 @@
+import logging
+
+from ludwig.api import LudwigModel
+from ludwig.datasets import sarcos
+
+model = LudwigModel(
+    config='config_tabnet_reference_laptop.yaml',
+    logging_level=logging.INFO,
+    backend="local",
+)
+
+sarcos_df, _, _ = sarcos.load()
+model.train(
+    dataset=sarcos_df,
+    experiment_name='sarcos_tabnet_reference_laptop',
+    model_name='sarcos_tabnet_reference_laptop',
+    skip_save_processed_input=True
+)
