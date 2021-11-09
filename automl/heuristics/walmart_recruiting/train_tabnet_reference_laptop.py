@@ -9,7 +9,7 @@ model = LudwigModel(
     backend="local",
 )
 
-walmart_recruiting_df, _, _ = walmart_recruiting.load()
+walmart_recruiting_df = walmart_recruiting.load()
 model.train(
     dataset=walmart_recruiting_df,
     experiment_name='walmart_recruiting_tabnet_reference_laptop',
