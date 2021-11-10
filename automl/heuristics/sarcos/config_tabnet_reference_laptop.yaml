@@ -65,3 +65,4 @@ training:
   decay_steps: 20000
   decay_rate: 0.4
   regularization_lambda: 1
+  validation_metric: root_mean_squared_error

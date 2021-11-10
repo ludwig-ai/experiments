@@ -413,3 +413,4 @@ training:
   decay_steps: 10000
   decay_rate: 0.9
   regularization_lambda: 1
+  validation_metric: root_mean_squared_error

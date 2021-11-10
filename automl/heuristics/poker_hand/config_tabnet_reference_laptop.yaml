@@ -43,3 +43,4 @@ training:
   decay_steps: 8000
   decay_rate: 0.8
   regularization_lambda: 1
+  validation_metric: accuracy
