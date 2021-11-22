@@ -428,4 +428,4 @@
                      'name': 'var_199',
                      'type': 'numerical'}],
  'output_features': [{'column': 'target', 'name': 'target', 'type': 'binary'}],
- 'training': {'batch_size': 'auto', 'learning_rate': 'auto'}}
+ 'training': {'batch_size': 'auto', 'epochs': 3000, 'learning_rate': 'auto'}}

@@ -100,4 +100,4 @@
                      'name': 'm_wwbb',
                      'type': 'numerical'}],
  'output_features': [{'column': 'label', 'name': 'label', 'type': 'binary'}],
- 'training': {'batch_size': 'auto', 'learning_rate': 'auto'}}
+ 'training': {'batch_size': 'auto', 'epochs': 3000, 'learning_rate': 'auto'}}

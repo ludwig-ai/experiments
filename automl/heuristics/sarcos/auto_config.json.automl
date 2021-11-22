@@ -111,4 +111,4 @@
  'output_features': [{'column': 'torque_1',
                       'name': 'torque_1',
                       'type': 'numerical'}],
- 'training': {'batch_size': 'auto', 'learning_rate': 'auto'}}
+ 'training': {'batch_size': 'auto', 'epochs': 3000, 'learning_rate': 'auto'}}

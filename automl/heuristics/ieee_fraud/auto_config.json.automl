@@ -476,4 +476,4 @@
  'output_features': [{'column': 'isFraud',
                       'name': 'isFraud',
                       'type': 'binary'}],
- 'training': {'batch_size': 'auto', 'learning_rate': 'auto'}}
+ 'training': {'batch_size': 'auto', 'epochs': 3000, 'learning_rate': 'auto'}}
