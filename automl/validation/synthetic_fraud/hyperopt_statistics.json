@@ -1,0 +1,1388 @@
+{
+    "hyperopt_config": {
+        "executor": {
+            "cpu_resources_per_trial": 16,
+            "gpu_resources_per_trial": 1,
+            "time_budget_s": 86400,
+            "type": "ray"
+        },
+        "goal": "minimize",
+        "metric": "loss",
+        "output_feature": "combined",
+        "parameters": {
+            "combiner.bn_momentum": {
+                "categories": [
+                    0.6,
+                    0.7,
+                    0.8,
+                    0.9,
+                    0.95,
+                    0.98
+                ],
+                "space": "choice"
+            },
+            "combiner.bn_virtual_bs": {
+                "categories": [
+                    256,
+                    512,
+                    1024,
+                    2048,
+                    4096
+                ],
+                "space": "choice"
+            },
+            "combiner.num_steps": {
+                "categories": [
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10
+                ],
+                "space": "choice"
+            },
+            "combiner.output_size": {
+                "categories": [
+                    8,
+                    16,
+                    24,
+                    32,
+                    64,
+                    128
+                ],
+                "space": "choice"
+            },
+            "combiner.relaxation_factor": {
+                "categories": [
+                    1.0,
+                    1.2,
+                    1.5,
+                    2.0
+                ],
+                "space": "choice"
+            },
+            "combiner.size": {
+                "categories": [
+                    8,
+                    16,
+                    24,
+                    32,
+                    64
+                ],
+                "space": "choice"
+            },
+            "combiner.sparsity": {
+                "categories": [
+                    0.0,
+                    1e-06,
+                    0.0001,
+                    0.001,
+                    0.01,
+                    0.1
+                ],
+                "space": "choice"
+            },
+            "training.batch_size": {
+                "categories": [
+                    256,
+                    512,
+                    1024,
+                    2048,
+                    4096,
+                    8192
+                ],
+                "space": "choice"
+            },
+            "training.decay_rate": {
+                "categories": [
+                    0.8,
+                    0.9,
+                    0.95
+                ],
+                "space": "choice"
+            },
+            "training.decay_steps": {
+                "categories": [
+                    500,
+                    2000,
+                    8000,
+                    10000,
+                    20000
+                ],
+                "space": "choice"
+            },
+            "training.learning_rate": {
+                "categories": [
+                    0.005,
+                    0.01,
+                    0.02,
+                    0.025
+                ],
+                "space": "choice"
+            }
+        },
+        "sampler": {
+            "num_samples": 20,
+            "scheduler": {
+                "max_t": 3000,
+                "time_attr": "time_total_s",
+                "type": "async_hyperband"
+            },
+            "type": "ray"
+        },
+        "split": "validation"
+    },
+    "hyperopt_results": [
+        {
+            "eval_stats": {
+                "combined": {
+                    "loss": [
+                        0.007633564993739128,
+                        0.00399874709546566,
+                        0.0033526811748743057,
+                        0.0035931167658418417,
+                        0.0036936583928763866,
+                        0.013460972346365452,
+                        0.0037416035775095224,
+                        0.00333664589561522,
+                        0.0032263370230793953,
+                        0.004857076331973076,
+                        0.004046358168125153,
+                        0.006503283977508545,
+                        0.004613643977791071,
+                        0.0056812041439116,
+                        0.005679768044501543,
+                        0.00571172870695591,
+                        0.005371341947466135,
+                        0.004762555472552776,
+                        0.003742518834769726,
+                        0.004007282666862011,
+                        0.00545561732724309
+                    ]
+                },
+                "isFraud": {
+                    "accuracy": [
+                        0.9988402128219604,
+                        0.9992409348487854,
+                        0.9993509650230408,
+                        0.9994169473648071,
+                        0.9993006587028503,
+                        0.9960083365440369,
+                        0.9993478059768677,
+                        0.9993415474891663,
+                        0.9994106888771057,
+                        0.9993698000907898,
+                        0.9993934035301208,
+                        0.9993525147438049,
+                        0.9993682503700256,
+                        0.9993792176246643,
+                        0.9993352293968201,
+                        0.9993352293968201,
+                        0.9994090795516968,
+                        0.9994185566902161,
+                        0.9994468092918396,
+                        0.9994358420372009,
+                        0.9993839859962463
+                    ],
+                    "loss": [
+                        0.007345621939748526,
+                        0.003773602657020092,
+                        0.0032649633940309286,
+                        0.0035210628993809223,
+                        0.0036337142810225487,
+                        0.013234574347734451,
+                        0.0037217075005173683,
+                        0.003277270821854472,
+                        0.0032045026309788227,
+                        0.00484833586961031,
+                        0.00401539821177721,
+                        0.005916407331824303,
+                        0.004603138193488121,
+                        0.005262097343802452,
+                        0.005307099316269159,
+                        0.005364068318158388,
+                        0.005048202816396952,
+                        0.004475074354559183,
+                        0.0031187047716230154,
+                        0.003992061130702496,
+                        0.005040367599576712
+                    ],
+                    "roc_auc": [
+                        0.5575539469718933,
+                        0.7128264904022217,
+                        0.7547929883003235,
+                        0.7889538407325745,
+                        0.733812153339386,
+                        0.9045990705490112,
+                        0.7529953122138977,
+                        0.7517946362495422,
+                        0.778173565864563,
+                        0.7613885998725891,
+                        0.7709800601005554,
+                        0.7625773549079895,
+                        0.7601903080940247,
+                        0.7721704244613647,
+                        0.7559826374053955,
+                        0.7470016479492188,
+                        0.7781727910041809,
+                        0.781769871711731,
+                        0.8548295497894287,
+                        0.8027341961860657,
+                        0.7835487723350525
+                    ]
+                }
+            },
+            "metric_score": 0.0032263370230793953,
+            "parameters": {
+                "combiner.bn_momentum": 0.8,
+                "combiner.bn_virtual_bs": 1024,
+                "combiner.num_steps": 4,
+                "combiner.output_size": 16,
+                "combiner.relaxation_factor": 1.0,
+                "combiner.size": 24,
+                "combiner.sparsity": 0.01,
+                "training.batch_size": 2048,
+                "training.decay_rate": 0.8,
+                "training.decay_steps": 10000,
+                "training.learning_rate": 0.01
+            },
+            "training_stats": {
+                "combined": {
+                    "loss": [
+                        0.009122337214648724,
+                        0.004594702739268541,
+                        0.003822219790890813,
+                        0.004157721996307373,
+                        0.004373941570520401,
+                        0.013576327823102474,
+                        0.004248444456607103,
+                        0.0038003530353307724,
+                        0.003409196389839053,
+                        0.005354674533009529,
+                        0.00421539694070816,
+                        0.007258576340973377,
+                        0.004974711686372757,
+                        0.006140793673694134,
+                        0.006624940782785416,
+                        0.006459497381001711,
+                        0.005695193540304899,
+                        0.004681388847529888,
+                        0.0036009917967021465,
+                        0.004145931452512741,
+                        0.0058809746988117695
+                    ]
+                },
+                "isFraud": {
+                    "accuracy": [
+                        0.9988564252853394,
+                        0.9992441534996033,
+                        0.9993520975112915,
+                        0.9994257688522339,
+                        0.9992935061454773,
+                        0.9959328770637512,
+                        0.9993478655815125,
+                        0.9993335008621216,
+                        0.9994194507598877,
+                        0.9993680715560913,
+                        0.9993950128555298,
+                        0.9993359446525574,
+                        0.9993718862533569,
+                        0.9993619918823242,
+                        0.9993303418159485,
+                        0.9993364214897156,
+                        0.9994105100631714,
+                        0.9994300007820129,
+                        0.9994439482688904,
+                        0.9994481801986694,
+                        0.9993813037872314
+                    ],
+                    "loss": [
+                        0.008836382068693638,
+                        0.004370297770947218,
+                        0.003734404454007745,
+                        0.00408564368262887,
+                        0.004313770215958357,
+                        0.013351098634302616,
+                        0.004228021018207073,
+                        0.0037406336050480604,
+                        0.0033869952894747257,
+                        0.005345405079424381,
+                        0.004183998331427574,
+                        0.006671912968158722,
+                        0.004963844083249569,
+                        0.005721024237573147,
+                        0.006252076476812363,
+                        0.006111755967140198,
+                        0.005371835082769394,
+                        0.004393699113279581,
+                        0.0029774541035294533,
+                        0.00413015391677618,
+                        0.005465529393404722
+                    ],
+                    "roc_auc": [
+                        0.5558363795280457,
+                        0.7078151106834412,
+                        0.7510868310928345,
+                        0.786586582660675,
+                        0.7269218564033508,
+                        0.9032509326934814,
+                        0.7484707832336426,
+                        0.7434970140457153,
+                        0.7779573202133179,
+                        0.7563227415084839,
+                        0.7673149704933167,
+                        0.754389762878418,
+                        0.7571089267730713,
+                        0.7626804113388062,
+                        0.7502917647361755,
+                        0.7427142858505249,
+                        0.775338888168335,
+                        0.7817093133926392,
+                        0.8542976379394531,
+                        0.8032401204109192,
+                        0.7763698697090149
+                    ]
+                }
+            }
+        },
+        {
+            "eval_stats": {
+                "combined": {
+                    "loss": [
+                        0.004096627701073885,
+                        0.004235918167978525,
+                        0.005549874156713486
+                    ]
+                },
+                "isFraud": {
+                    "accuracy": [
+                        0.9992236495018005,
+                        0.9993006587028503,
+                        0.99915611743927
+                    ],
+                    "loss": [
+                        0.00407159561291337,
+                        0.004214505199342966,
+                        0.005526588764041662
+                    ],
+                    "roc_auc": [
+                        0.7122191190719604,
+                        0.736207127571106,
+                        0.679254949092865
+                    ]
+                }
+            },
+            "metric_score": 0.004096627701073885,
+            "parameters": {
+                "combiner.bn_momentum": 0.7,
+                "combiner.bn_virtual_bs": 256,
+                "combiner.num_steps": 3,
+                "combiner.output_size": 8,
+                "combiner.relaxation_factor": 1.5,
+                "combiner.size": 64,
+                "combiner.sparsity": 0.0001,
+                "training.batch_size": 512,
+                "training.decay_rate": 0.95,
+                "training.decay_steps": 8000,
+                "training.learning_rate": 0.025
+            },
+            "training_stats": {
+                "combined": {
+                    "loss": [
+                        0.0042823380790650845,
+                        0.0043210964649915695,
+                        0.005727765616029501
+                    ]
+                },
+                "isFraud": {
+                    "accuracy": [
+                        0.9992254972457886,
+                        0.9992928504943848,
+                        0.9991539120674133
+                    ],
+                    "loss": [
+                        0.004257309716194868,
+                        0.004299684427678585,
+                        0.005704447627067566
+                    ],
+                    "roc_auc": [
+                        0.7081543207168579,
+                        0.729012668132782,
+                        0.672829806804657
+                    ]
+                }
+            }
+        },
+        {
+            "eval_stats": {
+                "combined": {
+                    "loss": [
+                        0.005539789330214262,
+                        0.004400896839797497,
+                        0.005288706161081791
+                    ]
+                },
+                "isFraud": {
+                    "accuracy": [
+                        0.999030351638794,
+                        0.9991435408592224,
+                        0.999195396900177
+                    ],
+                    "loss": [
+                        0.004505097400397062,
+                        0.003896239446476102,
+                        0.004837198182940483
+                    ],
+                    "roc_auc": [
+                        0.6785933375358582,
+                        0.6798474788665771,
+                        0.6966379880905151
+                    ]
+                }
+            },
+            "metric_score": 0.004400896839797497,
+            "parameters": {
+                "combiner.bn_momentum": 0.95,
+                "combiner.bn_virtual_bs": 2048,
+                "combiner.num_steps": 6,
+                "combiner.output_size": 64,
+                "combiner.relaxation_factor": 1.0,
+                "combiner.size": 32,
+                "combiner.sparsity": 0.001,
+                "training.batch_size": 8192,
+                "training.decay_rate": 0.95,
+                "training.decay_steps": 2000,
+                "training.learning_rate": 0.02
+            },
+            "training_stats": {
+                "combined": {
+                    "loss": [
+                        0.005514091346412897,
+                        0.004310400690883398,
+                        0.005224711261689663
+                    ]
+                },
+                "isFraud": {
+                    "accuracy": [
+                        0.9990344643592834,
+                        0.9991539120674133,
+                        0.9991859793663025
+                    ],
+                    "loss": [
+                        0.004479549825191498,
+                        0.003805955871939659,
+                        0.0047733294777572155
+                    ],
+                    "roc_auc": [
+                        0.6749483346939087,
+                        0.6757051944732666,
+                        0.6866128444671631
+                    ]
+                }
+            }
+        },
+        {
+            "eval_stats": {
+                "combined": {
+                    "loss": [
+                        0.005761269014328718,
+                        0.005242485553026199,
+                        0.004734144080430269
+                    ]
+                },
+                "isFraud": {
+                    "accuracy": [
+                        0.9990476369857788,
+                        0.9990570545196533,
+                        0.999074399471283
+                    ],
+                    "loss": [
+                        0.005761269014328718,
+                        0.005242485553026199,
+                        0.004734144080430269
+                    ],
+                    "roc_auc": [
+                        0.6504614949226379,
+                        0.6420839428901672,
+                        0.6642457842826843
+                    ]
+                }
+            },
+            "metric_score": 0.004734144080430269,
+            "parameters": {
+                "combiner.bn_momentum": 0.95,
+                "combiner.bn_virtual_bs": 512,
+                "combiner.num_steps": 9,
+                "combiner.output_size": 24,
+                "combiner.relaxation_factor": 2.0,
+                "combiner.size": 32,
+                "combiner.sparsity": 0.0,
+                "training.batch_size": 4096,
+                "training.decay_rate": 0.8,
+                "training.decay_steps": 500,
+                "training.learning_rate": 0.025
+            },
+            "training_stats": {
+                "combined": {
+                    "loss": [
+                        0.005603696685284376,
+                        0.005066166166216135,
+                        0.004535775166004896
+                    ]
+                },
+                "isFraud": {
+                    "accuracy": [
+                        0.9990634322166443,
+                        0.9990631937980652,
+                        0.9990825057029724
+                    ],
+                    "loss": [
+                        0.005603696685284376,
+                        0.005066166166216135,
+                        0.004535775166004896
+                    ],
+                    "roc_auc": [
+                        0.650827169418335,
+                        0.6381057500839233,
+                        0.6631224155426025
+                    ]
+                }
+            }
+        },
+        {
+            "eval_stats": {
+                "combined": {
+                    "loss": [
+                        0.006356281694024801
+                    ]
+                },
+                "isFraud": {
+                    "accuracy": [
+                        0.9989801049232483
+                    ],
+                    "loss": [
+                        0.0063562216237187386
+                    ],
+                    "roc_auc": [
+                        0.6252808570861816
+                    ]
+                }
+            },
+            "metric_score": 0.006356281694024801,
+            "parameters": {
+                "combiner.bn_momentum": 0.95,
+                "combiner.bn_virtual_bs": 2048,
+                "combiner.num_steps": 10,
+                "combiner.output_size": 64,
+                "combiner.relaxation_factor": 1.5,
+                "combiner.size": 64,
+                "combiner.sparsity": 1e-06,
+                "training.batch_size": 512,
+                "training.decay_rate": 0.9,
+                "training.decay_steps": 8000,
+                "training.learning_rate": 0.01
+            },
+            "training_stats": {
+                "combined": {
+                    "loss": [
+                        0.006499221548438072
+                    ]
+                },
+                "isFraud": {
+                    "accuracy": [
+                        0.9989974498748779
+                    ],
+                    "loss": [
+                        0.006499157752841711
+                    ],
+                    "roc_auc": [
+                        0.624480128288269
+                    ]
+                }
+            }
+        },
+        {
+            "eval_stats": {
+                "combined": {
+                    "loss": [
+                        0.0066439369693398476
+                    ]
+                },
+                "isFraud": {
+                    "accuracy": [
+                        0.9986893534660339
+                    ],
+                    "loss": [
+                        0.0066160098649561405
+                    ],
+                    "roc_auc": [
+                        0.5
+                    ]
+                }
+            },
+            "metric_score": 0.0066439369693398476,
+            "parameters": {
+                "combiner.bn_momentum": 0.8,
+                "combiner.bn_virtual_bs": 512,
+                "combiner.num_steps": 5,
+                "combiner.output_size": 128,
+                "combiner.relaxation_factor": 2.0,
+                "combiner.size": 24,
+                "combiner.sparsity": 0.0001,
+                "training.batch_size": 1024,
+                "training.decay_rate": 0.9,
+                "training.decay_steps": 500,
+                "training.learning_rate": 0.02
+            },
+            "training_stats": {
+                "combined": {
+                    "loss": [
+                        0.007268146146088839
+                    ]
+                },
+                "isFraud": {
+                    "accuracy": [
+                        0.9987131953239441
+                    ],
+                    "loss": [
+                        0.007240219507366419
+                    ],
+                    "roc_auc": [
+                        0.49999988079071045
+                    ]
+                }
+            }
+        },
+        {
+            "eval_stats": {
+                "combined": {
+                    "loss": [
+                        0.007062052842229605
+                    ]
+                },
+                "isFraud": {
+                    "accuracy": [
+                        0.9989423751831055
+                    ],
+                    "loss": [
+                        0.007020503748208284
+                    ],
+                    "roc_auc": [
+                        0.6210708618164062
+                    ]
+                }
+            },
+            "metric_score": 0.007062052842229605,
+            "parameters": {
+                "combiner.bn_momentum": 0.8,
+                "combiner.bn_virtual_bs": 512,
+                "combiner.num_steps": 4,
+                "combiner.output_size": 8,
+                "combiner.relaxation_factor": 1.2,
+                "combiner.size": 16,
+                "combiner.sparsity": 0.01,
+                "training.batch_size": 256,
+                "training.decay_rate": 0.9,
+                "training.decay_steps": 20000,
+                "training.learning_rate": 0.005
+            },
+            "training_stats": {
+                "combined": {
+                    "loss": [
+                        0.00697393948212266
+                    ]
+                },
+                "isFraud": {
+                    "accuracy": [
+                        0.9989421963691711
+                    ],
+                    "loss": [
+                        0.006932027637958527
+                    ],
+                    "roc_auc": [
+                        0.6187888979911804
+                    ]
+                }
+            }
+        },
+        {
+            "eval_stats": {
+                "combined": {
+                    "loss": [
+                        0.007437169551849365
+                    ]
+                },
+                "isFraud": {
+                    "accuracy": [
+                        0.9985227584838867
+                    ],
+                    "loss": [
+                        0.007011984474956989
+                    ],
+                    "roc_auc": [
+                        0.8118568062782288
+                    ]
+                }
+            },
+            "metric_score": 0.007437169551849365,
+            "parameters": {
+                "combiner.bn_momentum": 0.6,
+                "combiner.bn_virtual_bs": 256,
+                "combiner.num_steps": 6,
+                "combiner.output_size": 16,
+                "combiner.relaxation_factor": 1.2,
+                "combiner.size": 32,
+                "combiner.sparsity": 0.1,
+                "training.batch_size": 256,
+                "training.decay_rate": 0.95,
+                "training.decay_steps": 10000,
+                "training.learning_rate": 0.02
+            },
+            "training_stats": {
+                "combined": {
+                    "loss": [
+                        0.007568999659270048
+                    ]
+                },
+                "isFraud": {
+                    "accuracy": [
+                        0.9984956979751587
+                    ],
+                    "loss": [
+                        0.007144360337406397
+                    ],
+                    "roc_auc": [
+                        0.8100824356079102
+                    ]
+                }
+            }
+        },
+        {
+            "eval_stats": {
+                "combined": {
+                    "loss": [
+                        0.007730910554528236
+                    ]
+                },
+                "isFraud": {
+                    "accuracy": [
+                        0.9986861944198608
+                    ],
+                    "loss": [
+                        0.0074013895355165005
+                    ],
+                    "roc_auc": [
+                        0.49999842047691345
+                    ]
+                }
+            },
+            "metric_score": 0.007730910554528236,
+            "parameters": {
+                "combiner.bn_momentum": 0.8,
+                "combiner.bn_virtual_bs": 2048,
+                "combiner.num_steps": 9,
+                "combiner.output_size": 24,
+                "combiner.relaxation_factor": 1.2,
+                "combiner.size": 16,
+                "combiner.sparsity": 0.001,
+                "training.batch_size": 256,
+                "training.decay_rate": 0.8,
+                "training.decay_steps": 20000,
+                "training.learning_rate": 0.01
+            },
+            "training_stats": {
+                "combined": {
+                    "loss": [
+                        0.007776855956763029
+                    ]
+                },
+                "isFraud": {
+                    "accuracy": [
+                        0.9987105131149292
+                    ],
+                    "loss": [
+                        0.00744730606675148
+                    ],
+                    "roc_auc": [
+                        0.499998539686203
+                    ]
+                }
+            }
+        },
+        {
+            "eval_stats": {
+                "combined": {
+                    "loss": [
+                        0.00859759096056223
+                    ]
+                },
+                "isFraud": {
+                    "accuracy": [
+                        0.998791515827179
+                    ],
+                    "loss": [
+                        0.008597388863563538
+                    ],
+                    "roc_auc": [
+                        0.5617207288742065
+                    ]
+                }
+            },
+            "metric_score": 0.00859759096056223,
+            "parameters": {
+                "combiner.bn_momentum": 0.8,
+                "combiner.bn_virtual_bs": 512,
+                "combiner.num_steps": 9,
+                "combiner.output_size": 128,
+                "combiner.relaxation_factor": 2.0,
+                "combiner.size": 32,
+                "combiner.sparsity": 1e-06,
+                "training.batch_size": 8192,
+                "training.decay_rate": 0.95,
+                "training.decay_steps": 10000,
+                "training.learning_rate": 0.025
+            },
+            "training_stats": {
+                "combined": {
+                    "loss": [
+                        0.008526642806828022
+                    ]
+                },
+                "isFraud": {
+                    "accuracy": [
+                        0.9987980723381042
+                    ],
+                    "loss": [
+                        0.00852644257247448
+                    ],
+                    "roc_auc": [
+                        0.5594666600227356
+                    ]
+                }
+            }
+        },
+        {
+            "eval_stats": {
+                "combined": {
+                    "loss": [
+                        0.009085849858820438
+                    ]
+                },
+                "isFraud": {
+                    "accuracy": [
+                        0.9986343383789062
+                    ],
+                    "loss": [
+                        0.009085849858820438
+                    ],
+                    "roc_auc": [
+                        0.5221255421638489
+                    ]
+                }
+            },
+            "metric_score": 0.009085849858820438,
+            "parameters": {
+                "combiner.bn_momentum": 0.7,
+                "combiner.bn_virtual_bs": 4096,
+                "combiner.num_steps": 9,
+                "combiner.output_size": 16,
+                "combiner.relaxation_factor": 1.2,
+                "combiner.size": 16,
+                "combiner.sparsity": 0.0,
+                "training.batch_size": 1024,
+                "training.decay_rate": 0.9,
+                "training.decay_steps": 2000,
+                "training.learning_rate": 0.005
+            },
+            "training_stats": {
+                "combined": {
+                    "loss": [
+                        0.01012573391199112
+                    ]
+                },
+                "isFraud": {
+                    "accuracy": [
+                        0.9986287951469421
+                    ],
+                    "loss": [
+                        0.01012573391199112
+                    ],
+                    "roc_auc": [
+                        0.5207822322845459
+                    ]
+                }
+            }
+        },
+        {
+            "eval_stats": {
+                "combined": {
+                    "loss": [
+                        0.009487569332122803
+                    ]
+                },
+                "isFraud": {
+                    "accuracy": [
+                        0.9986893534660339
+                    ],
+                    "loss": [
+                        0.009487221948802471
+                    ],
+                    "roc_auc": [
+                        0.5
+                    ]
+                }
+            },
+            "metric_score": 0.009487569332122803,
+            "parameters": {
+                "combiner.bn_momentum": 0.8,
+                "combiner.bn_virtual_bs": 512,
+                "combiner.num_steps": 10,
+                "combiner.output_size": 64,
+                "combiner.relaxation_factor": 2.0,
+                "combiner.size": 32,
+                "combiner.sparsity": 1e-06,
+                "training.batch_size": 8192,
+                "training.decay_rate": 0.9,
+                "training.decay_steps": 8000,
+                "training.learning_rate": 0.01
+            },
+            "training_stats": {
+                "combined": {
+                    "loss": [
+                        0.009266811423003674
+                    ]
+                },
+                "isFraud": {
+                    "accuracy": [
+                        0.9987134337425232
+                    ],
+                    "loss": [
+                        0.009266460314393044
+                    ],
+                    "roc_auc": [
+                        0.5
+                    ]
+                }
+            }
+        },
+        {
+            "eval_stats": {
+                "combined": {
+                    "loss": [
+                        0.009525216184556484
+                    ]
+                },
+                "isFraud": {
+                    "accuracy": [
+                        0.9986893534660339
+                    ],
+                    "loss": [
+                        0.009089277125895023
+                    ],
+                    "roc_auc": [
+                        0.5
+                    ]
+                }
+            },
+            "metric_score": 0.009525216184556484,
+            "parameters": {
+                "combiner.bn_momentum": 0.8,
+                "combiner.bn_virtual_bs": 1024,
+                "combiner.num_steps": 10,
+                "combiner.output_size": 32,
+                "combiner.relaxation_factor": 1.0,
+                "combiner.size": 16,
+                "combiner.sparsity": 0.1,
+                "training.batch_size": 2048,
+                "training.decay_rate": 0.8,
+                "training.decay_steps": 2000,
+                "training.learning_rate": 0.02
+            },
+            "training_stats": {
+                "combined": {
+                    "loss": [
+                        0.011661726050078869
+                    ]
+                },
+                "isFraud": {
+                    "accuracy": [
+                        0.9987134337425232
+                    ],
+                    "loss": [
+                        0.011225491762161255
+                    ],
+                    "roc_auc": [
+                        0.5
+                    ]
+                }
+            }
+        },
+        {
+            "eval_stats": {
+                "combined": {
+                    "loss": [
+                        0.009547128342092037
+                    ]
+                },
+                "isFraud": {
+                    "accuracy": [
+                        0.9986893534660339
+                    ],
+                    "loss": [
+                        0.009547128342092037
+                    ],
+                    "roc_auc": [
+                        0.5
+                    ]
+                }
+            },
+            "metric_score": 0.009547128342092037,
+            "parameters": {
+                "combiner.bn_momentum": 0.7,
+                "combiner.bn_virtual_bs": 256,
+                "combiner.num_steps": 8,
+                "combiner.output_size": 8,
+                "combiner.relaxation_factor": 1.2,
+                "combiner.size": 32,
+                "combiner.sparsity": 0.0,
+                "training.batch_size": 4096,
+                "training.decay_rate": 0.9,
+                "training.decay_steps": 10000,
+                "training.learning_rate": 0.02
+            },
+            "training_stats": {
+                "combined": {
+                    "loss": [
+                        0.008825729601085186
+                    ]
+                },
+                "isFraud": {
+                    "accuracy": [
+                        0.9987127780914307
+                    ],
+                    "loss": [
+                        0.008825729601085186
+                    ],
+                    "roc_auc": [
+                        0.49999967217445374
+                    ]
+                }
+            }
+        },
+        {
+            "eval_stats": {
+                "combined": {
+                    "loss": [
+                        0.01038744580000639
+                    ]
+                },
+                "isFraud": {
+                    "accuracy": [
+                        0.9985982179641724
+                    ],
+                    "loss": [
+                        0.01038744580000639
+                    ],
+                    "roc_auc": [
+                        0.49995437264442444
+                    ]
+                }
+            },
+            "metric_score": 0.01038744580000639,
+            "parameters": {
+                "combiner.bn_momentum": 0.95,
+                "combiner.bn_virtual_bs": 512,
+                "combiner.num_steps": 8,
+                "combiner.output_size": 16,
+                "combiner.relaxation_factor": 2.0,
+                "combiner.size": 8,
+                "combiner.sparsity": 0.0,
+                "training.batch_size": 2048,
+                "training.decay_rate": 0.8,
+                "training.decay_steps": 500,
+                "training.learning_rate": 0.005
+            },
+            "training_stats": {
+                "combined": {
+                    "loss": [
+                        0.012228055857121944
+                    ]
+                },
+                "isFraud": {
+                    "accuracy": [
+                        0.998624324798584
+                    ],
+                    "loss": [
+                        0.012228055857121944
+                    ],
+                    "roc_auc": [
+                        0.5002167820930481
+                    ]
+                }
+            }
+        },
+        {
+            "eval_stats": {
+                "combined": {
+                    "loss": [
+                        0.010405657812952995
+                    ]
+                },
+                "isFraud": {
+                    "accuracy": [
+                        0.9986406564712524
+                    ],
+                    "loss": [
+                        0.010405657812952995
+                    ],
+                    "roc_auc": [
+                        0.5005743503570557
+                    ]
+                }
+            },
+            "metric_score": 0.010405657812952995,
+            "parameters": {
+                "combiner.bn_momentum": 0.98,
+                "combiner.bn_virtual_bs": 256,
+                "combiner.num_steps": 10,
+                "combiner.output_size": 8,
+                "combiner.relaxation_factor": 1.2,
+                "combiner.size": 64,
+                "combiner.sparsity": 0.0,
+                "training.batch_size": 8192,
+                "training.decay_rate": 0.95,
+                "training.decay_steps": 8000,
+                "training.learning_rate": 0.025
+            },
+            "training_stats": {
+                "combined": {
+                    "loss": [
+                        0.010343984700739384
+                    ]
+                },
+                "isFraud": {
+                    "accuracy": [
+                        0.9986512660980225
+                    ],
+                    "loss": [
+                        0.010343984700739384
+                    ],
+                    "roc_auc": [
+                        0.49996885657310486
+                    ]
+                }
+            }
+        },
+        {
+            "eval_stats": {
+                "combined": {
+                    "loss": [
+                        0.013527940027415752
+                    ]
+                },
+                "isFraud": {
+                    "accuracy": [
+                        0.9986893534660339
+                    ],
+                    "loss": [
+                        0.008066771551966667
+                    ],
+                    "roc_auc": [
+                        0.5
+                    ]
+                }
+            },
+            "metric_score": 0.013527940027415752,
+            "parameters": {
+                "combiner.bn_momentum": 0.6,
+                "combiner.bn_virtual_bs": 4096,
+                "combiner.num_steps": 6,
+                "combiner.output_size": 128,
+                "combiner.relaxation_factor": 1.5,
+                "combiner.size": 64,
+                "combiner.sparsity": 0.1,
+                "training.batch_size": 4096,
+                "training.decay_rate": 0.9,
+                "training.decay_steps": 10000,
+                "training.learning_rate": 0.005
+            },
+            "training_stats": {
+                "combined": {
+                    "loss": [
+                        0.012955896556377411
+                    ]
+                },
+                "isFraud": {
+                    "accuracy": [
+                        0.9987134337425232
+                    ],
+                    "loss": [
+                        0.0074927168898284435
+                    ],
+                    "roc_auc": [
+                        0.5
+                    ]
+                }
+            }
+        },
+        {
+            "eval_stats": {
+                "combined": {
+                    "loss": [
+                        0.014542323537170887
+                    ]
+                },
+                "isFraud": {
+                    "accuracy": [
+                        0.9981440305709839
+                    ],
+                    "loss": [
+                        0.014511249028146267
+                    ],
+                    "roc_auc": [
+                        0.5003257393836975
+                    ]
+                }
+            },
+            "metric_score": 0.014542323537170887,
+            "parameters": {
+                "combiner.bn_momentum": 0.6,
+                "combiner.bn_virtual_bs": 512,
+                "combiner.num_steps": 4,
+                "combiner.output_size": 128,
+                "combiner.relaxation_factor": 1.5,
+                "combiner.size": 32,
+                "combiner.sparsity": 0.001,
+                "training.batch_size": 1024,
+                "training.decay_rate": 0.9,
+                "training.decay_steps": 10000,
+                "training.learning_rate": 0.025
+            },
+            "training_stats": {
+                "combined": {
+                    "loss": [
+                        0.014851090498268604
+                    ]
+                },
+                "isFraud": {
+                    "accuracy": [
+                        0.998198926448822
+                    ],
+                    "loss": [
+                        0.014819994568824768
+                    ],
+                    "roc_auc": [
+                        0.500439465045929
+                    ]
+                }
+            }
+        },
+        {
+            "eval_stats": {
+                "combined": {
+                    "loss": [
+                        0.01709667593240738
+                    ]
+                },
+                "isFraud": {
+                    "accuracy": [
+                        0.9986893534660339
+                    ],
+                    "loss": [
+                        0.010740584693849087
+                    ],
+                    "roc_auc": [
+                        0.5
+                    ]
+                }
+            },
+            "metric_score": 0.01709667593240738,
+            "parameters": {
+                "combiner.bn_momentum": 0.6,
+                "combiner.bn_virtual_bs": 512,
+                "combiner.num_steps": 9,
+                "combiner.output_size": 128,
+                "combiner.relaxation_factor": 1.5,
+                "combiner.size": 64,
+                "combiner.sparsity": 0.1,
+                "training.batch_size": 4096,
+                "training.decay_rate": 0.95,
+                "training.decay_steps": 500,
+                "training.learning_rate": 0.005
+            },
+            "training_stats": {
+                "combined": {
+                    "loss": [
+                        0.01643003523349762
+                    ]
+                },
+                "isFraud": {
+                    "accuracy": [
+                        0.9987134337425232
+                    ],
+                    "loss": [
+                        0.010067787952721119
+                    ],
+                    "roc_auc": [
+                        0.5
+                    ]
+                }
+            }
+        },
+        {
+            "eval_stats": {
+                "combined": {
+                    "loss": [
+                        0.6588335037231445
+                    ]
+                },
+                "isFraud": {
+                    "accuracy": [
+                        0.9986893534660339
+                    ],
+                    "loss": [
+                        0.6588068008422852
+                    ],
+                    "roc_auc": [
+                        0.5
+                    ]
+                }
+            },
+            "metric_score": 0.6588335037231445,
+            "parameters": {
+                "combiner.bn_momentum": 0.98,
+                "combiner.bn_virtual_bs": 2048,
+                "combiner.num_steps": 9,
+                "combiner.output_size": 128,
+                "combiner.relaxation_factor": 1.5,
+                "combiner.size": 64,
+                "combiner.sparsity": 0.0001,
+                "training.batch_size": 8192,
+                "training.decay_rate": 0.9,
+                "training.decay_steps": 500,
+                "training.learning_rate": 0.025
+            },
+            "training_stats": {
+                "combined": {
+                    "loss": [
+                        0.6353549957275391
+                    ]
+                },
+                "isFraud": {
+                    "accuracy": [
+                        0.9987134337425232
+                    ],
+                    "loss": [
+                        0.6353281736373901
+                    ],
+                    "roc_auc": [
+                        0.5
+                    ]
+                }
+            }
+        }
+    ]
+}
