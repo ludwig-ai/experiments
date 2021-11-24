@@ -1,7 +1,11 @@
+2021-11-23 16:50:36.333128: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library libcudart.so.11.0
+2021-11-23 16:50:47,365	INFO worker.py:823 -- Connecting to existing Ray cluster at address: 172.31.18.78:6379
+[2m[36m(pid=None)[0m 2021-11-23 16:51:01.726408: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:176] None of the MLIR Optimization Passes are enabled (registered 2)
+[2m[36m(pid=None)[0m 2021-11-23 16:51:01.903306: I tensorflow/core/platform/profile_utils/cpu_utils.cc:114] CPU Frequency: 2499995000 Hz
 {'combiner': {'type': 'tabnet'},
  'hyperopt': {'executor': {'cpu_resources_per_trial': 16,
                            'gpu_resources_per_trial': 1,
-                           'time_budget_s': 86400,
+                           'time_budget_s': 7200,
                            'type': 'ray'},
               'parameters': {'combiner.bn_momentum': {'categories': [0.6,
                                                                      0.7,
@@ -73,7 +77,8 @@
                                                                        0.025],
                                                         'space': 'choice'}},
               'sampler': {'num_samples': 20,
-                          'scheduler': {'time_attr': 'time_total_s',
+                          'scheduler': {'max_t': 720.0,
+                                        'time_attr': 'time_total_s',
                                         'type': 'async_hyperband'},
                           'type': 'ray'}},
  'input_features': [{'column': 'step', 'name': 'step', 'type': 'numerical'},
@@ -107,7 +112,6 @@
               'decay': True,
               'decay_rate': 0.95,
               'decay_steps': 500,
-              'epochs': 3000,
               'learning_rate': 'auto',
               'optimizer': {'type': 'adam'},
               'regularization_lambda': 1,

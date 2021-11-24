@@ -9,7 +9,7 @@ mercedes_benz_greener_df = mercedes_benz_greener.load()
 auto_config = create_auto_config(
     dataset=mercedes_benz_greener_df,
     target='y',
-    time_limit_s=86400,
+    time_limit_s=7200,
     tune_for_memory=False
 )
 

@@ -9,7 +9,7 @@ adult_census_income_df = adult_census_income.load()
 auto_config = create_auto_config(
     dataset=adult_census_income_df,
     target='income',
-    time_limit_s=86400,
+    time_limit_s=7200,
     tune_for_memory=False
 )
 

@@ -9,7 +9,7 @@ forest_cover_df = forest_cover.load()
 auto_config = create_auto_config(
     dataset=forest_cover_df,
     target='Cover_Type',
-    time_limit_s=86400,
+    time_limit_s=7200,
     tune_for_memory=False
 )
 

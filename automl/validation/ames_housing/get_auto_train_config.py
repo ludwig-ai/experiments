@@ -9,7 +9,7 @@ ames_housing_df = ames_housing.load()
 auto_config = create_auto_config(
     dataset=ames_housing_df,
     target='SalePrice',
-    time_limit_s=86400,
+    time_limit_s=7200,
     tune_for_memory=False
 )
 

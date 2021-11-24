@@ -9,7 +9,7 @@ higgs_df = higgs.load()
 auto_config = create_auto_config(
     dataset=higgs_df,
     target='label',
-    time_limit_s=86400,
+    time_limit_s=7200,
     tune_for_memory=False
 )
 

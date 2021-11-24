@@ -9,7 +9,7 @@ bnp_claims_management_df = bnp_claims_management.load()
 auto_config = create_auto_config(
     dataset=bnp_claims_management_df,
     target='target',
-    time_limit_s=86400,
+    time_limit_s=7200,
     tune_for_memory=False
 )
 

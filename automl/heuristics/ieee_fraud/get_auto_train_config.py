@@ -9,7 +9,7 @@ ieee_fraud_df = ieee_fraud.load()
 auto_config = create_auto_config(
     dataset=ieee_fraud_df,
     target='isFraud',
-    time_limit_s=86400,
+    time_limit_s=7200,
     tune_for_memory=False
 )
 

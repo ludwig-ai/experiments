@@ -9,7 +9,7 @@ poker_hand_df, _, _ = poker_hand.load()
 auto_config = create_auto_config(
     dataset=poker_hand_df,
     target='hand',
-    time_limit_s=86400,
+    time_limit_s=7200,
     tune_for_memory=False
 )
 
