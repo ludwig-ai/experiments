@@ -10,7 +10,7 @@ synthetic_fraud_df = synthetic_fraud.load()
 auto_train_results = auto_train(
     dataset=synthetic_fraud_df,
     target='isFraud',
-    time_limit_s=86400,
+    time_limit_s=7200,
     tune_for_memory=False
 )
 
