@@ -11,7 +11,7 @@ auto_config = create_auto_config(
     target='label',
     time_limit_s=7200,
     tune_for_memory=False,
-    user_specified_config={'combiner': {'type': 'tabnet'}}
+    user_config={'combiner': {'type': 'tabnet'}}
 )
 
 pprint.pprint(auto_config)
