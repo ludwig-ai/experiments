@@ -1,5 +1,3 @@
-2021-11-23 16:48:52.872834: I tensorflow/stream_executor/platform/default/dso_loader.cc:53] Successfully opened dynamic library libcudart.so.11.0
-2021-11-23 16:48:55,192	INFO worker.py:823 -- Connecting to existing Ray cluster at address: 172.31.18.78:6379
 {'combiner': {'type': 'tabnet'},
  'hyperopt': {'executor': {'cpu_resources_per_trial': 16,
                            'gpu_resources_per_trial': 1,
@@ -74,8 +72,10 @@
                                                                        0.02,
                                                                        0.025],
                                                         'space': 'choice'}},
-              'sampler': {'num_samples': 20,
-                          'scheduler': {'max_t': 720.0,
+              'sampler': {'num_samples': 10,
+                          'scheduler': {'grace_period': 72,
+                                        'max_t': 7200,
+                                        'reduction_factor': 5,
                                         'time_attr': 'time_total_s',
                                         'type': 'async_hyperband'},
                           'type': 'ray'}},

@@ -1,164 +1,244 @@
 output_features:
-  - name: SalePrice
+  - column: SalePrice
+    name: SalePrice
     type: numerical
 input_features:
-  - name: MSSubClass
-    type: category
-  - name: MSZoning
-    type: category
-  - name: LotFrontage
+  - column: MSSubClass
+    name: MSSubClass
     type: numerical
-  - name: LotArea
+  - column: MSZoning
+    name: MSZoning
+    type: category
+  - column: LotFrontage
+    name: LotFrontage
     type: numerical
-  - name: Street
-    type: category
-  - name: Alley
-    type: category
-  - name: LotShape
-    type: category
-  - name: LandContour
-    type: category
-  - name: Utilities
-    type: category
-  - name: LotConfig
-    type: category
-  - name: LandSlope
-    type: category
-  - name: Neighborhood
-    type: category
-  - name: Condition1
-    type: category
-  - name: Condition2
-    type: category
-  - name: BldgType
-    type: category
-  - name: HouseStyle
-    type: category
-  - name: OverallQual
-    type: category
-  - name: OverallCond
-    type: category
-  - name: YearBuilt
+  - column: LotArea
+    name: LotArea
     type: numerical
-  - name: YearRemodAdd
+  - column: Street
+    name: Street
+    type: category
+  - column: Alley
+    name: Alley
+    type: category
+  - column: LotShape
+    name: LotShape
+    type: category
+  - column: LandContour
+    name: LandContour
+    type: category
+  - column: Utilities
+    name: Utilities
+    type: category
+  - column: LotConfig
+    name: LotConfig
+    type: category
+  - column: LandSlope
+    name: LandSlope
+    type: category
+  - column: Neighborhood
+    name: Neighborhood
+    type: category
+  - column: Condition1
+    name: Condition1
+    type: category
+  - column: Condition2
+    name: Condition2
+    type: category
+  - column: BldgType
+    name: BldgType
+    type: category
+  - column: HouseStyle
+    name: HouseStyle
+    type: category
+  - column: OverallQual
+    name: OverallQual
+    type: category
+  - column: OverallCond
+    name: OverallCond
+    type: category
+  - column: YearBuilt
+    name: YearBuilt
     type: numerical
-  - name: RoofStyle
-    type: category
-  - name: RoofMatl
-    type: category
-  - name: Exterior1st
-    type: category
-  - name: Exterior2nd
-    type: category
-  - name: MasVnrType
-    type: category
-  - name: MasVnrArea
+  - column: YearRemodAdd
+    name: YearRemodAdd
     type: numerical
-  - name: ExterQual
+  - column: RoofStyle
+    name: RoofStyle
     type: category
-  - name: ExterCond
+  - column: RoofMatl
+    name: RoofMatl
     type: category
-  - name: Foundation
+  - column: Exterior1st
+    name: Exterior1st
     type: category
-  - name: BsmtQual
+  - column: Exterior2nd
+    name: Exterior2nd
     type: category
-  - name: BsmtCond
+  - column: MasVnrType
+    name: MasVnrType
     type: category
-  - name: BsmtExposure
-    type: category
-  - name: BsmtFinType1
-    type: category
-  - name: BsmtFinSF1
+  - column: MasVnrArea
+    name: MasVnrArea
     type: numerical
-  - name: BsmtFinType2
+  - column: ExterQual
+    name: ExterQual
     type: category
-  - name: BsmtFinSF2
-    type: numerical
-  - name: BsmtUnfSF
-    type: numerical
-  - name: TotalBsmtSF
-    type: numerical
-  - name: Heating
+  - column: ExterCond
+    name: ExterCond
     type: category
-  - name: HeatingQC
+  - column: Foundation
+    name: Foundation
     type: category
-  - name: CentralAir
+  - column: BsmtQual
+    name: BsmtQual
+    type: category
+  - column: BsmtCond
+    name: BsmtCond
+    type: category
+  - column: BsmtExposure
+    name: BsmtExposure
+    type: category
+  - column: BsmtFinType1
+    name: BsmtFinType1
+    type: category
+  - column: BsmtFinSF1
+    name: BsmtFinSF1
+    type: numerical
+  - column: BsmtFinType2
+    name: BsmtFinType2
+    type: category
+  - column: BsmtFinSF2
+    name: BsmtFinSF2
+    type: numerical
+  - column: BsmtUnfSF
+    name: BsmtUnfSF
+    type: numerical
+  - column: TotalBsmtSF
+    name: TotalBsmtSF
+    type: numerical
+  - column: Heating
+    name: Heating
+    type: category
+  - column: HeatingQC
+    name: HeatingQC
+    type: category
+  - column: CentralAir
+    name: CentralAir
     type: binary
-  - name: Electrical
+  - column: Electrical
+    name: Electrical
     type: category
-  - name: 1stFlrSF
+  - column: 1stFlrSF
+    name: 1stFlrSF
     type: numerical
-  - name: 2ndFlrSF
+  - column: 2ndFlrSF
+    name: 2ndFlrSF
     type: numerical
-  - name: LowQualFinSF
+  - column: LowQualFinSF
+    name: LowQualFinSF
     type: numerical
-  - name: GrLivArea
+  - column: GrLivArea
+    name: GrLivArea
     type: numerical
-  - name: BsmtFullBath
+  - column: BsmtFullBath
+    name: BsmtFullBath
     type: numerical
-  - name: BsmtHalfBath
+  - column: BsmtHalfBath
+    name: BsmtHalfBath
     type: numerical
-  - name: FullBath
-    type: numerical
-  - name: HalfBath
-    type: numerical
-  - name: BedroomAbvGr
-    type: numerical
-  - name: KitchenAbvGr
-    type: numerical
-  - name: KitchenQual
+  - column: FullBath
+    name: FullBath
     type: category
-  - name: TotRmsAbvGrd
-    type: numerical
-  - name: Functional
+  - column: HalfBath
+    name: HalfBath
     type: category
-  - name: Fireplaces
+  - column: BedroomAbvGr
+    name: BedroomAbvGr
     type: numerical
-  - name: FireplaceQu
+  - column: KitchenAbvGr
+    name: KitchenAbvGr
     type: category
-  - name: GarageType
+  - column: KitchenQual
+    name: KitchenQual
     type: category
-  - name: GarageYrBlt
-    type: numerical
-  - name: GarageFinish
+  - column: TotRmsAbvGrd
+    name: TotRmsAbvGrd
     type: category
-  - name: GarageCars
-    type: numerical
-  - name: GarageArea
-    type: numerical
-  - name: GarageQual
+  - column: Functional
+    name: Functional
     type: category
-  - name: GarageCond
+  - column: Fireplaces
+    name: Fireplaces
     type: category
-  - name: PavedDrive
+  - column: FireplaceQu
+    name: FireplaceQu
     type: category
-  - name: WoodDeckSF
-    type: numerical
-  - name: OpenPorchSF
-    type: numerical
-  - name: EnclosedPorch
-    type: numerical
-  - name: 3SsnPorch
-    type: numerical
-  - name: ScreenPorch
-    type: numerical
-  - name: PoolArea
-    type: numerical
-  - name: PoolQC
+  - column: GarageType
+    name: GarageType
     type: category
-  - name: Fence
-    type: category
-  - name: MiscFeature
-    type: category
-  - name: MiscVal
+  - column: GarageYrBlt
+    name: GarageYrBlt
     type: numerical
-  - name: MoSold
+  - column: GarageFinish
+    name: GarageFinish
     type: category
-  - name: YrSold
+  - column: GarageCars
+    name: GarageCars
     type: numerical
-  - name: SaleType
+  - column: GarageArea
+    name: GarageArea
+    type: numerical
+  - column: GarageQual
+    name: GarageQual
     type: category
-  - name: SaleCondition
+  - column: GarageCond
+    name: GarageCond
+    type: category
+  - column: PavedDrive
+    name: PavedDrive
+    type: category
+  - column: WoodDeckSF
+    name: WoodDeckSF
+    type: numerical
+  - column: OpenPorchSF
+    name: OpenPorchSF
+    type: numerical
+  - column: EnclosedPorch
+    name: EnclosedPorch
+    type: numerical
+  - column: 3SsnPorch
+    name: 3SsnPorch
+    type: numerical
+  - column: ScreenPorch
+    name: ScreenPorch
+    type: numerical
+  - column: PoolArea
+    name: PoolArea
+    type: numerical
+  - column: PoolQC
+    name: PoolQC
+    type: category
+  - column: Fence
+    name: Fence
+    type: category
+  - column: MiscFeature
+    name: MiscFeature
+    type: category
+  - column: MiscVal
+    name: MiscVal
+    type: numerical
+  - column: MoSold
+    name: MoSold
+    type: category
+  - column: YrSold
+    name: YrSold
+    type: category
+  - column: SaleType
+    name: SaleType
+    type: category
+  - column: SaleCondition
+    name: SaleCondition
     type: category
 combiner:
   type: tabnet
