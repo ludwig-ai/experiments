@@ -1,7 +1,7 @@
 import logging
 
 from ludwig.api import LudwigModel
-from ludwig.datasets import higgs
+from load_util import load_higgs
 
 model = LudwigModel(
     config='config_tabnet_transfer_santCustSat.yaml',
@@ -9,7 +9,7 @@ model = LudwigModel(
     backend="local",
 )
 
-higgs_df = higgs.load()
+higgs_df = load_higgs()
 model.train(
     dataset=higgs_df,
     experiment_name='higgs_tabnet_transfer_santCustSat',

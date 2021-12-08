@@ -1,10 +1,10 @@
 import logging
 import pprint
 
-from ludwig.datasets import ames_housing
+from load_util import load_ames_housing
 from ludwig.automl import auto_train
 
-ames_housing_df = ames_housing.load()
+ames_housing_df = load_ames_housing()
 
 auto_train_results = auto_train(
     dataset=ames_housing_df,

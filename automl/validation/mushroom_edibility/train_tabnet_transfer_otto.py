@@ -1,7 +1,7 @@
 import logging
 
 from ludwig.api import LudwigModel
-from ludwig.datasets import mushroom_edibility
+from load_util import load_mushroom_edibility
 
 model = LudwigModel(
     config='config_tabnet_transfer_otto.yaml',
@@ -9,7 +9,7 @@ model = LudwigModel(
     backend="local",
 )
 
-mushroom_edibility_df = mushroom_edibility.load()
+mushroom_edibility_df = load_mushroom_edibility()
 model.train(
     dataset=mushroom_edibility_df,
     experiment_name='mushroom_edibility_tabnet_transfer_otto',

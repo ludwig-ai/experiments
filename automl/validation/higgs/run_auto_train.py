@@ -1,10 +1,10 @@
 import logging
 import pprint
 
-from ludwig.datasets import higgs
+from load_util import load_higgs
 from ludwig.automl import auto_train
 
-higgs_df = higgs.load()
+higgs_df = load_higgs()
 
 auto_train_results = auto_train(
     dataset=higgs_df,

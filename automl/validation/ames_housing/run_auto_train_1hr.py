@@ -1,15 +1,15 @@
 import logging
 import pprint
 
-from load_util import load_higgs
+from load_util import load_ames_housing
 from ludwig.automl import auto_train
 
-higgs_df = load_higgs()
+ames_housing_df = load_ames_housing()
 
 auto_train_results = auto_train(
-    dataset=higgs_df,
-    target='label',
-    time_limit_s=14400,
+    dataset=ames_housing_df,
+    target='SalePrice',
+    time_limit_s=3600,
     tune_for_memory=False
 )
 

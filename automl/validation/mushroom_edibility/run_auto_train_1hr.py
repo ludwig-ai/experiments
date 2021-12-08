@@ -9,7 +9,7 @@ mushroom_edibility_df = load_mushroom_edibility()
 auto_train_results = auto_train(
     dataset=mushroom_edibility_df,
     target='class',
-    time_limit_s=7200,
+    time_limit_s=3600,
     tune_for_memory=False
 )
 

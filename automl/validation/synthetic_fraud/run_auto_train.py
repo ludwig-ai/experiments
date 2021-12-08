@@ -1,10 +1,10 @@
 import logging
 import pprint
 
-from ludwig.datasets import synthetic_fraud
+from load_util import load_synthetic_fraud
 from ludwig.automl import auto_train
 
-synthetic_fraud_df = synthetic_fraud.load()
+synthetic_fraud_df = load_synthetic_fraud()
 
 auto_train_results = auto_train(
     dataset=synthetic_fraud_df,
