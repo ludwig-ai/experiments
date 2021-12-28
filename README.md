@@ -31,4 +31,7 @@ Each __dataset__ subdirectory contains the following scripts and configuration f
   * Automatically generate and run configuration for hyperparameter search via auto_train API w/2hr time limit
     * Script: **run_auto_train_2hr.py**
     * Output: **hyperopt_statistics.json.2hr**
+  * Automatically generate and run configuration for hyperparameter search via auto_train API w/4hr time limit
+    * Script: **run_auto_train_4hr.py**
+    * Output: **hyperopt_statistics.json.4hr**
 
