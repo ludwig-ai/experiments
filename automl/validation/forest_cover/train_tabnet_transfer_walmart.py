@@ -9,7 +9,7 @@ model = LudwigModel(
     backend="local",
 )
 
-forest_cover_df = forest_cover.load()
+forest_cover_df = forest_cover.load(use_tabnet_split=True)
 model.train(
     dataset=forest_cover_df,
     experiment_name='forest_cover_tabnet_transfer_walmart',
