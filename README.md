@@ -1,7 +1,10 @@
 # experiments
-Reproducible benchmark experiments for Ludwig
+Reproducible benchmark experiment scripts and results for Ludwig
 
-The experiments for automl are in the __automl__ directory.
+Utilities for experiments are in the __utils__ directory.
+* __best_hyperopt_statistics.py__ fetches from the specified hyperopt_statistics.json file the combined loss and specified metric for the best model found by the hyperparameter search.
+
+Scripts and results for automl experiments are in the __automl__ directory.
 * The __heuristics__ subdirectory contains subdirectories for each dataset used to run extensive hyperparameter searches from which to derive automl heuristics.
 * The __validation__ subdirectory contains subdirectories for each dataset used to validate the derived heuristics.
 
