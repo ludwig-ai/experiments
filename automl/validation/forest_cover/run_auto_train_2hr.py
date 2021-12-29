@@ -4,7 +4,7 @@ import pprint
 from ludwig.datasets import forest_cover
 from ludwig.automl import auto_train
 
-forest_cover_df = forest_cover.load()
+forest_cover_df = forest_cover.load(use_tabnet_split=True)
 
 auto_train_results = auto_train(
     dataset=forest_cover_df,
