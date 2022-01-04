@@ -6,6 +6,7 @@ with open(sys.argv[1]) as json_file:
     hyperopt_stats = json.load(json_file)
 
 metric_score = hyperopt_stats["hyperopt_results"][0]["metric_score"]
+parameters = hyperopt_stats["hyperopt_results"][0]["parameters"]
 
 vali_stats = hyperopt_stats["hyperopt_results"][0]["training_stats"]["validation"]
 combined_losses = vali_stats["combined"]["loss"]
@@ -15,6 +16,7 @@ for ind in range(len(combined_losses)):
         ind_offset = ind
         break
 print("best metric_score offset in validation", ind_offset)
+print("best metric_score hyperparameters", parameters)
 
 test_stats = hyperopt_stats["hyperopt_results"][0]["training_stats"]["test"]
 test_loss = test_stats["combined"]["loss"][ind_offset]
