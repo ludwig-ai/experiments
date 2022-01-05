@@ -12,7 +12,7 @@ auto_train_results = auto_train(
     time_limit_s=3600,
     tune_for_memory=False,
     output_directory='s3://predibase-runs/nodeless/forest_cover/hours1/',
-    user_config={'hyperopt': {'executor': {'max_concurrent_trials': 3, 'gpu_resources_per_trial': 1, 'cpu_resources_per_trial': 4}, 'sampler': {'search_alg': {'type': 'hyperopt', 'random_state_seed': 42}}}},
+    user_config={'hyperopt': {'executor': {'max_concurrent_trials': 3, 'gpu_resources_per_trial': 1, 'cpu_resources_per_trial': 4}}},
 )
 
 pprint.pprint(auto_train_results)
