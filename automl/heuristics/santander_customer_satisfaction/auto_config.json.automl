@@ -78,6 +78,8 @@
                                         'reduction_factor': 5,
                                         'time_attr': 'time_total_s',
                                         'type': 'async_hyperband'},
+                          'search_alg': {'random_state_seed': 42,
+                                         'type': 'hyperopt'},
                           'type': 'ray'}},
  'input_features': [{'column': 'var3', 'name': 'var3', 'type': 'numerical'},
                     {'column': 'var15', 'name': 'var15', 'type': 'numerical'},
