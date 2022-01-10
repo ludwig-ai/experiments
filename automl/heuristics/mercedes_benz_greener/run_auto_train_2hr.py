@@ -1,14 +1,14 @@
 import logging
 import pprint
 
-from load_util import load_otto_group_product
+from load_util import load_mercedes_benz_greener
 from ludwig.automl import auto_train
 
-otto_group_product_df = load_otto_group_product()
+mercedes_benz_greener_df = load_mercedes_benz_greener()
 
 auto_train_results = auto_train(
-    dataset=otto_group_product_df,
-    target='target',
+    dataset=mercedes_benz_greener_df,
+    target='y',
     time_limit_s=7200,
     tune_for_memory=False
 )
