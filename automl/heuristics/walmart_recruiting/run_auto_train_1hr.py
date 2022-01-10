@@ -10,7 +10,8 @@ auto_train_results = auto_train(
     dataset=walmart_recruiting_df,
     target='TripType',
     time_limit_s=3600,
-    tune_for_memory=False
+    tune_for_memory=False,
+    user_config={'output_features': [{'column': 'TripType', 'name': 'TripType', 'type': 'category'}]}
 )
 
 pprint.pprint(auto_train_results)

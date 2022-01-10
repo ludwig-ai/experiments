@@ -99,7 +99,7 @@
                      'type': 'numerical'}],
  'output_features': [{'column': 'TripType',
                       'name': 'TripType',
-                      'type': 'numerical'}],
+                      'type': 'category'}],
  'training': {'batch_size': 'auto',
               'decay': True,
               'decay_rate': 0.95,
