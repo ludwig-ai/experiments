@@ -5,11 +5,14 @@ hyperopt_stats = {}
 with open(sys.argv[1]) as json_file:
     hyperopt_stats = json.load(json_file)
 
+metric = hyperopt_stats["hyperopt_config"]["metric"]
+output_feature = hyperopt_stats["hyperopt_config"]["output_feature"]
+
 metric_score = hyperopt_stats["hyperopt_results"][0]["metric_score"]
 parameters = hyperopt_stats["hyperopt_results"][0]["parameters"]
 
 vali_stats = hyperopt_stats["hyperopt_results"][0]["training_stats"]["validation"]
-combined_losses = vali_stats["combined"]["loss"]
+combined_losses = vali_stats[output_feature][metric]
 ind_offset = -1
 for ind in range(len(combined_losses)):
     if combined_losses[ind] == metric_score:
@@ -19,13 +22,13 @@ print("best metric_score offset in validation", ind_offset)
 print("best metric_score hyperparameters", parameters)
 
 test_stats = hyperopt_stats["hyperopt_results"][0]["training_stats"]["test"]
-test_loss = test_stats["combined"]["loss"][ind_offset]
+test_loss = test_stats[output_feature][metric][ind_offset]
 print("offset metric_score in test ", test_loss)
 
 print("offset metric_score in vali ", metric_score)
 
 train_stats = hyperopt_stats["hyperopt_results"][0]["training_stats"]["training"]
-train_loss = train_stats["combined"]["loss"][ind_offset]
+train_loss = train_stats[output_feature][metric][ind_offset]
 print("offset metric_score in train", train_loss)
 
 metric_of_interest = sys.argv[2]
