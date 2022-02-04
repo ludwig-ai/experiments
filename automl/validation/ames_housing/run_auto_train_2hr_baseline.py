@@ -12,7 +12,6 @@ auto_train_results = auto_train(
     time_limit_s=7200,
     tune_for_memory=False,
     output_directory='s3://predibase-elotl/baseline/ames_housing/hours2/',
-    user_config={'hyperopt': {'executor': {'max_concurrent_trials': 3}, 'sampler': {'search_alg': {'type': 'hyperopt', 'random_state_seed': 42}}}},
 )
 
 pprint.pprint(auto_train_results)
