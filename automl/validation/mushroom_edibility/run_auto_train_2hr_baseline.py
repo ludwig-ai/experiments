@@ -11,7 +11,7 @@ auto_train_results = auto_train(
     target='class',
     time_limit_s=7200,
     tune_for_memory=False,
-    output_directory='s3://predibase-elotl/nodeless/mushroom_edibility/hours2/',
+    output_directory='s3://predibase-elotl/baseline/mushroom_edibility/hours2/',
 )
 
 pprint.pprint(auto_train_results)
