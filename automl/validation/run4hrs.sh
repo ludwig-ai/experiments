@@ -18,3 +18,19 @@ cd synthetic_fraud
 python3 run_auto_train_4hr.py >run.4hr 2>&1
 cd ..
 #
+cd protein
+python3 run_auto_train_4hr.py >run.4hr 2>&1
+cd ..
+#
+cd naval
+python3 run_auto_train_4hr.py >run.4hr 2>&1
+cd ..
+#
+cd connect4
+python3 run_auto_train_4hr.py >run.4hr 2>&1
+cd ..
+#
+cd numerai28.6
+python3 run_auto_train_4hr.py >run.4hr 2>&1
+cd ..
+#
