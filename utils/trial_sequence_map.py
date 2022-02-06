@@ -41,11 +41,12 @@ for index in range(1, len(sys.argv)):
                 if min_trial_start_time == None or last_current_time_unix < min_trial_start_time:
                     min_trial_start_time = last_current_time_unix
             if trial_name in trial_dict and trial_status == 'TERMINATED':
-                trial_duration = cols[16].strip()
-                if len(trial_duration) == 0:
-                    trial_dict[trial_name]['duration'] = '0'
-                else:
-                    trial_dict[trial_name]['duration'] = trial_duration
+                if 'duration' not in trial_dict[trial_name]:
+                    trial_duration = cols[16].strip()
+                    if len(trial_duration) == 0:
+                        trial_dict[trial_name]['duration'] = last_current_time_unix - trial_dict[trial_name]['start_time']
+                    else:
+                        trial_dict[trial_name]['duration'] = trial_duration
 
 print("Unix time of first trial start:", min_trial_start_time)
 
@@ -54,18 +55,19 @@ location_dict = {}
 with open('trialruns.csv', 'w') as f:
     print("trial,starttime,runtime,location", file=f)
     for key in trial_dict:
-        duration = trial_dict[key]['duration']
-        if duration != '0':
-            location = trial_dict[key]['loc']
-            start_offset = trial_dict[key]['start_time'] - min_trial_start_time
-            if 'dataset' not in trial_dict[key]:
-                trial_key = trial_dict[key]['hours'] + "/" + key
-            else:
-                trial_key = trial_dict[key]['dataset'] + "/" + trial_dict[key]['hours'] + "/" + key
-            print("{0},{1},{2},{3}".format(trial_key, start_offset, duration, location), file=f)
-            if location not in location_dict:
-                location_dict[location] = []
-            location_dict[location].append({'starttime': start_offset, 'runtime': duration, 'trial': trial_key})
+        if 'duration' in trial_dict[key]:
+            duration = trial_dict[key]['duration']
+            if duration != '0':
+                location = trial_dict[key]['loc']
+                start_offset = trial_dict[key]['start_time'] - min_trial_start_time
+                if 'dataset' not in trial_dict[key]:
+                    trial_key = trial_dict[key]['hours'] + "/" + key
+                else:
+                    trial_key = trial_dict[key]['dataset'] + "/" + trial_dict[key]['hours'] + "/" + key
+                print("{0},{1},{2},{3}".format(trial_key, start_offset, duration, location), file=f)
+                if location not in location_dict:
+                    location_dict[location] = []
+                location_dict[location].append({'starttime': start_offset, 'runtime': duration, 'trial': trial_key})
 
 location_order_dict = {}
 for loc_key in location_dict:
