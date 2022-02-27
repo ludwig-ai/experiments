@@ -2,11 +2,13 @@ import pandas as pd
 
 from ludwig.datasets import dbpedia
 
-def load_dbpedia():
+def load_dbpedia(include_title: bool = False):
     dbpedia_df = dbpedia.load(split=False)
 
     # Concatenate title and description to produce single column for Text AutoML
-    dbpedia_df["content"] = dbpedia_df["title"] + " " + dbpedia_df["content"]
+    if include_title:
+        dbpedia_df["content"] = dbpedia_df["title"] + " " + dbpedia_df["content"]
+
     dbpedia_df.drop("title", axis=1, inplace=True)
 
     if "split" in dbpedia_df.columns:

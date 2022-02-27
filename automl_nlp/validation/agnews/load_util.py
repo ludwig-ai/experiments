@@ -2,11 +2,13 @@ import pandas as pd
 
 from ludwig.datasets import agnews
 
-def load_agnews():
+def load_agnews(include_title: bool = False):
     agnews_df = agnews.load(split=False)
 
     # Concatenate title and description to produce single column for Text AutoML
-    agnews_df["description"] = agnews_df["title"] + " " + agnews_df["description"]
+    if include_title:
+        agnews_df["description"] = agnews_df["title"] + " " + agnews_df["description"]
+
     agnews_df.drop("title", axis=1, inplace=True)
 
     if "split" in agnews_df.columns:
