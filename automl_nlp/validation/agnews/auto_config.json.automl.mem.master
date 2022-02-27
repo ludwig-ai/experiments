@@ -1,0 +1,47 @@
+[2m[36m(memory_tune_config pid=1060)[0m Using full dataframe
+[2m[36m(memory_tune_config pid=1060)[0m Building dataset (it may take a while)
+[2m[36m(memory_tune_config pid=1060)[0m Building dataset: DONE
+[2m[36m(memory_tune_config pid=1060)[0m Writing preprocessed training set cache
+[2m[36m(memory_tune_config pid=1060)[0m Writing preprocessed test set cache
+[2m[36m(memory_tune_config pid=1060)[0m Writing preprocessed validation set cache
+[2m[36m(memory_tune_config pid=1060)[0m Writing train set metadata
+[2m[36m(memory_tune_config pid=1060)[0m huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+[2m[36m(memory_tune_config pid=1060)[0m To disable this warning, you can either:
+[2m[36m(memory_tune_config pid=1060)[0m 	- Avoid using `tokenizers` before the fork if possible
+[2m[36m(memory_tune_config pid=1060)[0m 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+[2m[36m(memory_tune_config pid=1060)[0m huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+[2m[36m(memory_tune_config pid=1060)[0m To disable this warning, you can either:
+[2m[36m(memory_tune_config pid=1060)[0m 	- Avoid using `tokenizers` before the fork if possible
+[2m[36m(memory_tune_config pid=1060)[0m 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+[2m[36m(memory_tune_config pid=1060)[0m Checking model mem use 168170626560 against memory size 15842934784.0
+[2m[36m(memory_tune_config pid=1060)[0m Checking model mem use 84085313280 against memory size 15842934784.0
+[2m[36m(memory_tune_config pid=1060)[0m Checking model mem use 42042656640 against memory size 15842934784.0
+[2m[36m(memory_tune_config pid=1060)[0m Checking model mem use 21021328320 against memory size 15842934784.0
+{'hyperopt': {'executor': {'cpu_resources_per_trial': 8,
+                           'gpu_resources_per_trial': 1,
+                           'time_budget_s': 7200,
+                           'type': 'ray'},
+              'parameters': {'trainer.batch_size': {'categories': [8],
+                                                    'space': 'choice'},
+                             'trainer.learning_rate': {'lower': 2e-05,
+                                                       'space': 'loguniform',
+                                                       'type': 'float',
+                                                       'upper': 5e-05}},
+              'sampler': {'num_samples': 10,
+                          'scheduler': {'grace_period': 72,
+                                        'max_t': 7200,
+                                        'reduction_factor': 5,
+                                        'time_attr': 'time_total_s',
+                                        'type': 'async_hyperband'},
+                          'search_alg': {'random_state_seed': 42,
+                                         'type': 'hyperopt'},
+                          'type': 'ray'}},
+ 'input_features': [{'column': 'description',
+                     'encoder': 'bert',
+                     'name': 'description',
+                     'type': 'text'}],
+ 'output_features': [{'column': 'class_index',
+                      'name': 'class_index',
+                      'type': 'category'}],
+ 'trainer': {'batch_size': 'auto', 'learning_rate': 'auto'}}
+[2m[36m(memory_tune_config pid=1060)[0m Checking model mem use 10510664160 against memory size 15842934784.0
