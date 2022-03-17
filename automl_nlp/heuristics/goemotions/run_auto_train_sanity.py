@@ -10,7 +10,7 @@ auto_train_results = auto_train(
     dataset=goemotions_df,
     target='emotion_ids',
     time_limit_s=360,
-    tune_for_memory=False,
+    tune_for_memory=True,
     user_config={'output_features': [{'column': 'emotion_ids', 'name': 'emotion_ids', 'type': 'set'}]}
 )
 
