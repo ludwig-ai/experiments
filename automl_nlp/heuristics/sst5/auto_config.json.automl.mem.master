@@ -1,3 +1,4 @@
+Note: NumExpr detected 16 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
 [2m[36m(pid=None)[0m Note: NumExpr detected 16 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
 [2m[36m(pid=None)[0m Note: NumExpr detected 16 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
 [2m[36m(memory_tune_config pid=None)[0m Using full dataframe
@@ -15,10 +16,7 @@
 [2m[36m(memory_tune_config pid=None)[0m To disable this warning, you can either:
 [2m[36m(memory_tune_config pid=None)[0m 	- Avoid using `tokenizers` before the fork if possible
 [2m[36m(memory_tune_config pid=None)[0m 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-[2m[36m(memory_tune_config pid=None)[0m Checking model estimated mem use 42045609600.0 against memory size 15842934784.0
-[2m[36m(memory_tune_config pid=None)[0m Checking model estimated mem use 42374090925.0 against memory size 15842934784.0
-[2m[36m(memory_tune_config pid=None)[0m Checking model estimated mem use 21187045462.5 against memory size 15842934784.0
-[2m[36m(memory_tune_config pid=None)[0m Checking model estimated mem use 10593522731.25 against memory size 15842934784.0
+[2m[36m(memory_tune_config pid=None)[0m Checking model estimated mem use 18722252034.0 against memory size 15842934784.0
 {'hyperopt': {'executor': {'cpu_resources_per_trial': 16,
                            'gpu_resources_per_trial': 1,
                            'time_budget_s': 7200,
@@ -26,7 +24,7 @@
               'goal': 'maximize',
               'metric': 'accuracy',
               'output_feature': 'label',
-              'parameters': {'trainer.batch_size': {'categories': [16],
+              'parameters': {'trainer.batch_size': {'categories': [16, 32, 64],
                                                     'space': 'choice'},
                              'trainer.learning_rate': {'categories': [2e-05,
                                                                       3e-05],
@@ -40,12 +38,12 @@
                           'search_alg': {'random_state_seed': 42,
                                          'type': 'hyperopt'},
                           'type': 'ray'}},
- 'input_features': [{'column': 'content',
+ 'input_features': [{'column': 'sentence',
                      'encoder': 'bert',
-                     'name': 'content',
+                     'name': 'sentence',
                      'type': 'text'}],
  'output_features': [{'column': 'label', 'name': 'label', 'type': 'category'}],
- 'preprocessing': {'text': {'word_sequence_length_limit': 126}},
+ 'preprocessing': {'text': {'word_sequence_length_limit': 55}},
  'trainer': {'batch_size': 'auto',
              'epochs': 5,
              'learning_rate': 'auto',
@@ -53,3 +51,4 @@
              'optimizer': {'type': 'adamw'},
              'validation_field': 'label',
              'validation_metric': 'accuracy'}}
+[2m[36m(memory_tune_config pid=None)[0m Checking model estimated mem use 11167659108.0 against memory size 15842934784.0
