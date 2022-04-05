@@ -1,14 +1,14 @@
 import logging
 import pprint
 
-from load_util import load_ohsumed_cmu
+from load_util import load_ohsumed_7400
 from ludwig.automl import auto_train
 
-ohsumed_cmu_df = load_ohsumed_cmu()
+ohsumed_7400_df = load_ohsumed_7400()
 
 auto_train_results = auto_train(
-    dataset=ohsumed_cmu_df,
-    target='class',
+    dataset=ohsumed_7400_df,
+    target='intent',
     time_limit_s=360,
     tune_for_memory=False,
 )

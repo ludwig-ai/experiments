@@ -1,14 +1,14 @@
 import logging
 import pprint
 
-from ludwig.datasets import reuters_cmu
+from load_util import load_reuters_r8
 from ludwig.automl import create_auto_config
 
-reuters_cmu_df = reuters_cmu.load(split=False)
+reuters_r8_df = load_reuters_r8()
 
 auto_config = create_auto_config(
-    dataset=reuters_cmu_df,
-    target='class',
+    dataset=reuters_r8_df,
+    target='intent',
     time_limit_s=7200,
     tune_for_memory=False
 )

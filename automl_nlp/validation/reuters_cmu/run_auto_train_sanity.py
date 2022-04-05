@@ -1,13 +1,13 @@
 import logging
 import pprint
 
-from load_util import load_reuters
+from load_util import load_reuters_cmu
 from ludwig.automl import auto_train
 
-reuters_df = load_reuters()
+reuters_cmu_df = load_reuters_cmu()
 
 auto_train_results = auto_train(
-    dataset=reuters_df,
+    dataset=reuters_cmu_df,
     target='class',
     time_limit_s=360,
     tune_for_memory=False,
