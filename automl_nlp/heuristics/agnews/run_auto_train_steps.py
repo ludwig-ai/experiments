@@ -9,9 +9,9 @@ agnews_df = load_agnews()
 auto_train_results = auto_train(
     dataset=agnews_df,
     target='class_index',
-    time_limit_s=14400,
+    time_limit_s=7200,
     tune_for_memory=True,
-    user_config={'trainer': {'steps_per_checkpoint': 3375}}
+    user_config={'trainer': {'checkpoints_per_epoch': 2}}
 )
 
 pprint.pprint(auto_train_results)

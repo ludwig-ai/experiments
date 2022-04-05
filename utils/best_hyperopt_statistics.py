@@ -28,8 +28,9 @@ print("offset metric_score in test ", test_loss)
 print("offset metric_score in vali ", metric_score)
 
 train_stats = hyperopt_stats["hyperopt_results"][0]["training_stats"]["training"]
-train_loss = train_stats[output_feature][metric][ind_offset]
-print("offset metric_score in train", train_loss)
+if metric in train_stats[output_feature]:
+    train_loss = train_stats[output_feature][metric][ind_offset]
+    print("offset metric_score in train", train_loss)
 
 metric_of_interest = sys.argv[2]
 for key in test_stats.keys():
@@ -38,5 +39,6 @@ for key in test_stats.keys():
         print(metric_of_interest, "offset in test ", key, test_acc)
         vali_acc = vali_stats[key][metric_of_interest][ind_offset]
         print(metric_of_interest, "offset in vali ", key, vali_acc)
-        train_acc = train_stats[key][metric_of_interest][ind_offset]
-        print(metric_of_interest, "offset in train", key, train_acc)
+        if metric_of_interest in train_stats[key]:
+            train_acc = train_stats[key][metric_of_interest][ind_offset]
+            print(metric_of_interest, "offset in train", key, train_acc)
