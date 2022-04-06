@@ -1,7 +1,7 @@
 Note: NumExpr detected 16 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
-While assessing potential image in is_image(), encountered exception: Protocol not known: I suspect atheists are projecting their desires when they imagine Obama is one of their number.  Does anyone remember the crazy preacher with whom he was associated? 
+While assessing potential image in is_image() for column comment_text, encountered exception: Protocol not known: I suspect atheists are projecting their desires when they imagine Obama is one of their number.  Does anyone remember the crazy preacher with whom he was associated? 
 http
-While assessing potential image in is_image(), encountered exception: Protocol not known: I suspect atheists are projecting their desires when they imagine Obama is one of their number.  Does anyone remember the crazy preacher with whom he was associated? 
+While assessing potential image in is_image() for column comment_text, encountered exception: Protocol not known: I suspect atheists are projecting their desires when they imagine Obama is one of their number.  Does anyone remember the crazy preacher with whom he was associated? 
 http
 [2m[36m(pid=None)[0m Note: NumExpr detected 16 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
 [2m[36m(pid=None)[0m Note: NumExpr detected 16 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
@@ -49,7 +49,7 @@ http
                      'name': 'comment_text',
                      'type': 'text'}],
  'output_features': [{'column': 'label', 'name': 'label', 'type': 'category'}],
- 'preprocessing': {'text': {'word_sequence_length_limit': 128}},
+ 'preprocessing': {'text': {'max_sequence_length': 128}},
  'trainer': {'batch_size': 'auto',
              'epochs': 5,
              'learning_rate': 'auto',

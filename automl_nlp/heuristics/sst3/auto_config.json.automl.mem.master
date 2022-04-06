@@ -43,7 +43,7 @@ Note: NumExpr detected 16 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing 
                      'name': 'sentence',
                      'type': 'text'}],
  'output_features': [{'column': 'label', 'name': 'label', 'type': 'category'}],
- 'preprocessing': {'text': {'word_sequence_length_limit': 55}},
+ 'preprocessing': {'text': {'max_sequence_length': 55}},
  'trainer': {'batch_size': 'auto',
              'epochs': 5,
              'learning_rate': 'auto',

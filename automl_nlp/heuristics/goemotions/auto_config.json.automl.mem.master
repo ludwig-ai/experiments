@@ -46,7 +46,7 @@
  'output_features': [{'column': 'emotion_ids',
                       'name': 'emotion_ids',
                       'type': 'set'}],
- 'preprocessing': {'text': {'word_sequence_length_limit': 40}},
+ 'preprocessing': {'text': {'max_sequence_length': 40}},
  'trainer': {'batch_size': 'auto',
              'epochs': 5,
              'learning_rate': 'auto',

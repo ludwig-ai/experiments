@@ -24,7 +24,7 @@ Note: NumExpr detected 16 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing 
                            'time_budget_s': 7200,
                            'type': 'ray'},
               'goal': 'maximize',
-              'metric': 'accuracy',
+              'metric': 'roc_auc',
               'output_feature': 'isHate',
               'parameters': {'trainer.batch_size': {'categories': [16],
                                                     'space': 'choice'},
@@ -45,12 +45,12 @@ Note: NumExpr detected 16 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing 
                      'name': 'comment',
                      'type': 'text'}],
  'output_features': [{'column': 'isHate', 'name': 'isHate', 'type': 'binary'}],
- 'preprocessing': {'text': {'word_sequence_length_limit': 128}},
+ 'preprocessing': {'text': {'max_sequence_length': 128}},
  'trainer': {'batch_size': 'auto',
              'epochs': 5,
              'learning_rate': 'auto',
              'learning_rate_warmup_epochs': 0,
              'optimizer': {'type': 'adamw'},
              'validation_field': 'isHate',
-             'validation_metric': 'accuracy'}}
+             'validation_metric': 'roc_auc'}}
 [2m[36m(memory_tune_config pid=None)[0m Checking model estimated mem use 10592481120.75 against memory size 15842934784.0
