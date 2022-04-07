@@ -1,15 +1,15 @@
 import logging
 import pprint
 
-from load_util import load_agnews
+from load_util import load_yelp_reviews
 from ludwig.automl import auto_train
 
-agnews_df = load_agnews()
+yelp_reviews_df = load_yelp_reviews()
 
 auto_train_results = auto_train(
-    dataset=agnews_df,
-    target='class_index',
-    time_limit_s=7200,
+    dataset=yelp_reviews_df,
+    target='label',
+    time_limit_s=10800,
     tune_for_memory=True
 )
 

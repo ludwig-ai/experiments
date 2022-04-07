@@ -10,6 +10,10 @@ cd yelp_polarity
 python3 run_auto_train_standard.py >run.standard 2>&1
 cd ..
 #
+cd yelp_reviews
+python3 run_auto_train_standard.py >run.standard 2>&1
+cd ..
+#
 cd goemotions
 python3 run_auto_train_standard.py >run.standard 2>&1
 cd ..
