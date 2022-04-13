@@ -10,7 +10,7 @@ auto_train_results = auto_train(
     dataset=irony_df,
     target='label',
     time_limit_s=360,
-    tune_for_memory=False,
+    tune_for_memory=True,
     user_config={'output_features': [{'column': 'label', 'name': 'label', 'type': 'category'}]}
 )
 
