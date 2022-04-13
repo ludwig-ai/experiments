@@ -10,6 +10,8 @@ def load_agnews(include_title: bool = False):
         agnews_df["description"] = agnews_df["title"] + " " + agnews_df["description"]
 
     agnews_df.drop("title", axis=1, inplace=True)
+    if "class" in agnews_df.columns:
+        agnews_df.drop("class", axis=1, inplace=True)
 
     if "split" in agnews_df.columns:
         train_df = agnews_df[agnews_df["split"] == 0]
