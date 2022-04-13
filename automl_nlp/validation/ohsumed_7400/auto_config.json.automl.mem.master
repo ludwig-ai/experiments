@@ -1,0 +1,57 @@
+[2m[36m(pid=16109)[0m Note: NumExpr detected 16 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+[2m[36m(pid=16110)[0m Note: NumExpr detected 16 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+[2m[36m(memory_tune_config pid=16110)[0m Using full dataframe
+[2m[36m(memory_tune_config pid=16110)[0m Building dataset (it may take a while)
+[2m[36m(memory_tune_config pid=16110)[0m Building dataset: DONE
+[2m[36m(memory_tune_config pid=16110)[0m Writing preprocessed training set cache
+[2m[36m(memory_tune_config pid=16110)[0m Writing preprocessed test set cache
+[2m[36m(memory_tune_config pid=16110)[0m Writing preprocessed validation set cache
+[2m[36m(memory_tune_config pid=16110)[0m Writing train set metadata
+[2m[36m(memory_tune_config pid=16110)[0m huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+[2m[36m(memory_tune_config pid=16110)[0m To disable this warning, you can either:
+[2m[36m(memory_tune_config pid=16110)[0m 	- Avoid using `tokenizers` before the fork if possible
+[2m[36m(memory_tune_config pid=16110)[0m 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+[2m[36m(memory_tune_config pid=16110)[0m huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+[2m[36m(memory_tune_config pid=16110)[0m To disable this warning, you can either:
+[2m[36m(memory_tune_config pid=16110)[0m 	- Avoid using `tokenizers` before the fork if possible
+[2m[36m(memory_tune_config pid=16110)[0m 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+[2m[36m(memory_tune_config pid=16110)[0m Checking model estimated mem use 42705271440.0 against memory size 15842934784.0
+[2m[36m(memory_tune_config pid=16110)[0m Checking model estimated mem use 42376769352.0 against memory size 15842934784.0
+[2m[36m(memory_tune_config pid=16110)[0m Checking model estimated mem use 21188384676.0 against memory size 15842934784.0
+{'hyperopt': {'executor': {'cpu_resources_per_trial': 16,
+                           'gpu_resources_per_trial': 1,
+                           'time_budget_s': 7200,
+                           'type': 'ray'},
+              'goal': 'maximize',
+              'metric': 'accuracy',
+              'output_feature': 'intent',
+              'parameters': {'trainer.batch_size': {'categories': [16],
+                                                    'space': 'choice'},
+                             'trainer.learning_rate': {'categories': [2e-05,
+                                                                      3e-05],
+                                                       'space': 'choice'}},
+              'sampler': {'num_samples': 5,
+                          'scheduler': {'grace_period': 72,
+                                        'max_t': 7200,
+                                        'reduction_factor': 5,
+                                        'time_attr': 'time_total_s',
+                                        'type': 'async_hyperband'},
+                          'search_alg': {'random_state_seed': 42,
+                                         'type': 'hyperopt'},
+                          'type': 'ray'}},
+ 'input_features': [{'column': 'text',
+                     'encoder': 'bert',
+                     'name': 'text',
+                     'type': 'text'}],
+ 'output_features': [{'column': 'intent',
+                      'name': 'intent',
+                      'type': 'category'}],
+ 'preprocessing': {'text': {'max_sequence_length': 128}},
+ 'trainer': {'batch_size': 'auto',
+             'epochs': 5,
+             'learning_rate': 'auto',
+             'learning_rate_warmup_epochs': 0,
+             'optimizer': {'type': 'adamw'},
+             'validation_field': 'intent',
+             'validation_metric': 'accuracy'}}
+[2m[36m(memory_tune_config pid=16110)[0m Checking model estimated mem use 10594192338.0 against memory size 15842934784.0
