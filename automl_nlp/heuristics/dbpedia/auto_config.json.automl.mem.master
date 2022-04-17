@@ -1,24 +1,25 @@
-[2m[36m(pid=None)[0m Note: NumExpr detected 16 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
-[2m[36m(pid=None)[0m Note: NumExpr detected 16 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
-[2m[36m(memory_tune_config pid=None)[0m Using full dataframe
-[2m[36m(memory_tune_config pid=None)[0m Building dataset (it may take a while)
-[2m[36m(memory_tune_config pid=None)[0m Building dataset: DONE
-[2m[36m(memory_tune_config pid=None)[0m Writing preprocessed training set cache
-[2m[36m(memory_tune_config pid=None)[0m Writing preprocessed test set cache
-[2m[36m(memory_tune_config pid=None)[0m Writing preprocessed validation set cache
-[2m[36m(memory_tune_config pid=None)[0m Writing train set metadata
-[2m[36m(memory_tune_config pid=None)[0m huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
-[2m[36m(memory_tune_config pid=None)[0m To disable this warning, you can either:
-[2m[36m(memory_tune_config pid=None)[0m 	- Avoid using `tokenizers` before the fork if possible
-[2m[36m(memory_tune_config pid=None)[0m 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-[2m[36m(memory_tune_config pid=None)[0m huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
-[2m[36m(memory_tune_config pid=None)[0m To disable this warning, you can either:
-[2m[36m(memory_tune_config pid=None)[0m 	- Avoid using `tokenizers` before the fork if possible
-[2m[36m(memory_tune_config pid=None)[0m 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-[2m[36m(memory_tune_config pid=None)[0m Checking model estimated mem use 42045609600.0 against memory size 15842934784.0
-[2m[36m(memory_tune_config pid=None)[0m Checking model estimated mem use 42374090925.0 against memory size 15842934784.0
-[2m[36m(memory_tune_config pid=None)[0m Checking model estimated mem use 21187045462.5 against memory size 15842934784.0
-[2m[36m(memory_tune_config pid=None)[0m Checking model estimated mem use 10593522731.25 against memory size 15842934784.0
+Connecting to existing Ray cluster at address: 172.31.12.213:6379
+[2m[36m(pid=2027)[0m Note: NumExpr detected 16 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+[2m[36m(pid=2026)[0m Note: NumExpr detected 16 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+[2m[36m(memory_tune_config pid=2027)[0m Using full dataframe
+[2m[36m(memory_tune_config pid=2027)[0m Building dataset (it may take a while)
+[2m[36m(memory_tune_config pid=2027)[0m Building dataset: DONE
+[2m[36m(memory_tune_config pid=2027)[0m Writing preprocessed training set cache
+[2m[36m(memory_tune_config pid=2027)[0m Writing preprocessed test set cache
+[2m[36m(memory_tune_config pid=2027)[0m Writing preprocessed validation set cache
+[2m[36m(memory_tune_config pid=2027)[0m Writing train set metadata
+[2m[36m(memory_tune_config pid=2027)[0m huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+[2m[36m(memory_tune_config pid=2027)[0m To disable this warning, you can either:
+[2m[36m(memory_tune_config pid=2027)[0m 	- Avoid using `tokenizers` before the fork if possible
+[2m[36m(memory_tune_config pid=2027)[0m 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+[2m[36m(memory_tune_config pid=2027)[0m huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+[2m[36m(memory_tune_config pid=2027)[0m To disable this warning, you can either:
+[2m[36m(memory_tune_config pid=2027)[0m 	- Avoid using `tokenizers` before the fork if possible
+[2m[36m(memory_tune_config pid=2027)[0m 	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+[2m[36m(memory_tune_config pid=2027)[0m Checking model estimated mem use 42045609600.0 against memory size 15842934784.0
+[2m[36m(memory_tune_config pid=2027)[0m Checking model estimated mem use 42374090925.0 against memory size 15842934784.0
+[2m[36m(memory_tune_config pid=2027)[0m Checking model estimated mem use 21187045462.5 against memory size 15842934784.0
+[2m[36m(memory_tune_config pid=2027)[0m Checking model estimated mem use 10593522731.25 against memory size 15842934784.0
 {'hyperopt': {'executor': {'cpu_resources_per_trial': 16,
                            'gpu_resources_per_trial': 1,
                            'time_budget_s': 7200,
