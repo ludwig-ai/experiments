@@ -2,8 +2,12 @@ import pandas as pd
 
 from ludwig.datasets import amazon_reviews
 
-def load_amazon_reviews():
+def load_amazon_reviews(include_title: bool = False):
     amazon_reviews_df = amazon_reviews.load(split=False)
+
+    # Concatenate title and text to produce single column for Text AutoML
+    if include_title:
+        amazon_reviews_df["review_text"] = amazon_reviews_df["review_tile"] + " " + amazon_reviews_df["review_text"]
 
     amazon_reviews_df.drop("review_tile", axis=1, inplace=True)
 
