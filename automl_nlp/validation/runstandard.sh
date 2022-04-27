@@ -1,9 +1,9 @@
 cd amazon_review_polarity
-python3 run_auto_train_standard.py >run.standard 2>&1
+python3 run_auto_train_standard.title.py >run.standard 2>&1
 cd ..
 #
 cd amazon_reviews
-python3 run_auto_train_standard.py >run.standard 2>&1
+python3 run_auto_train_standard.title.py >run.standard 2>&1
 cd ..
 #
 cd bbcnews
