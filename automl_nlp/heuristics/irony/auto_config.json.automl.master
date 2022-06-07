@@ -1,10 +1,14 @@
-Note: NumExpr detected 16 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
-While assessing potential image in is_image(), encountered exception: Protocol not known: I suspect atheists are projecting their desires when they imagine Obama is one of their number.  Does anyone remember the crazy preacher with whom he was associated? 
+While assessing potential image in is_image() for column comment_text, encountered exception: Protocol not known: I suspect atheists are projecting their desires when they imagine Obama is one of their number.  Does anyone remember the crazy preacher with whom he was associated? 
 http
-While assessing potential image in is_image(), encountered exception: Protocol not known: I suspect atheists are projecting their desires when they imagine Obama is one of their number.  Does anyone remember the crazy preacher with whom he was associated? 
+While assessing potential image in is_image() for column comment_text, encountered exception: Protocol not known: I suspect atheists are projecting their desires when they imagine Obama is one of their number.  Does anyone remember the crazy preacher with whom he was associated? 
 http
-{'hyperopt': {'executor': {'cpu_resources_per_trial': 16,
-                           'gpu_resources_per_trial': 1,
+{'hyperopt': {'executor': {'cpu_resources_per_trial': 1,
+                           'num_samples': 5,
+                           'scheduler': {'grace_period': 72,
+                                         'max_t': 7200,
+                                         'reduction_factor': 5,
+                                         'time_attr': 'time_total_s',
+                                         'type': 'async_hyperband'},
                            'time_budget_s': 7200,
                            'type': 'ray'},
               'goal': 'maximize',
@@ -18,15 +22,7 @@ http
                              'trainer.learning_rate': {'categories': [2e-05,
                                                                       3e-05],
                                                        'space': 'choice'}},
-              'sampler': {'num_samples': 5,
-                          'scheduler': {'grace_period': 72,
-                                        'max_t': 7200,
-                                        'reduction_factor': 5,
-                                        'time_attr': 'time_total_s',
-                                        'type': 'async_hyperband'},
-                          'search_alg': {'random_state_seed': 42,
-                                         'type': 'hyperopt'},
-                          'type': 'ray'}},
+              'search_alg': {'random_state_seed': 42, 'type': 'hyperopt'}},
  'input_features': [{'column': 'comment_text',
                      'encoder': 'bert',
                      'name': 'comment_text',
