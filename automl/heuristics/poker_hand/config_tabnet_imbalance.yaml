@@ -1,0 +1,44 @@
+output_features:
+  - name: hand
+    type: category
+input_features:
+  - name: S1
+    type: category
+  - name: C1
+    type: number
+  - name: S2
+    type: category
+  - name: C2
+    type: number
+  - name: S3
+    type: category
+  - name: C3
+    type: number
+  - name: S4
+    type: category
+  - name: C4
+    type: number
+  - name: S5
+    type: category
+  - name: C5
+    type: number
+combiner:
+  type: tabnet
+  size: 16  # N_a
+  output_size: 128  # N_d
+  sparsity: 0.0  # lambda_sparse
+  bn_momentum: 0.98  # m_B
+  num_steps: 6  # N_steps
+  relaxation_factor: 1.0  # gamma
+  bn_virtual_bs: 512  # B_v 
+trainer:
+  batch_size: 256 # B
+  eval_batch_size: 0 # 65536 131072 262144 524288
+  epochs: 300
+  early_stop: 30
+  learning_rate: 0.01
+  decay: true
+  decay_steps: 8000
+  decay_rate: 0.8
+  validation_field: hand
+  validation_metric: accuracy

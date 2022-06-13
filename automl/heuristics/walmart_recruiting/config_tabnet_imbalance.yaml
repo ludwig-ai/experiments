@@ -1,0 +1,36 @@
+output_features:
+  - name: TripType
+    type: category
+input_features:
+  - name: VisitNumber
+    type: number
+  - name: Weekday
+    type: category
+  - name: Upc
+    type: number
+  - name: ScanCount
+    type: number
+  - name: DepartmentDescription
+    type: category
+  - name: FinelineNumber
+    type: number
+combiner:
+  type: tabnet
+  size: 32  # N_a
+  output_size: 128 # N_d
+  sparsity: 0.000001  # lambda_sparse
+  bn_momentum: 0.6  # m_B
+  num_steps: 4  # N_steps
+  relaxation_factor: 1.2  # gamma
+  bn_virtual_bs: 4096  # B_v 
+trainer:
+  batch_size: 8192 # B
+  eval_batch_size: 0 # 65536 131072 262144 524288
+  epochs: 300
+  early_stop: 30
+  learning_rate: 0.01
+  decay: true
+  decay_steps: 20000
+  decay_rate: 0.9
+  validation_field: TripType
+  validation_metric: accuracy

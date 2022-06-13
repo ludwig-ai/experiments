@@ -1,0 +1,48 @@
+input_features:
+  - name: Elevation
+    type: number
+  - name: Aspect
+    type: number
+  - name: Slope
+    type: number
+  - name: Horizontal_Distance_To_Hydrology
+    type: number
+  - name: Vertical_Distance_To_Hydrology
+    type: number
+  - name: Horizontal_Distance_To_Roadways
+    type: number
+  - name: Hillshade_9am
+    type: number
+  - name: Hillshade_Noon
+    type: number
+  - name: Hillshade_3pm
+    type: number
+  - name: Horizontal_Distance_To_Fire_Points
+    type: number
+  - name: Wilderness_Area
+    type: category
+  - name: Soil_Type
+    type: number
+output_features:
+  - name: Cover_Type
+    type: category
+combiner:
+  type: tabnet
+  size: 32  # N_a
+  output_size: 128  # N_d
+  sparsity: 0.000001  # lambda_sparse
+  bn_momentum: 0.6  # m_B
+  num_steps: 4  # N_steps
+  relaxation_factor: 1.2  # gamma
+  bn_virtual_bs: 4096  # B_v 
+trainer:
+  batch_size: 8192 # B
+  eval_batch_size: 8192 # 65536 131072 262144 524288
+  epochs: 300
+  early_stop: 30
+  learning_rate: 0.01
+  decay: true
+  decay_steps: 20000
+  decay_rate: 0.9
+  validation_field: Cover_Type
+  validation_metric: accuracy
