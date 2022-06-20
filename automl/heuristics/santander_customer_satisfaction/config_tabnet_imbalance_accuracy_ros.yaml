@@ -1110,6 +1110,8 @@ input_features:
   - column: var38
     name: var38
     type: number
+preprocessing:
+    oversample_minority: 1.00
 combiner:
   type: tabnet
   size: 24  # N_a
@@ -1129,4 +1131,4 @@ trainer:
   decay_steps: 10000
   decay_rate: 0.8
   validation_field: TARGET
-  validation_metric: roc_auc
+  validation_metric: accuracy

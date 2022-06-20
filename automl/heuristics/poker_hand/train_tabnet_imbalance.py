@@ -1,7 +1,7 @@
 import logging
 
 from ludwig.api import LudwigModel
-from ludwig.datasets import poker_hand
+from load_util import load_poker_hand
 
 model = LudwigModel(
     config='config_tabnet_imbalance.yaml',
@@ -9,7 +9,7 @@ model = LudwigModel(
     backend="local",
 )
 
-poker_hand_df, _, _ = poker_hand.load()
+poker_hand_df = load_poker_hand()
 model.experiment(
     dataset=poker_hand_df,
     experiment_name='poker_hand_tabnet_imbalance',

@@ -1,7 +1,7 @@
 import logging
 
 from ludwig.api import LudwigModel
-from ludwig.datasets import walmart_recruiting
+from load_util import load_walmart_recruiting
 
 model = LudwigModel(
     config='config_tabnet_imbalance.yaml',
@@ -9,7 +9,7 @@ model = LudwigModel(
     backend="local",
 )
 
-walmart_recruiting_df = walmart_recruiting.load()
+walmart_recruiting_df = load_walmart_recruiting()
 model.experiment(
     dataset=walmart_recruiting_df,
     experiment_name='walmart_recruiting_tabnet_imbalance',
