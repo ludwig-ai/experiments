@@ -1,17 +1,20 @@
 import logging
 import pprint
 
-from load_util import load_mercedes_benz_greener
 from ludwig.automl import auto_train
+from ludwig.datasets import mercedes_benz_greener
+from ludwig.utils.dataset_utils import get_repeatable_train_val_test_split
 
-mercedes_benz_greener_df = load_mercedes_benz_greener()
+mercedes_df = mercedes_benz_greener.load()
+mercedes_benz_greener_df = get_repeatable_train_val_test_split(mercedes_df, random_seed=42)
 
 auto_train_results = auto_train(
     dataset=mercedes_benz_greener_df,
     target='y',
     time_limit_s=3600,
     tune_for_memory=False,
-    use_reference_config=True
+    use_reference_config=True,
+    user_config={'preprocessing': {'split': {'column': 'split', 'type': 'fixed'}}},
 )
 
 pprint.pprint(auto_train_results)

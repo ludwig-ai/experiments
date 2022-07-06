@@ -175,7 +175,10 @@ input_features:
     name: ps_calc_20_bin
     type: binary
 preprocessing:
-    oversample_minority: 1.00
+  oversample_minority: 1.00
+  split:
+    type: fixed
+    column: split
 combiner:
   type: tabnet
   size: 32  # N_a

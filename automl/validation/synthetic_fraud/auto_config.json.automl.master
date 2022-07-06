@@ -1,3 +1,92 @@
+NumExpr defaulting to 8 threads.
+Importing GBM requirements failed. Not loading GBM model type. If you want to use GBM, install Ludwig's 'tree' extra.
+Importing GBM requirements failed. Not loading LightGBM trainer. If you want to use LightGBM, install Ludwig's 'tree' extra.
+ImportError (ray.py) from horovod.ray import RayExecutor failed with error: 
+	No module named 'horovod'
+Connecting to existing Ray cluster at address: 127.0.0.1:6379
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl/validation/synthetic_fraud/CASH_IN'
+While assessing potential image in is_image() for column type, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl/validation/synthetic_fraud/TRANSFER'
+While assessing potential image in is_image() for column type, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column type, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column type, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl/validation/synthetic_fraud/CASH_OUT'
+While assessing potential image in is_image() for column type, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column type, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column type, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column type, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column type, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column type, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl/validation/synthetic_fraud/C386091144'
+While assessing potential image in is_image() for column nameOrig, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl/validation/synthetic_fraud/C977405179'
+While assessing potential image in is_image() for column nameOrig, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl/validation/synthetic_fraud/C1091684896'
+While assessing potential image in is_image() for column nameOrig, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl/validation/synthetic_fraud/C300199504'
+While assessing potential image in is_image() for column nameOrig, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl/validation/synthetic_fraud/C1297572994'
+While assessing potential image in is_image() for column nameOrig, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl/validation/synthetic_fraud/C1341533880'
+While assessing potential image in is_image() for column nameOrig, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl/validation/synthetic_fraud/C1266699174'
+While assessing potential image in is_image() for column nameOrig, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl/validation/synthetic_fraud/C352219231'
+While assessing potential image in is_image() for column nameOrig, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl/validation/synthetic_fraud/C189878749'
+While assessing potential image in is_image() for column nameOrig, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl/validation/synthetic_fraud/C240784479'
+While assessing potential image in is_image() for column nameOrig, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl/validation/synthetic_fraud/C268784004'
+While assessing potential image in is_image() for column nameDest, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl/validation/synthetic_fraud/C1032483118'
+While assessing potential image in is_image() for column nameDest, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl/validation/synthetic_fraud/C1969901822'
+While assessing potential image in is_image() for column nameDest, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl/validation/synthetic_fraud/C591887141'
+While assessing potential image in is_image() for column nameDest, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl/validation/synthetic_fraud/C1998002208'
+While assessing potential image in is_image() for column nameDest, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl/validation/synthetic_fraud/C195684796'
+While assessing potential image in is_image() for column nameDest, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl/validation/synthetic_fraud/C1777623152'
+While assessing potential image in is_image() for column nameDest, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl/validation/synthetic_fraud/C1284002911'
+While assessing potential image in is_image() for column nameDest, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl/validation/synthetic_fraud/C828228192'
+While assessing potential image in is_image() for column nameDest, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl/validation/synthetic_fraud/C1891885863'
+While assessing potential image in is_image() for column nameDest, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column type, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column type, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column type, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column type, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column type, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column type, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column type, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column type, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column type, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column type, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column nameOrig, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column nameOrig, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column nameOrig, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column nameOrig, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column nameOrig, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column nameOrig, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column nameOrig, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column nameOrig, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column nameOrig, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column nameOrig, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column nameDest, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column nameDest, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column nameDest, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column nameDest, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column nameDest, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column nameDest, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column nameDest, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column nameDest, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column nameDest, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column nameDest, encountered exception: 'NoneType' object has no attribute 'tell'
 Imbalance in isFraud: minority/majority=0.0012924888191769902
 {'combiner': {'type': 'tabnet'},
  'hyperopt': {'executor': {'cpu_resources_per_trial': 1,
@@ -12,12 +101,12 @@ Imbalance in isFraud: minority/majority=0.0012924888191769902
               'goal': 'maximize',
               'metric': 'roc_auc',
               'output_feature': 'isFraud',
-              'parameters': {'combiner.bn_momentum': {'categories': [0.6,
-                                                                     0.7,
-                                                                     0.8,
-                                                                     0.9,
-                                                                     0.95,
-                                                                     0.98],
+              'parameters': {'combiner.bn_momentum': {'categories': [0.4,
+                                                                     0.3,
+                                                                     0.2,
+                                                                     0.1,
+                                                                     0.05,
+                                                                     0.02],
                                                       'space': 'choice'},
                              'combiner.bn_virtual_bs': {'categories': [256,
                                                                        512,
@@ -59,13 +148,6 @@ Imbalance in isFraud: minority/majority=0.0012924888191769902
                                                                   0.01,
                                                                   0.1],
                                                    'space': 'choice'},
-                             'trainer.batch_size': {'categories': [256,
-                                                                   512,
-                                                                   1024,
-                                                                   2048,
-                                                                   4096,
-                                                                   8192],
-                                                    'space': 'choice'},
                              'trainer.decay_rate': {'categories': [0.8,
                                                                    0.9,
                                                                    0.95],
@@ -82,7 +164,7 @@ Imbalance in isFraud: minority/majority=0.0012924888191769902
                                                                       0.025],
                                                        'space': 'choice'}},
               'search_alg': {'random_state_seed': 42, 'type': 'hyperopt'}},
- 'input_features': [{'column': 'step', 'name': 'step', 'type': 'category'},
+ 'input_features': [{'column': 'step', 'name': 'step', 'type': 'number'},
                     {'column': 'type', 'name': 'type', 'type': 'category'},
                     {'column': 'amount', 'name': 'amount', 'type': 'number'},
                     {'column': 'oldbalanceOrg',
@@ -106,6 +188,7 @@ Imbalance in isFraud: minority/majority=0.0012924888191769902
  'output_features': [{'column': 'isFraud',
                       'name': 'isFraud',
                       'type': 'binary'}],
+ 'preprocessing': {'split': {'column': 'split', 'type': 'fixed'}},
  'trainer': {'batch_size': 'auto',
              'decay': True,
              'decay_rate': 0.8,
@@ -113,7 +196,5 @@ Imbalance in isFraud: minority/majority=0.0012924888191769902
              'learning_rate': 'auto',
              'learning_rate_scaling': 'sqrt',
              'optimizer': {'type': 'adam'},
-             'tune_batch_size': {'substitute_with_max': True,
-                                 'type': 'bin_search'},
              'validation_field': 'isFraud',
              'validation_metric': 'roc_auc'}}

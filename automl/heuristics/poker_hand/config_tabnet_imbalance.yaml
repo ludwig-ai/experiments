@@ -22,6 +22,10 @@ input_features:
     type: category
   - name: C5
     type: number
+preprocessing:
+  split:
+    type: fixed
+    column: split
 combiner:
   type: tabnet
   size: 16  # N_a

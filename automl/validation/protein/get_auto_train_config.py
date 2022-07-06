@@ -1,16 +1,19 @@
 import logging
 import pprint
 
-from ludwig.datasets import protein
 from ludwig.automl import create_auto_config
+from ludwig.datasets import protein
+from ludwig.utils.dataset_utils import get_repeatable_train_val_test_split
 
-protein_df = protein.load()
+p_df = protein.load()
+protein_df = get_repeatable_train_val_test_split(p_df, random_seed=42)
 
 auto_config = create_auto_config(
     dataset=protein_df,
     target='RMSD',
     time_limit_s=7200,
-    tune_for_memory=False
+    tune_for_memory=False,
+    user_config={'preprocessing': {'split': {'column': 'split', 'type': 'fixed'}}},
 )
 
 pprint.pprint(auto_config)

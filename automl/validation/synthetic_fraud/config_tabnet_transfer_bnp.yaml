@@ -16,6 +16,10 @@ input_features:
     type: numerical
   - name: newbalanceDest
     type: numerical
+preprocessing:
+  split:
+    type: fixed
+    column: split
 combiner:
   type: tabnet
   size: 32  # N_a

@@ -1,3 +1,39 @@
+NumExpr defaulting to 8 threads.
+Importing GBM requirements failed. Not loading GBM model type. If you want to use GBM, install Ludwig's 'tree' extra.
+Importing GBM requirements failed. Not loading LightGBM trainer. If you want to use LightGBM, install Ludwig's 'tree' extra.
+ImportError (ray.py) from horovod.ray import RayExecutor failed with error: 
+	No module named 'horovod'
+Connecting to existing Ray cluster at address: 127.0.0.1:6379
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl_nlp/heuristics/dbpedia/ Abbott of Farnham E D Abbott Limited was a British coachbuilding business based in Farnham Surrey trading under that name from 1929. A major part of their output was under sub-contract to motor vehicle manufacturers. Their business closed in 1972.'
+While assessing potential image in is_image() for column content, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: "/Users/anne/ludwig/experiments/automl_nlp/heuristics/dbpedia/ Schwan-STABILO is a German maker of pens for writing colouring and cosmetics as well as markers and highlighters for office use. It is the world's largest manufacturer of highlighter pens Stabilo Boss."
+While assessing potential image in is_image() for column content, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl_nlp/heuristics/dbpedia/ Marvell Software Solutions Israel known as RADLAN Computer Communications Limited before 2007 is a wholly owned subsidiary of Marvell Technology Group that specializes in local area network (LAN) technologies.'
+While assessing potential image in is_image() for column content, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl_nlp/heuristics/dbpedia/ Bergan Mercy Medical Center is a hospital located in Omaha Nebraska. It is part of the Alegent Health System.'
+While assessing potential image in is_image() for column content, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl_nlp/heuristics/dbpedia/ The Unsigned Guide is an online contacts directory and careers guide for the UK music industry. Founded in 2003 and first published as a printed directory The Unsigned Guide became an online only resource in November 2011.'
+While assessing potential image in is_image() for column content, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 63] File name too long: '/Users/anne/ludwig/experiments/automl_nlp/heuristics/dbpedia/ The Rompetrol Group N.V. is a Romanian oil company that operates in many countries throughout Europe. The group is active primarily in refining marketing and trading with additional operations in exploration and production and other oil industry services such as drilling EPCM and transportation.'
+While assessing potential image in is_image() for column content, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 63] File name too long: "/Users/anne/ludwig/experiments/automl_nlp/heuristics/dbpedia/ Wave is the brand name for a suite of online small business software products. The legal company name is Wave Accounting Inc. Wave is headquartered in the Leslieville neighbourhood in Toronto Canada and is currently being used in 200 countries.The company's first product was a free online accounting software designed for businesses with 1-9 employees."
+While assessing potential image in is_image() for column content, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 63] File name too long: '/Users/anne/ludwig/experiments/automl_nlp/heuristics/dbpedia/ Angstrem Group (Russian: ОАО «Ангстрем» named after angstrom) is a group of Russian companies one of the largest manufacturers of integrated circuits in Eastern Europe.The group includes: OAO Angstrem (the parent company design and manufacturing of electronic products and semiconductors)'
+While assessing potential image in is_image() for column content, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 63] File name too long: '/Users/anne/ludwig/experiments/automl_nlp/heuristics/dbpedia/ I-innovate (UK) is a London-based independent record label that diversified from video production into music management from 2009. I-innovate was founded by Najero Okenabirhie in 2008. I-innovate work with freelance directors marketers and artists in music and graphic design providing ad hoc services for clients labels and music professionals.'
+While assessing potential image in is_image() for column content, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 63] File name too long: '/Users/anne/ludwig/experiments/automl_nlp/heuristics/dbpedia/ The Toei Bus (都営バス Toei Basu) is a bus service operated by the Bus Service Division the Tokyo Metropolitan Bureau of Transportation (東京都交通局 Tōkyō-to Kōtsū-kyoku). It is also called To Bus (都バス To Basu).The bureau mainly operates bus routes in the special wards of Tokyo as well as those in the city of Ōme in the western Tama Area.'
+While assessing potential image in is_image() for column content, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column content, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column content, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column content, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column content, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column content, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column content, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column content, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column content, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column content, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column content, encountered exception: 'NoneType' object has no attribute 'tell'
 {'hyperopt': {'executor': {'cpu_resources_per_trial': 1,
                            'num_samples': 5,
                            'scheduler': {'grace_period': 72,
@@ -24,6 +60,7 @@
                      'name': 'content',
                      'type': 'text'}],
  'output_features': [{'column': 'label', 'name': 'label', 'type': 'category'}],
+ 'preprocessing': {'split': {'column': 'split', 'type': 'fixed'}},
  'trainer': {'batch_size': 'auto',
              'epochs': 5,
              'learning_rate': 'auto',

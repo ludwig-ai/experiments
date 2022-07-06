@@ -2,7 +2,8 @@ import logging
 import numpy as np
 
 from ludwig.api import LudwigModel
-from load_util import load_porto_seguro_safe_driver
+from ludwig.datasets import porto_seguro_safe_driver
+from ludwig.utils.dataset_utils import get_repeatable_train_val_test_split
 from eval_util import set_model_threshold, get_best_threshold
 
 
@@ -13,7 +14,8 @@ model = LudwigModel(
 )
 
 # Train model and evaluate on test split with default threshold
-porto_seguro_safe_driver_df = load_porto_seguro_safe_driver()
+porto_df = porto_seguro_safe_driver.load()
+porto_seguro_safe_driver_df = get_repeatable_train_val_test_split(porto_df, 'target', random_seed=42)
 model.experiment(
     dataset=porto_seguro_safe_driver_df,
     experiment_name='porto_seguro_safe_driver_tabnet_imbalance_ros',

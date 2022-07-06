@@ -1,3 +1,39 @@
+NumExpr defaulting to 8 threads.
+Importing GBM requirements failed. Not loading GBM model type. If you want to use GBM, install Ludwig's 'tree' extra.
+Importing GBM requirements failed. Not loading LightGBM trainer. If you want to use LightGBM, install Ludwig's 'tree' extra.
+ImportError (ray.py) from horovod.ray import RayExecutor failed with error: 
+	No module named 'horovod'
+Connecting to existing Ray cluster at address: 127.0.0.1:6379
+[Errno 63] File name too long: "/Users/anne/ludwig/experiments/automl_nlp/heuristics/yelp_polarity/Unfortunately, the frustration of being Dr. Goldberg's patient is a repeat of the experience I've had with so many other doctors in NYC -- good doctor, terrible staff.  It seems that his staff simply never answers the phone.  It usually takes 2 hours of repeated calling to get an answer.  Who has time for that or wants to deal with it"
+While assessing potential image in is_image() for column text, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 63] File name too long: "/Users/anne/ludwig/experiments/automl_nlp/heuristics/yelp_polarity/Been going to Dr. Goldberg for over 10 years. I think I was one of his 1st patients when he started at MHMG. He's been great over the years and is really all about the big picture. It is because of him, not my now former gyn Dr. Markoff, that I found out I have fibroids. He explores all options with you and is very patient and understanding. He doesn't judge and asks all the right questions. Very thorough and wants to be kept in the loop on every aspect of your medical health and your life."
+While assessing potential image in is_image() for column text, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 63] File name too long: "/Users/anne/ludwig/experiments/automl_nlp/heuristics/yelp_polarity/I'm writing this review to give you a heads up before you see this Doctor. The office staff and administration are very unprofessional. I left a message with multiple people regarding my bill, and no one ever called me back. I had to hound them to get an answer about my bill. \\n\\nSecond, and most important, make sure your insurance is going to cover Dr. Goldberg's visits and blood work. He recommended to me that I get a physical, and he knew I was a student because I told him. I got the physical done. Later, I found out my health insurance doesn't pay for preventative visits. I received an $800.00 bill for the blood work. I can't pay for my bill because I'm a student and don't have any cash flow at this current time. I can't believe the Doctor wouldn't give me a heads up to make sure my insurance would cover work that wasn't necessary and was strictly preventative. The office can't do anything to help me cover the bill. In addition, the office staff said the onus is on me to make sure my insurance covers visits. Frustrating situation!"
+While assessing potential image in is_image() for column text, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 63] File name too long: '/Users/anne/ludwig/experiments/automl_nlp/heuristics/yelp_polarity/All the food is great here. But the best thing they have is their wings. Their wings are simply fantastic!!  The \\"Wet Cajun\\" are by the best & most popular.  I also like the seasoned salt wings.  Wing Night is Monday & Wednesday night, $0.75 whole wings!\\n\\nThe dining area is nice. Very family friendly! The bar is very nice is well.  This place is truly a Yinzer\'s dream!!  \\"Pittsburgh Dad\\" would love this place n\'at!!'
+While assessing potential image in is_image() for column text, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl_nlp/heuristics/yelp_polarity/Wing sauce is like water. Pretty much a lot of butter and some hot sauce (franks red hot maybe).  The whole wings are good size and crispy, but for $1 a wing the sauce could be better. The hot and extra hot are about the same flavor/heat.  The fish sandwich is good and is a large portion, sides are decent.'
+While assessing potential image in is_image() for column text, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 63] File name too long: "/Users/anne/ludwig/experiments/automl_nlp/heuristics/yelp_polarity/Before I finally made it over to this range I heard the same thing from most people - it's just fine to go work on your swing. I had such a low expectation I was pleasantly surprised. \\n\\nIt's a fairly big range - if you are familiar with Scally's in Moon, it seems like it has almost as many tees, though its not nearly as nice a facility. \\n\\nThe guys in the pro shop were two of the friendlier guys I've come across at ranges or at courses. Yards were indeed marked and there are some targets to aim for, and even some hazards to aim away from. \\n\\nA big red flag to me was the extra charge ($3) to hit off the grass. I am no range expert, but this is the 4th one I've been to and the first I've seen of that sort of nickel and diming....\\n\\nPrice for the golf balls was reasonable and I do plan to be back every week until they close up in October for the season. Hopefully, since its for sale, it will reopen as a golf facility again."
+While assessing potential image in is_image() for column text, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 63] File name too long: "/Users/anne/ludwig/experiments/automl_nlp/heuristics/yelp_polarity/I drove by yesterday to get a sneak peak.  It re-opens on July 14th and I can't wait to take my kids.  The new range looks amazing.  The entire range appears to be turf, which may or many not help your game, but it looks really nice.  The tee boxes look state of the art and the club house looks like something you'll see on a newer course.  Can't wait to experience it!"
+While assessing potential image in is_image() for column text, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 63] File name too long: "/Users/anne/ludwig/experiments/automl_nlp/heuristics/yelp_polarity/After waiting for almost 30 minutes to trade in an old phone part of the buy back program, our customer service rep incorrectly processed the transaction. This led to us waiting another 30 minutes for him to correct it. Don't visit this store if you want pleasant or good service."
+While assessing potential image in is_image() for column text, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: "/Users/anne/ludwig/experiments/automl_nlp/heuristics/yelp_polarity/Wonderful reuben.  Map shown on Yelp page is incorrect. It is actually a different Hawkins.  I'd recommend a call for directions 412-271-9911."
+While assessing potential image in is_image() for column text, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 63] File name too long: "/Users/anne/ludwig/experiments/automl_nlp/heuristics/yelp_polarity/This is a hidden gem, no really. It took us forever to find but well worth it. It is right across the street from the Rankin Police Station. The menu has a wide selection, I really couldn't decide what I wanted but I went with the ribeye sandwich. I'm glad i did too. Huge sandwich! I added mushrooms, it was very flavorful. My boyfriend got the fish sandwich, he enjoyed it as well. Fast and friendly service. Will definitely be back."
+While assessing potential image in is_image() for column text, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column text, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column text, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column text, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column text, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column text, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column text, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column text, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column text, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column text, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column text, encountered exception: 'NoneType' object has no attribute 'tell'
 {'hyperopt': {'executor': {'cpu_resources_per_trial': 1,
                            'num_samples': 5,
                            'scheduler': {'grace_period': 72,
@@ -24,6 +60,7 @@
                      'name': 'text',
                      'type': 'text'}],
  'output_features': [{'column': 'label', 'name': 'label', 'type': 'category'}],
+ 'preprocessing': {'split': {'column': 'split', 'type': 'fixed'}},
  'trainer': {'batch_size': 'auto',
              'epochs': 5,
              'learning_rate': 'auto',

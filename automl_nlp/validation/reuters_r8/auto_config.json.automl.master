@@ -1,3 +1,61 @@
+NumExpr defaulting to 8 threads.
+Importing GBM requirements failed. Not loading GBM model type. If you want to use GBM, install Ludwig's 'tree' extra.
+Importing GBM requirements failed. Not loading LightGBM trainer. If you want to use LightGBM, install Ludwig's 'tree' extra.
+ImportError (ray.py) from horovod.ray import RayExecutor failed with error: 
+	No module named 'horovod'
+Connecting to existing Ray cluster at address: 127.0.0.1:6379
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl_nlp/validation/reuters_r8/champion product approv stock split champion product inc board director approv two for stock split common share for sharehold record april compani board vote recommend sharehold annual meet april increas author capit stock mln mln share reuter'
+While assessing potential image in is_image() for column text, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 63] File name too long: '/Users/anne/ludwig/experiments/automl_nlp/validation/reuters_r8/comput termin system cpml complet sale comput termin system inc complet sale share common stock and warrant acquir addit mln share sedio lugano switzerland for dlr compani warrant exercis for year purchas price dlr per share comput termin sedio bui addit share and increas total hold pct comput termin outstand common stock circumst involv chang control compani compani condit occur warrant exercis price equal pct common stock market price time not exce dlr per share comput termin sold technolgi right dot matrix impact technolog includ futur improv woodco inc houston tex for dlr continu exclus worldwid license technolog for woodco compani move part reorgan plan and pai current oper cost and ensur product deliveri comput termin make comput gener label form tag and ticket printer and termin reuter'
+While assessing potential image in is_image() for column text, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl_nlp/validation/reuters_r8/cobanco inc cbco year net shr ct dlr net asset mln mln deposit mln mln loan mln mln note qtr not year includ extraordinari gain tax carri forward dlr ct per shr reuter'
+While assessing potential image in is_image() for column text, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 63] File name too long: '/Users/anne/ludwig/experiments/automl_nlp/validation/reuters_r8/intern inc qtr jan oper shr loss two ct profit ct oper shr profit profit rev mln mln avg shr mln mln six mth oper shr profit nil profit ct oper net profit profit rev mln mln avg shr mln mln note per shr calcul payment prefer dividend result exclud credit ct and ct for qtr and six mth six ct and ct for prior period oper loss carryforward reuter'
+While assessing potential image in is_image() for column text, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl_nlp/validation/reuters_r8/brown forman inc bfd qtr net shr dlr ct net mln mln rev mln mln mth shr dlr dlr net mln mln rev billion mln reuter'
+While assessing potential image in is_image() for column text, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 63] File name too long: '/Users/anne/ludwig/experiments/automl_nlp/validation/reuters_r8/dean food see strong qtr earn dean food expect earn for fourth quarter end exce year ago period chairman kenneth dougla told analyst fiscal fourth quarter food processor report earn ct share dougla year sale exce billion dlr billion dlr prior year repeat earlier project that quarter earn will slightli last year ct share fall rang ct ct share dougla earli project whether anticip fourth quarter perform for exce prior year earn dlr share dougla dean experi pct improv bottom line effect tax reform act alon presid howard dean fiscal compani will deriv benefit dairi and frozen veget acquisit ryan milk larsen dean compani will benefit acquisit late decemb elgin blender inc west chicago compani major sharehold food unit kingdom blender and licens arrang australia canada brazil and japan ann entri mcdonald corp mcd for year dougla told analyst reuter'
+While assessing potential image in is_image() for column text, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 63] File name too long: '/Users/anne/ludwig/experiments/automl_nlp/validation/reuters_r8/brown forman bfdb set stock split up payout brown forman inc board approv for two stock split and pct increas compani cash dividend compani cite improv earn outlook and continu strong cash flow reason for rais dividend brown forman split class and class common share effect march compani director declar quarterli cash dividend each share class ct payabl april holder record march prior split compani had paid ct quarterli brown forman todai report pct increas quarter profit mln dlr dlr share pct increas sale record mln dlr brown forman month profit declin bit mln dlr dlr share mln dlr dlr share year earlier due second quarter charg ct share for restructur beverag oper compani lower corpor tax rate and restructur expect substanti improv brown forman earn and cash flow fiscal reuter'
+While assessing potential image in is_image() for column text, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl_nlp/validation/reuters_r8/esquir radio and electron inc qtr shr profit ct profit ct annual div ct ct prior net profit profit rev mth shr profit ct loss ct net profit loss rev mln note annual dividend payabl april stockhold record march reuter'
+While assessing potential image in is_image() for column text, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl_nlp/validation/reuters_r8/unit presidenti corp upco qtr net shr ct ct net rev mln mln year shr dlr dlr net rev mln mln note result includ adjust dlr ct shr for year and period improv result univers life busi estim reuter'
+While assessing potential image in is_image() for column text, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl_nlp/validation/reuters_r8/owen and minor inc obod rais qtly dividend qtly div eight ct ct prior pai march record march reuter'
+While assessing potential image in is_image() for column text, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl_nlp/validation/reuters_r8/earn'
+While assessing potential image in is_image() for column intent, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl_nlp/validation/reuters_r8/acq'
+While assessing potential image in is_image() for column intent, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column intent, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column intent, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column intent, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column intent, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column intent, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column intent, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column intent, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column intent, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column text, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column text, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column text, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column text, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column text, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column text, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column text, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column text, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column text, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column text, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column intent, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column intent, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column intent, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column intent, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column intent, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column intent, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column intent, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column intent, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column intent, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column intent, encountered exception: 'NoneType' object has no attribute 'tell'
 Imbalance in intent: minority/majority=0.013003569607343193
 {'hyperopt': {'executor': {'cpu_resources_per_trial': 1,
                            'num_samples': 5,
@@ -27,6 +85,7 @@ Imbalance in intent: minority/majority=0.013003569607343193
  'output_features': [{'column': 'intent',
                       'name': 'intent',
                       'type': 'category'}],
+ 'preprocessing': {'split': {'column': 'split', 'type': 'fixed'}},
  'trainer': {'batch_size': 'auto',
              'epochs': 5,
              'learning_rate': 'auto',

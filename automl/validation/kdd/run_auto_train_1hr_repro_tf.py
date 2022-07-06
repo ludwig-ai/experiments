@@ -1,10 +1,12 @@
 import logging
 import pprint
 
-from load_util import load_kdd_appetency
 from ludwig.automl import auto_train
+from ludwig.datasets import kdd_appetency
+from ludwig.utils.dataset_utils import get_repeatable_train_val_test_split
 
-kdd_appetency_df = load_kdd_appetency()
+kdd_df = kdd_appetency.load()
+kdd_appetency_df = get_repeatable_train_val_test_split(kdd_df, random_seed=42)
 
 auto_train_results = auto_train(
     dataset=kdd_appetency_df,
@@ -13,6 +15,7 @@ auto_train_results = auto_train(
     tune_for_memory=False,
     user_config={'hyperopt': {
         'executor': {'max_concurrent_trials': 1, 'gpu_resources_per_trial': 1, 'cpu_resources_per_trial': 1},
+        'preprocessing': {'split': {'column': 'split', 'type': 'fixed'}},
         'sampler': {'search_alg': {'points_to_evaluate': [{
             'combiner.bn_momentum': 0.7,
             'combiner.bn_virtual_bs': 2048,

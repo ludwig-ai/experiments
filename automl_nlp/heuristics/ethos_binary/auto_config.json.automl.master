@@ -1,3 +1,39 @@
+NumExpr defaulting to 8 threads.
+Importing GBM requirements failed. Not loading GBM model type. If you want to use GBM, install Ludwig's 'tree' extra.
+Importing GBM requirements failed. Not loading LightGBM trainer. If you want to use LightGBM, install Ludwig's 'tree' extra.
+ImportError (ray.py) from horovod.ray import RayExecutor failed with error: 
+	No module named 'horovod'
+Connecting to existing Ray cluster at address: 127.0.0.1:6379
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl_nlp/heuristics/ethos_binary/GUN SHOT INA YU HEAD! NO MERCY!'
+While assessing potential image in is_image() for column comment, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl_nlp/heuristics/ethos_binary/You deserve way more subscribers . The shit you say is fucking gold.'
+While assessing potential image in is_image() for column comment, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl_nlp/heuristics/ethos_binary/dexpraxia my ass girl. Cheap excuses to be lazy and get paid by our country. I bet you pretend to be like that'
+While assessing potential image in is_image() for column comment, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl_nlp/heuristics/ethos_binary/Every time I see her with a hijab, niqab or burka or shit I fantasising of choking her to death with that facking piece of cloth'
+While assessing potential image in is_image() for column comment, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl_nlp/heuristics/ethos_binary/After all this time the african americans are the people with most crime rate'
+While assessing potential image in is_image() for column comment, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: "/Users/anne/ludwig/experiments/automl_nlp/heuristics/ethos_binary/Shemales are paranormal creatures. We shouldn't let them be free. Neither be captured. Just dead and buried already"
+While assessing potential image in is_image() for column comment, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl_nlp/heuristics/ethos_binary/We are repeating our past before it used to Germany and Jews now its China and Muslims'
+While assessing potential image in is_image() for column comment, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl_nlp/heuristics/ethos_binary/They are the most calm and patient police ever, also, did the bald police man just get stabbed'
+While assessing potential image in is_image() for column comment, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl_nlp/heuristics/ethos_binary/Even straight boys played with Barbies when they were kids!\xa0 Not an issue.'
+While assessing potential image in is_image() for column comment, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl_nlp/heuristics/ethos_binary/I read the title and immediately was ready to kill'
+While assessing potential image in is_image() for column comment, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column comment, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column comment, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column comment, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column comment, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column comment, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column comment, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column comment, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column comment, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column comment, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column comment, encountered exception: 'NoneType' object has no attribute 'tell'
 {'hyperopt': {'executor': {'cpu_resources_per_trial': 1,
                            'num_samples': 5,
                            'scheduler': {'grace_period': 72,
@@ -24,6 +60,7 @@
                      'name': 'comment',
                      'type': 'text'}],
  'output_features': [{'column': 'isHate', 'name': 'isHate', 'type': 'binary'}],
+ 'preprocessing': {'split': {'column': 'split', 'type': 'fixed'}},
  'trainer': {'batch_size': 'auto',
              'epochs': 5,
              'learning_rate': 'auto',

@@ -1299,6 +1299,10 @@ input_features:
   - column: DeviceInfo
     name: DeviceInfo
     type: category
+preprocessing:
+  split:
+    type: fixed
+    column: split
 combiner:
   type: tabnet
   size: 128  # N_a

@@ -1110,6 +1110,10 @@ input_features:
   - column: var38
     name: var38
     type: number
+preprocessing:
+  split:
+    type: fixed
+    column: split
 combiner:
   type: tabnet
   size: 24  # N_a

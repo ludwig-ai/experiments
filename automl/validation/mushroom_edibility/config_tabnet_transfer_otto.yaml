@@ -46,6 +46,10 @@ input_features:
     type: category
   - name: habitat
     type: category
+preprocessing:
+  split:
+    type: fixed
+    column: split
 combiner:
   type: tabnet
   size: 128  # N_a

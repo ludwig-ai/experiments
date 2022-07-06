@@ -1,7 +1,8 @@
 import logging
 
 from ludwig.api import LudwigModel
-from load_util import load_synthetic_fraud
+from ludwig.datasets import synthetic_fraud
+from ludwig.utils.dataset_utils import get_repeatable_train_val_test_split
 
 model = LudwigModel(
     config='config_tabnet_transfer_bnp.yaml',
@@ -9,7 +10,8 @@ model = LudwigModel(
     backend="local",
 )
 
-synthetic_fraud_df = load_synthetic_fraud()
+synthetic_df = synthetic_fraud.load()
+synthetic_fraud_df = get_repeatable_train_val_test_split(synthetic_df, 'isFraud', random_seed=42)
 model.train(
     dataset=synthetic_fraud_df,
     experiment_name='synthetic_fraud_tabnet_transfer_bnp',

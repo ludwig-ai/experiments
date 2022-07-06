@@ -1,7 +1,8 @@
 import logging
 
 from ludwig.api import LudwigModel
-from load_util import load_higgs
+from ludwig.datasets import higgs
+from ludwig.utils.dataset_utils import get_repeatable_train_val_test_split
 
 model = LudwigModel(
     config='config_tabnet_transfer_santCustSat.yaml',
@@ -9,7 +10,8 @@ model = LudwigModel(
     backend="local",
 )
 
-higgs_df = load_higgs()
+h_df = higgs.load()
+higgs_df = get_repeatable_train_val_test_split(h_df, 'label', random_seed=42)
 model.train(
     dataset=higgs_df,
     experiment_name='higgs_tabnet_transfer_santCustSat',

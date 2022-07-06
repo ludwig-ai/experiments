@@ -2,7 +2,8 @@ import logging
 import numpy as np
 
 from ludwig.api import LudwigModel
-from load_util import load_santander_customer_satisfaction
+from ludwig.datasets import santander_customer_satisfaction
+from ludwig.utils.dataset_utils import get_repeatable_train_val_test_split
 from eval_util import set_model_threshold, get_best_threshold
 
 
@@ -13,7 +14,8 @@ model = LudwigModel(
 )
 
 # Train model and evaluate on test split with default threshold
-santander_customer_satisfaction_df = load_santander_customer_satisfaction()
+santander_df = santander_customer_satisfaction.load()
+santander_customer_satisfaction_df = get_repeatable_train_val_test_split(santander_df, 'TARGET', random_seed=42)
 model.experiment(
     dataset=santander_customer_satisfaction_df,
     experiment_name='santander_customer_satisfaction_tabnet_imbalance_ros',

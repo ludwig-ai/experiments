@@ -1,16 +1,19 @@
 import logging
 import pprint
 
-from ludwig.datasets import yelp_review_polarity
 from ludwig.automl import create_auto_config
+from ludwig.datasets import yelp_review_polarity
+from ludwig.utils.dataset_utils import get_repeatable_train_val_test_split
 
-yelp_polarity_df = yelp_review_polarity.load(split=False)
+yelp_df = yelp_review_polarity.load(split=False)
+yelp_polarity_df = get_repeatable_train_val_test_split(yelp_df, 'label', random_seed=42)
 
 auto_config = create_auto_config(
     dataset=yelp_polarity_df,
     target='label',
     time_limit_s=7200,
-    tune_for_memory=False
+    tune_for_memory=False,
+    user_config={'preprocessing': {'split': {'column': 'split', 'type': 'fixed'}}},
 )
 
 pprint.pprint(auto_config)

@@ -1,3 +1,9 @@
+NumExpr defaulting to 8 threads.
+Importing GBM requirements failed. Not loading GBM model type. If you want to use GBM, install Ludwig's 'tree' extra.
+Importing GBM requirements failed. Not loading LightGBM trainer. If you want to use LightGBM, install Ludwig's 'tree' extra.
+ImportError (ray.py) from horovod.ray import RayExecutor failed with error: 
+	No module named 'horovod'
+Connecting to existing Ray cluster at address: 127.0.0.1:6379
 {'combiner': {'type': 'tabnet'},
  'hyperopt': {'executor': {'cpu_resources_per_trial': 1,
                            'num_samples': 10,
@@ -11,12 +17,12 @@
               'goal': 'minimize',
               'metric': 'mean_squared_error',
               'output_feature': 'gtcdsc',
-              'parameters': {'combiner.bn_momentum': {'categories': [0.6,
-                                                                     0.7,
-                                                                     0.8,
-                                                                     0.9,
-                                                                     0.95,
-                                                                     0.98],
+              'parameters': {'combiner.bn_momentum': {'categories': [0.4,
+                                                                     0.3,
+                                                                     0.2,
+                                                                     0.1,
+                                                                     0.05,
+                                                                     0.02],
                                                       'space': 'choice'},
                              'combiner.bn_virtual_bs': {'categories': [256,
                                                                        512,
@@ -58,13 +64,6 @@
                                                                   0.01,
                                                                   0.1],
                                                    'space': 'choice'},
-                             'trainer.batch_size': {'categories': [256,
-                                                                   512,
-                                                                   1024,
-                                                                   2048,
-                                                                   4096,
-                                                                   8192],
-                                                    'space': 'choice'},
                              'trainer.decay_rate': {'categories': [0.8,
                                                                    0.9,
                                                                    0.95],
@@ -99,6 +98,7 @@
                     {'column': 'mf', 'name': 'mf', 'type': 'number'},
                     {'column': 'gttdsc', 'name': 'gttdsc', 'type': 'number'}],
  'output_features': [{'column': 'gtcdsc', 'name': 'gtcdsc', 'type': 'number'}],
+ 'preprocessing': {'split': {'column': 'split', 'type': 'fixed'}},
  'trainer': {'batch_size': 'auto',
              'decay': True,
              'decay_rate': 0.8,
@@ -106,7 +106,5 @@
              'learning_rate': 'auto',
              'learning_rate_scaling': 'sqrt',
              'optimizer': {'type': 'adam'},
-             'tune_batch_size': {'substitute_with_max': True,
-                                 'type': 'bin_search'},
              'validation_field': 'gtcdsc',
              'validation_metric': 'mean_squared_error'}}

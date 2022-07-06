@@ -1,10 +1,20 @@
+NumExpr defaulting to 8 threads.
+Importing GBM requirements failed. Not loading GBM model type. If you want to use GBM, install Ludwig's 'tree' extra.
+Importing GBM requirements failed. Not loading LightGBM trainer. If you want to use LightGBM, install Ludwig's 'tree' extra.
+ImportError (ray.py) from horovod.ray import RayExecutor failed with error: 
+	No module named 'horovod'
 >>> create ludwig formatted training data
 >>> create ludwig formatted testing data
 >>> completed data preparation
-Connecting to existing Ray cluster at address: 172.31.12.213:6379
+Connecting to existing Ray cluster at address: 127.0.0.1:6379
 {'combiner': {'type': 'concat'},
- 'hyperopt': {'executor': {'cpu_resources_per_trial': 16,
-                           'gpu_resources_per_trial': 1,
+ 'hyperopt': {'executor': {'cpu_resources_per_trial': 1,
+                           'num_samples': 10,
+                           'scheduler': {'grace_period': 72,
+                                         'max_t': 7200,
+                                         'reduction_factor': 5,
+                                         'time_attr': 'time_total_s',
+                                         'type': 'async_hyperband'},
                            'time_budget_s': 7200,
                            'type': 'ray'},
               'goal': 'maximize',
@@ -30,20 +40,13 @@ Connecting to existing Ray cluster at address: 172.31.12.213:6379
                                                        'space': 'loguniform',
                                                        'type': 'float',
                                                        'upper': 0.001}},
-              'sampler': {'num_samples': 10,
-                          'scheduler': {'grace_period': 72,
-                                        'max_t': 7200,
-                                        'reduction_factor': 5,
-                                        'time_attr': 'time_total_s',
-                                        'type': 'async_hyperband'},
-                          'search_alg': {'random_state_seed': 42,
-                                         'type': 'hyperopt'},
-                          'type': 'ray'}},
+              'search_alg': {'random_state_seed': 42, 'type': 'hyperopt'}},
  'input_features': [{'column': 'image_path',
                      'encoder': 'stacked_cnn',
                      'name': 'image_path',
                      'type': 'image'}],
  'output_features': [{'column': 'label', 'name': 'label', 'type': 'category'}],
+ 'preprocessing': {'split': {'column': 'split', 'type': 'fixed'}},
  'trainer': {'batch_size': 'auto',
              'learning_rate': 'auto',
              'validation_field': 'label',

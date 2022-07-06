@@ -1,3 +1,67 @@
+NumExpr defaulting to 8 threads.
+Importing GBM requirements failed. Not loading GBM model type. If you want to use GBM, install Ludwig's 'tree' extra.
+Importing GBM requirements failed. Not loading LightGBM trainer. If you want to use LightGBM, install Ludwig's 'tree' extra.
+ImportError (ray.py) from horovod.ray import RayExecutor failed with error: 
+	No module named 'horovod'
+Connecting to existing Ray cluster at address: 127.0.0.1:6379
+[Errno 2] No such file or directory: "/Users/anne/ludwig/experiments/automl_nlp/heuristics/goemotions/My favourite food is anything I didn't have to cook myself."
+While assessing potential image in is_image() for column text, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl_nlp/heuristics/goemotions/Now if he does off himself, everyone will think hes having a laugh screwing with people instead of actually dead'
+While assessing potential image in is_image() for column text, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl_nlp/heuristics/goemotions/WHY THE FUCK IS BAYLESS ISOING'
+While assessing potential image in is_image() for column text, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl_nlp/heuristics/goemotions/To make her feel threatened'
+While assessing potential image in is_image() for column text, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl_nlp/heuristics/goemotions/Dirty Southern Wankers'
+While assessing potential image in is_image() for column text, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: "/Users/anne/ludwig/experiments/automl_nlp/heuristics/goemotions/OmG pEyToN iSn'T gOoD eNoUgH tO hElP uS iN tHe PlAyOfFs! Dumbass Broncos fans circa December 2015."
+While assessing potential image in is_image() for column text, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl_nlp/heuristics/goemotions/Yes I heard abt the f bombs! That has to be why. Thanks for your reply:) until then hubby and I will anxiously wait 😝'
+While assessing potential image in is_image() for column text, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl_nlp/heuristics/goemotions/We need more boards and to create a bit more space for [NAME]. Then we’ll be good.'
+While assessing potential image in is_image() for column text, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl_nlp/heuristics/goemotions/Damn youtube and outrage drama is super lucrative for reddit'
+While assessing potential image in is_image() for column text, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl_nlp/heuristics/goemotions/It might be linked to the trust factor of your friend.'
+While assessing potential image in is_image() for column text, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl_nlp/heuristics/goemotions/27'
+While assessing potential image in is_image() for column emotion_ids, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column emotion_ids, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl_nlp/heuristics/goemotions/2'
+While assessing potential image in is_image() for column emotion_ids, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl_nlp/heuristics/goemotions/14'
+While assessing potential image in is_image() for column emotion_ids, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl_nlp/heuristics/goemotions/3'
+While assessing potential image in is_image() for column emotion_ids, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl_nlp/heuristics/goemotions/26'
+While assessing potential image in is_image() for column emotion_ids, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl_nlp/heuristics/goemotions/15'
+While assessing potential image in is_image() for column emotion_ids, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl_nlp/heuristics/goemotions/8 20'
+While assessing potential image in is_image() for column emotion_ids, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl_nlp/heuristics/goemotions/0'
+While assessing potential image in is_image() for column emotion_ids, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column emotion_ids, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column text, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column text, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column text, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column text, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column text, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column text, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column text, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column text, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column text, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column text, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column emotion_ids, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column emotion_ids, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column emotion_ids, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column emotion_ids, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column emotion_ids, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column emotion_ids, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column emotion_ids, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column emotion_ids, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column emotion_ids, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column emotion_ids, encountered exception: 'NoneType' object has no attribute 'tell'
 {'hyperopt': {'executor': {'cpu_resources_per_trial': 1,
                            'num_samples': 5,
                            'scheduler': {'grace_period': 72,
@@ -26,6 +90,7 @@
  'output_features': [{'column': 'emotion_ids',
                       'name': 'emotion_ids',
                       'type': 'set'}],
+ 'preprocessing': {'split': {'column': 'split', 'type': 'fixed'}},
  'trainer': {'batch_size': 'auto',
              'epochs': 5,
              'learning_rate': 'auto',

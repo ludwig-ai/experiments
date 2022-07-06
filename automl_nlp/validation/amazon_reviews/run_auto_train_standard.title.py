@@ -1,16 +1,21 @@
 import logging
 import pprint
 
-from load_util import load_amazon_reviews
 from ludwig.automl import auto_train
+from ludwig.datasets import amazon_reviews
+from ludwig.utils.dataset_utils import get_repeatable_train_val_test_split
 
-amazon_reviews_df = load_amazon_reviews(include_title=True)
+amazon_df = amazon_reviews.load(split=False)
+amazon_df["review_text"] = amazon_df["review_tile"] + " " + amazon_df["review_text"]
+amazon_df.drop("review_tile", axis=1, inplace=True)
+amazon_reviews_df = get_repeatable_train_val_test_split(amazon_df, 'label', random_seed=42)
 
 auto_train_results = auto_train(
     dataset=amazon_reviews_df,
     target='label',
     time_limit_s=18000,
     tune_for_memory=True,
+    user_config={'preprocessing': {'split': {'column': 'split', 'type': 'fixed'}}},
 )
 
 pprint.pprint(auto_train_results)

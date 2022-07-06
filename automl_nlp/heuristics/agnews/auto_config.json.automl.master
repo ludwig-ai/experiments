@@ -1,3 +1,39 @@
+NumExpr defaulting to 8 threads.
+Importing GBM requirements failed. Not loading GBM model type. If you want to use GBM, install Ludwig's 'tree' extra.
+Importing GBM requirements failed. Not loading LightGBM trainer. If you want to use LightGBM, install Ludwig's 'tree' extra.
+ImportError (ray.py) from horovod.ray import RayExecutor failed with error: 
+	No module named 'horovod'
+Connecting to existing Ray cluster at address: 127.0.0.1:6379
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl_nlp/heuristics/agnews/Do-it-yourself phishing kits are being made available for download free of charge from the Internet, according to anti-virus firm Sophos.\\'
+While assessing potential image in is_image() for column description, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl_nlp/heuristics/agnews/Two students at the Durham NC School of Science and Mathematics will split \\$100,000 in scholarship money for their cancer research.'
+While assessing potential image in is_image() for column description, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl_nlp/heuristics/agnews/AP - In one of the first enforcement actions of the Americans with Disabilities Act on the Internet, two major travel services have agreed to make sites more accessible to the blind and visually impaired.'
+While assessing potential image in is_image() for column description, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl_nlp/heuristics/agnews/Reuters - Europe is warming up\\more quickly than the rest of the world, and cold winters could\\disappear almost entirely by 2080 as a result of global\\warming, researchers predicted Wednesday.'
+While assessing potential image in is_image() for column description, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 63] File name too long: "/Users/anne/ludwig/experiments/automl_nlp/heuristics/agnews/The education policy of the Bush administration is founded on two pillars: standardized testing and charter schools.    However, as reported in this New York Times article (see also the audio archive at NPR or nonsubscription coverage at the Boston Globe) , the US Department of Education's own testing data show that nationwide, charter schools are, in aggregate, lagging their public counterparts."
+While assessing potential image in is_image() for column description, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl_nlp/heuristics/agnews/Music file-sharing companies are not legally responsible for the swapping of copyright content through their file-sharing software, a federal appeals court ruled Thursday in a blow to movie studios and record labels. &lt'
+While assessing potential image in is_image() for column description, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: "/Users/anne/ludwig/experiments/automl_nlp/heuristics/agnews/Conservationists say the survival of Mongolia's fabled taimen salmon may depend on an unusual ecotourism venture involving Western anglers."
+While assessing potential image in is_image() for column description, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl_nlp/heuristics/agnews/Scientists have manipulated carbon atoms to create a material that could be used to create light-based, versus electronic, switches. The material could lead to a supercharged Internet based entirely on light, scientists say.'
+While assessing potential image in is_image() for column description, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl_nlp/heuristics/agnews/The killer storm that slammed into Florida on August 13 made two things clear: Hurricanes can still surprise forecasters, and the rest of the 2004 hurricane season probably is going to be quite active.'
+While assessing potential image in is_image() for column description, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: "/Users/anne/ludwig/experiments/automl_nlp/heuristics/agnews/CNET News.com's Michael Kanellos says start-ups and their innovative ideas are the lifeblood of Silicon Valley."
+While assessing potential image in is_image() for column description, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column description, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column description, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column description, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column description, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column description, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column description, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column description, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column description, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column description, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column description, encountered exception: 'NoneType' object has no attribute 'tell'
 {'hyperopt': {'executor': {'cpu_resources_per_trial': 1,
                            'num_samples': 5,
                            'scheduler': {'grace_period': 72,
@@ -26,6 +62,7 @@
  'output_features': [{'column': 'class_index',
                       'name': 'class_index',
                       'type': 'category'}],
+ 'preprocessing': {'split': {'column': 'split', 'type': 'fixed'}},
  'trainer': {'batch_size': 'auto',
              'epochs': 5,
              'learning_rate': 'auto',

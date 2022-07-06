@@ -1,3 +1,215 @@
+NumExpr defaulting to 8 threads.
+Importing GBM requirements failed. Not loading GBM model type. If you want to use GBM, install Ludwig's 'tree' extra.
+Importing GBM requirements failed. Not loading LightGBM trainer. If you want to use LightGBM, install Ludwig's 'tree' extra.
+ImportError (ray.py) from horovod.ray import RayExecutor failed with error: 
+	No module named 'horovod'
+Connecting to existing Ray cluster at address: 127.0.0.1:6379
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl/heuristics/adult_census_income/ State-gov'
+While assessing potential image in is_image() for column workclass, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl/heuristics/adult_census_income/ Self-emp-not-inc'
+While assessing potential image in is_image() for column workclass, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl/heuristics/adult_census_income/ Private'
+While assessing potential image in is_image() for column workclass, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column workclass, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column workclass, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column workclass, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column workclass, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column workclass, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column workclass, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column workclass, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl/heuristics/adult_census_income/ Bachelors'
+While assessing potential image in is_image() for column education, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column education, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl/heuristics/adult_census_income/ HS-grad'
+While assessing potential image in is_image() for column education, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl/heuristics/adult_census_income/ 11th'
+While assessing potential image in is_image() for column education, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column education, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl/heuristics/adult_census_income/ Masters'
+While assessing potential image in is_image() for column education, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column education, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column education, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column education, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl/heuristics/adult_census_income/ Some-college'
+While assessing potential image in is_image() for column education, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl/heuristics/adult_census_income/ Never-married'
+While assessing potential image in is_image() for column marital-status, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl/heuristics/adult_census_income/ Married-civ-spouse'
+While assessing potential image in is_image() for column marital-status, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl/heuristics/adult_census_income/ Divorced'
+While assessing potential image in is_image() for column marital-status, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column marital-status, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column marital-status, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column marital-status, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column marital-status, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column marital-status, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column marital-status, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column marital-status, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl/heuristics/adult_census_income/ Adm-clerical'
+While assessing potential image in is_image() for column occupation, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl/heuristics/adult_census_income/ Exec-managerial'
+While assessing potential image in is_image() for column occupation, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl/heuristics/adult_census_income/ Handlers-cleaners'
+While assessing potential image in is_image() for column occupation, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column occupation, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl/heuristics/adult_census_income/ Prof-specialty'
+While assessing potential image in is_image() for column occupation, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column occupation, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column occupation, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column occupation, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column occupation, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column occupation, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl/heuristics/adult_census_income/ Not-in-family'
+While assessing potential image in is_image() for column relationship, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl/heuristics/adult_census_income/ Husband'
+While assessing potential image in is_image() for column relationship, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column relationship, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column relationship, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl/heuristics/adult_census_income/ Wife'
+While assessing potential image in is_image() for column relationship, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column relationship, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column relationship, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column relationship, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column relationship, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column relationship, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl/heuristics/adult_census_income/ White'
+While assessing potential image in is_image() for column race, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column race, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column race, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl/heuristics/adult_census_income/ Black'
+While assessing potential image in is_image() for column race, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column race, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column race, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column race, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column race, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column race, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column race, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl/heuristics/adult_census_income/ Male'
+While assessing potential image in is_image() for column sex, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column sex, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column sex, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column sex, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl/heuristics/adult_census_income/ Female'
+While assessing potential image in is_image() for column sex, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column sex, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column sex, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column sex, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column sex, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column sex, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl/heuristics/adult_census_income/ United-States'
+While assessing potential image in is_image() for column native-country, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column native-country, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column native-country, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column native-country, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl/heuristics/adult_census_income/ Cuba'
+While assessing potential image in is_image() for column native-country, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column native-country, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column native-country, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column native-country, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column native-country, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column native-country, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl/heuristics/adult_census_income/ <=50K'
+While assessing potential image in is_image() for column income, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column income, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column income, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column income, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column income, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column income, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl/heuristics/adult_census_income/ >50K'
+While assessing potential image in is_image() for column income, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column income, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column income, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column income, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column workclass, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column workclass, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column workclass, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column workclass, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column workclass, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column workclass, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column workclass, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column workclass, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column workclass, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column workclass, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column education, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column education, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column education, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column education, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column education, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column education, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column education, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column education, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column education, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column education, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column marital-status, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column marital-status, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column marital-status, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column marital-status, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column marital-status, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column marital-status, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column marital-status, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column marital-status, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column marital-status, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column marital-status, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column occupation, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column occupation, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column occupation, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column occupation, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column occupation, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column occupation, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column occupation, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column occupation, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column occupation, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column occupation, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column relationship, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column relationship, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column relationship, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column relationship, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column relationship, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column relationship, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column relationship, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column relationship, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column relationship, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column relationship, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column race, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column race, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column race, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column race, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column race, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column race, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column race, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column race, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column race, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column race, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column sex, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column sex, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column sex, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column sex, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column sex, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column sex, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column sex, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column sex, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column sex, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column sex, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column native-country, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column native-country, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column native-country, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column native-country, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column native-country, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column native-country, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column native-country, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column native-country, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column native-country, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column native-country, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column income, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column income, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column income, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column income, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column income, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column income, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column income, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column income, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column income, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column income, encountered exception: 'NoneType' object has no attribute 'tell'
 {'combiner': {'type': 'tabnet'},
  'hyperopt': {'executor': {'cpu_resources_per_trial': 1,
                            'num_samples': 10,
@@ -11,12 +223,12 @@
               'goal': 'maximize',
               'metric': 'accuracy',
               'output_feature': 'income',
-              'parameters': {'combiner.bn_momentum': {'categories': [0.6,
-                                                                     0.7,
-                                                                     0.8,
-                                                                     0.9,
-                                                                     0.95,
-                                                                     0.98],
+              'parameters': {'combiner.bn_momentum': {'categories': [0.4,
+                                                                     0.3,
+                                                                     0.2,
+                                                                     0.1,
+                                                                     0.05,
+                                                                     0.02],
                                                       'space': 'choice'},
                              'combiner.bn_virtual_bs': {'categories': [256,
                                                                        512,
@@ -58,13 +270,6 @@
                                                                   0.01,
                                                                   0.1],
                                                    'space': 'choice'},
-                             'trainer.batch_size': {'categories': [256,
-                                                                   512,
-                                                                   1024,
-                                                                   2048,
-                                                                   4096,
-                                                                   8192],
-                                                    'space': 'choice'},
                              'trainer.decay_rate': {'categories': [0.8,
                                                                    0.9,
                                                                    0.95],
@@ -118,6 +323,7 @@
  'output_features': [{'column': 'income',
                       'name': 'income',
                       'type': 'category'}],
+ 'preprocessing': {'split': {'column': 'split', 'type': 'fixed'}},
  'trainer': {'batch_size': 'auto',
              'decay': True,
              'decay_rate': 0.8,
@@ -125,7 +331,5 @@
              'learning_rate': 'auto',
              'learning_rate_scaling': 'sqrt',
              'optimizer': {'type': 'adam'},
-             'tune_batch_size': {'substitute_with_max': True,
-                                 'type': 'bin_search'},
              'validation_field': 'income',
              'validation_metric': 'accuracy'}}

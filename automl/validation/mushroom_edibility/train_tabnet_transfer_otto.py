@@ -1,7 +1,8 @@
 import logging
 
 from ludwig.api import LudwigModel
-from load_util import load_mushroom_edibility
+from ludwig.datasets import mushroom_edibility
+from ludwig.utils.dataset_utils import get_repeatable_train_val_test_split
 
 model = LudwigModel(
     config='config_tabnet_transfer_otto.yaml',
@@ -9,7 +10,8 @@ model = LudwigModel(
     backend="local",
 )
 
-mushroom_edibility_df = load_mushroom_edibility()
+mushroom_df = mushroom_edibility.load()
+mushroom_edibility_df = get_repeatable_train_val_test_split(mushroom_df, 'class', random_seed=42)
 model.train(
     dataset=mushroom_edibility_df,
     experiment_name='mushroom_edibility_tabnet_transfer_otto',

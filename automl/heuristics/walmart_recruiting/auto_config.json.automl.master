@@ -1,3 +1,59 @@
+NumExpr defaulting to 8 threads.
+Importing GBM requirements failed. Not loading GBM model type. If you want to use GBM, install Ludwig's 'tree' extra.
+Importing GBM requirements failed. Not loading LightGBM trainer. If you want to use LightGBM, install Ludwig's 'tree' extra.
+ImportError (ray.py) from horovod.ray import RayExecutor failed with error: 
+	No module named 'horovod'
+Connecting to existing Ray cluster at address: 127.0.0.1:6379
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl/heuristics/walmart_recruiting/Friday'
+While assessing potential image in is_image() for column Weekday, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column Weekday, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl/heuristics/walmart_recruiting/Monday'
+While assessing potential image in is_image() for column Weekday, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl/heuristics/walmart_recruiting/Thursday'
+While assessing potential image in is_image() for column Weekday, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column Weekday, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl/heuristics/walmart_recruiting/Wednesday'
+While assessing potential image in is_image() for column Weekday, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column Weekday, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column Weekday, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column Weekday, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl/heuristics/walmart_recruiting/Tuesday'
+While assessing potential image in is_image() for column Weekday, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl/heuristics/walmart_recruiting/HOUSEHOLD CHEMICALS/SUPP'
+While assessing potential image in is_image() for column DepartmentDescription, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column DepartmentDescription, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl/heuristics/walmart_recruiting/FROZEN FOODS'
+While assessing potential image in is_image() for column DepartmentDescription, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl/heuristics/walmart_recruiting/GROCERY DRY GOODS'
+While assessing potential image in is_image() for column DepartmentDescription, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column DepartmentDescription, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl/heuristics/walmart_recruiting/PRODUCE'
+While assessing potential image in is_image() for column DepartmentDescription, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl/heuristics/walmart_recruiting/PERSONAL CARE'
+While assessing potential image in is_image() for column DepartmentDescription, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column DepartmentDescription, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column DepartmentDescription, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column DepartmentDescription, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column Weekday, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column Weekday, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column Weekday, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column Weekday, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column Weekday, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column Weekday, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column Weekday, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column Weekday, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column Weekday, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column Weekday, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column DepartmentDescription, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column DepartmentDescription, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column DepartmentDescription, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column DepartmentDescription, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column DepartmentDescription, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column DepartmentDescription, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column DepartmentDescription, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column DepartmentDescription, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column DepartmentDescription, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column DepartmentDescription, encountered exception: 'NoneType' object has no attribute 'tell'
 Imbalance in TripType: minority/majority=0.00020096001469878966
 {'combiner': {'type': 'tabnet'},
  'hyperopt': {'executor': {'cpu_resources_per_trial': 1,
@@ -12,12 +68,12 @@ Imbalance in TripType: minority/majority=0.00020096001469878966
               'goal': 'maximize',
               'metric': 'accuracy',
               'output_feature': 'TripType',
-              'parameters': {'combiner.bn_momentum': {'categories': [0.6,
-                                                                     0.7,
-                                                                     0.8,
-                                                                     0.9,
-                                                                     0.95,
-                                                                     0.98],
+              'parameters': {'combiner.bn_momentum': {'categories': [0.4,
+                                                                     0.3,
+                                                                     0.2,
+                                                                     0.1,
+                                                                     0.05,
+                                                                     0.02],
                                                       'space': 'choice'},
                              'combiner.bn_virtual_bs': {'categories': [256,
                                                                        512,
@@ -59,13 +115,6 @@ Imbalance in TripType: minority/majority=0.00020096001469878966
                                                                   0.01,
                                                                   0.1],
                                                    'space': 'choice'},
-                             'trainer.batch_size': {'categories': [256,
-                                                                   512,
-                                                                   1024,
-                                                                   2048,
-                                                                   4096,
-                                                                   8192],
-                                                    'space': 'choice'},
                              'trainer.decay_rate': {'categories': [0.8,
                                                                    0.9,
                                                                    0.95],
@@ -101,6 +150,7 @@ Imbalance in TripType: minority/majority=0.00020096001469878966
  'output_features': [{'column': 'TripType',
                       'name': 'TripType',
                       'type': 'category'}],
+ 'preprocessing': {'split': {'column': 'split', 'type': 'fixed'}},
  'trainer': {'batch_size': 'auto',
              'decay': True,
              'decay_rate': 0.8,
@@ -108,7 +158,5 @@ Imbalance in TripType: minority/majority=0.00020096001469878966
              'learning_rate': 'auto',
              'learning_rate_scaling': 'sqrt',
              'optimizer': {'type': 'adam'},
-             'tune_batch_size': {'substitute_with_max': True,
-                                 'type': 'bin_search'},
              'validation_field': 'TripType',
              'validation_metric': 'accuracy'}}

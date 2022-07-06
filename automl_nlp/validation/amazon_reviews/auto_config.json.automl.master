@@ -1,3 +1,39 @@
+NumExpr defaulting to 8 threads.
+Importing GBM requirements failed. Not loading GBM model type. If you want to use GBM, install Ludwig's 'tree' extra.
+Importing GBM requirements failed. Not loading LightGBM trainer. If you want to use LightGBM, install Ludwig's 'tree' extra.
+ImportError (ray.py) from horovod.ray import RayExecutor failed with error: 
+	No module named 'horovod'
+Connecting to existing Ray cluster at address: 127.0.0.1:6379
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl_nlp/validation/amazon_reviews/Gave this to my dad for a gag gift after directing "Nunsense," he got a reall kick out of it!'
+While assessing potential image in is_image() for column review_text, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl_nlp/validation/amazon_reviews/I hope a lot of people hear this cd. We need more strong and positive vibes like this. Great vocals, fresh tunes, cross-cultural happiness. Her blues is from the gut. The pop sounds are catchy and mature.'
+While assessing potential image in is_image() for column review_text, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 63] File name too long: "/Users/anne/ludwig/experiments/automl_nlp/validation/amazon_reviews/I'm reading a lot of reviews saying that this is the best 'game soundtrack' and I figured that I'd write a review to disagree a bit. This in my opinino is Yasunori Mitsuda's ultimate masterpiece. The music is timeless and I'm been listening to it for years now and its beauty simply refuses to fade.The price tag on this is pretty staggering I must say, but if you are going to buy any cd for this much money, this is the only one that I feel would be worth every penny."
+While assessing potential image in is_image() for column review_text, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 63] File name too long: "/Users/anne/ludwig/experiments/automl_nlp/validation/amazon_reviews/The music of Yasunori Misuda is without question my close second below the great Nobuo Uematsu.Chrono Cross OST is a wonderful creation filled with rich orchestra and synthesized sounds. While ambiance is one of the music's major factors, yet at times it's very uplifting and vigorous. Some of my favourite tracks include"
+While assessing potential image in is_image() for column review_text, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 63] File name too long: "/Users/anne/ludwig/experiments/automl_nlp/validation/amazon_reviews/Probably the greatest soundtrack in history! Usually it's better to have played the game first but this is so enjoyable anyway! I worked so hard getting this soundtrack and after spending [money] to get it it was really worth every penny!! Get this OST! it's amazing! The first few tracks will have you dancing around with delight (especially Scars Left by Time)!! BUY IT NOW!!"
+While assessing potential image in is_image() for column review_text, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: "/Users/anne/ludwig/experiments/automl_nlp/validation/amazon_reviews/There's a reason this CD is so expensive, even the version that's not an import.Some of the best music ever. I could listen to every track every minute of every day. That's about all i can say."
+While assessing potential image in is_image() for column review_text, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 63] File name too long: '/Users/anne/ludwig/experiments/automl_nlp/validation/amazon_reviews/This is a self-published book, and if you want to know why--read a few paragraphs! Those 5 star reviews must have been written by Ms. Haddon\'s family and friends--or perhaps, by herself! I can\'t imagine anyone reading the whole thing--I spent an evening with the book and a friend and we were in hysterics reading bits and pieces of it to one another. It is most definitely bad enough to be entered into some kind of a "worst book" contest. I can\'t believe Amazon even sells this kind of thing. Maybe I can offer them my 8th grade term paper on "To Kill a Mockingbird"--a book I am quite sure Ms. Haddon never heard of. Anyway, unless you are in a mood to send a book to someone as a joke---stay far, far away from this one!'
+While assessing potential image in is_image() for column review_text, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 63] File name too long: "/Users/anne/ludwig/experiments/automl_nlp/validation/amazon_reviews/I was a dissapointed to see errors on the back cover, but since I paid for the book I read it anyway. I have to say I love it. I couldn't put it down. I read the whole book in two hours. I say buy it. I say read it. It is sad, but it gives an interesting point of view on church today. We spend too much time looking at the faults of others. I also enjoyed beloved.Sincerly,Jaylynn R"
+While assessing potential image in is_image() for column review_text, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: "/Users/anne/ludwig/experiments/automl_nlp/validation/amazon_reviews/A complete waste of time. Typographical errors, poor grammar, and a totally pathetic plot add up to absolutely nothing. I'm embarrassed for this author and very disappointed I actually paid for this book."
+While assessing potential image in is_image() for column review_text, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 63] File name too long: "/Users/anne/ludwig/experiments/automl_nlp/validation/amazon_reviews/I guess you have to be a romance novel lover for this one, and not a very discerning one. All others beware! It is absolute drivel. I figured I was in trouble when a typo is prominently featured on the back cover, but the first page of the book removed all doubt. Wait - maybe I'm missing the point. A quick re-read of the beginning now makes it clear. This has to be an intentional churning of over-heated prose for satiric purposes. Phew, so glad I didn't waste $10.95 after all."
+While assessing potential image in is_image() for column review_text, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column review_text, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column review_text, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column review_text, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column review_text, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column review_text, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column review_text, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column review_text, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column review_text, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column review_text, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column review_text, encountered exception: 'NoneType' object has no attribute 'tell'
 {'hyperopt': {'executor': {'cpu_resources_per_trial': 1,
                            'num_samples': 5,
                            'scheduler': {'grace_period': 72,
@@ -24,6 +60,7 @@
                      'name': 'review_text',
                      'type': 'text'}],
  'output_features': [{'column': 'label', 'name': 'label', 'type': 'category'}],
+ 'preprocessing': {'split': {'column': 'split', 'type': 'fixed'}},
  'trainer': {'batch_size': 'auto',
              'epochs': 5,
              'learning_rate': 'auto',

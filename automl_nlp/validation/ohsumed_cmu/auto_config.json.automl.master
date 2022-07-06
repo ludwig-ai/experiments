@@ -1,6 +1,69 @@
-Note: NumExpr detected 16 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
-{'hyperopt': {'executor': {'cpu_resources_per_trial': 16,
-                           'gpu_resources_per_trial': 1,
+NumExpr defaulting to 8 threads.
+Importing GBM requirements failed. Not loading GBM model type. If you want to use GBM, install Ludwig's 'tree' extra.
+Importing GBM requirements failed. Not loading LightGBM trainer. If you want to use LightGBM, install Ludwig's 'tree' extra.
+ImportError (ray.py) from horovod.ray import RayExecutor failed with error: 
+	No module named 'horovod'
+Connecting to existing Ray cluster at address: 127.0.0.1:6379
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl_nlp/validation/ohsumed_cmu/Neg-'
+While assessing potential image in is_image() for column class, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column class, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl_nlp/validation/ohsumed_cmu/Pos-Hyperplasia'
+While assessing potential image in is_image() for column class, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column class, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column class, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column class, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column class, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column class, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column class, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column class, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl_nlp/validation/ohsumed_cmu/Laparoscopic treatment of perforated peptic ulcer. Mouret P  Francois Y  Vignal J  Barth X  Lombard-Platet R.'
+While assessing potential image in is_image() for column text, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 63] File name too long: '/Users/anne/ludwig/experiments/automl_nlp/validation/ohsumed_cmu/Experimental sympathetic activation causes endothelial injury in the rabbit thoracic aorta via beta 1-adrenoceptor activation. Sympathetic activation appears to accelerate the development of atherosclerosis  an effect that may be inhibited by beta-receptor blockade. It is unclear  however  which mechanisms mediate this effect. In view of the significance attached to endothelial injury in the initial phases of atherogenesis  we decided to test whether sympathetic activation might lead to an increase in endothelial injury. Chloralose anesthesia was used to induce sympathetic activation and the presence of intracellular IgG as a criterion of endothelial cell injury. The beta 1-selective beta-blocker metoprolol was used to evaluate if the effect s  of sympathetic activation might be mediated by beta 1-adrenoceptors. In normal rabbits  the frequency of injured endothelial cells in unbranched areas of the thoracic aorta was 0.23   compared with 1.93  in circumostial areas. Chloralose anesthesia caused significant increases in blood pressure  heart rate  and plasma norepinephrine  that is  caused sympathetic activation  and led to an approximately fivefold increase in the number of injured cells both in unbranched and in circumostial areas. This increase was totally inhibited by metoprolol pretreatment  indicating that it was mediated by beta 1-receptors. These observations suggest one possible mechanism that may connect sympathetic activation with atherogenesis and explain why beta-blockade protects against atherosclerosis. Pettersson K  Bejne B  Bjork H  Strawn WB  Bondjers G.'
+While assessing potential image in is_image() for column text, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 63] File name too long: '/Users/anne/ludwig/experiments/automl_nlp/validation/ohsumed_cmu/Myocyte cell loss and myocyte cellular hyperplasia in the hypertrophied aging rat heart. To determine the effects of age on the myocardium  the functional and structural characteristics of the heart were studied in rats at 4  12  20  and 29 months of age. Mean arterial pressure  left ventricular pressure and its first derivative  dP dt   and heart rate were comparable in rat groups up to 20 months. During the interval from 20 to 29 months  elevated left ventricular end-diastolic pressure and decreased dP dt indicated that a significant impairment of ventricular function occurred with senescence. In the period between 4 and 12 months  a reduction of nearly 19  in the total number of myocytes was measured in both ventricles. In the subsequent ages  similar decreases in myocyte cell number were found in the left ventricle  whereas in the right ventricle  the initial loss was fully reversed by 20 months. Moreover  from 20 to 29 months  a 59  increase in the aggregate number of myocytes occurred in the right ventricular myocardium. In the left ventricle  a 3  increment was also seen  but this small change was not statistically significant. These estimations of myocyte cellular hyperplasia  however  were complicated by the fact that cell loss continued to take place with age. The volume fraction of collagen in the tissue  in fact  progressively increased from 8  and 7  at 4 months to 16  and 22  at 29 months in the left and right ventricles  respectively. In conclusion  myocyte cellular hyperplasia tends to regenerate the ventricular mass being lost with age in the adult mammalian rat heart. Anversa P  Palackal T  Sonnenblick EH  Olivetti G  Meggs LG  Capasso JM.'
+While assessing potential image in is_image() for column text, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 63] File name too long: '/Users/anne/ludwig/experiments/automl_nlp/validation/ohsumed_cmu/Absorption and motility of the bypassed human ileum. The authors assessed absorption and motility of the human ileum after a prolonged period of disuse. In eight patients with ulcerative colitis  a manometric-catheter assembly was placed via the ileostomy into the unused portion of distal ileum two months after ileal pouch-anal anastomosis and temporary diverting loop ileostomy. The distal ileum was perfused at 5 ml min with an isosmotic solution of either sodium chloride or ileal chyme diluted with sodium chloride for three hours before and three hours after a meal on two consecutive days. Absorption was measured  single and clustered pressure waves were identified and quantitated with the aid of a computer program  and a motility index was calculated. Mean absorption   - S.E.M. of both perfusates was poor on day 1  -10   - 2 ml 25 cm x 30 min   and the meal induced no ileal motor response. By day 2  however  absorption of both perfusates was much improved  -1   - 2 ml 25 cm x 30 min  P less than 0.05   and the number of discrete clustered contractions and the motility index now clearly increased after the meal  2.6   - 0.6 vs. 7.2   - 1.0 clustered waves hr  7.5   - 0.5 vs. 9.7   - 0.2 motility units 30 min  P less than 0.05 . The conclusion was that absorption and motility of the human ileum were impaired after two months of disuse  but that ileal absorption and motility improved one day after the introduction of isosmotic ileal perfusates. Miedema BW  Karlstrom L  Hanson RB  Johnson GP  Kelly KA.'
+While assessing potential image in is_image() for column text, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 63] File name too long: '/Users/anne/ludwig/experiments/automl_nlp/validation/ohsumed_cmu/Evolution of fundic argyrophil cell hyperplasia in nonantral atrophic gastritis. Fundic argyrophil cells were studied for a mean period of 68.7 months  range  11-170  in 18 patients with fundic atrophic gastritis and achlorhydria. Initially  12 patients had hyperplasia of the argyrophil cells  the severity of which was assessed using a semiquantitative classification based on the number of argyrophil clusters per square millimeter. At the end of the study  the degree of hyperplasia was unchanged in 9 patients  had decreased in 2  and had increased in 1  no significant increase in the number of argyrophil clusters  precarcinoid changes  or carcinoid tumors were observed and the high level of gastrinemia  mean  4.8  range  1.9-8.1  times the upper limit for normal  did not change significantly. Of the 6 patients with no hyperplasia at the outset of the study  4 continued without hyperplasia and 2 presented a low-grade hyperplasia at the 20th and 130th month. Gastrinemia increased significantly in the last patient and stayed normal in the other 5. This study argues in favor of the stable appearance of fundic argyrophil cells in patients with atrophic gastritis and stable gastrinemia. Roucayrol AM  Cattan D.'
+While assessing potential image in is_image() for column text, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 63] File name too long: '/Users/anne/ludwig/experiments/automl_nlp/validation/ohsumed_cmu/Late recurrence of a hepatocellular carcinoma in a patient with incomplete Alagille syndrome. In this study  the case of a patient presenting a second hepatocellular carcinoma 13 years after resection of a first tumor of the same type is reported. In this case  etiological investigations remained negative  but an incomplete form of syndromatic Alagille syndrome with paucity of bile ducts in the nontumoral tissue was detected and associated with nodular regenerative hyperplasia and foci of dysplasia. Malignant transformation in Alagille syndrome seems to be extremely rare. The fact that such tumors evolve very slowly could be an argument for partial hepatectomy and  if necessary  liver transplantation. Le Bail B  Bioulac-Sage P  Arnoux R  Perissat J  Saric J  Balabaud C.'
+While assessing potential image in is_image() for column text, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 63] File name too long: '/Users/anne/ludwig/experiments/automl_nlp/validation/ohsumed_cmu/Endoscopic cholangiopancreatography in hepatic clonorchiasis--a follow-up study. Cholangiographic changes of the biliary system in 16 patients with proven hepatic clonorchiasis  diagnosed by positive stool or bile ova isolates  were studied. All patients presented with epigastric pain. Other symptoms included jaundice in 31   5 of 16  and fever in 12.5   2 of 16 . Praziquantel given at 25 mg kg for three doses in 1 day were administered. Three consecutive stool tests were performed 3 months after treatment and were negative in 87.5   14 of 16 . ERCP studies were repeated at a mean interval of 31.6 months  range  8 to 69 months . Measurements of the bile ducts on retrograde cholangiograms before and after treatment were compared using the paired Student s t test. Filling defects and blunting of the terminal bile ducts seen on the initial cholangiogram  interpreted as the presence of adult worms  disappeared after treatment. However  there was no significant change between pre- and post-treatment measurement of bile duct caliber. Bile duct dilation  irregularities  and ductal proliferation persisted despite eradication of the parasite. Leung JW  Sung JY  Banez VP  Wu ZM  Agas FV Jr  Ling TK  Chung SC.'
+While assessing potential image in is_image() for column text, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl_nlp/validation/ohsumed_cmu/Nodular lymphoid hyperplasia of the colon in adults  is it common   letter  Colarian J  Calzada R  Jaszewski R.'
+While assessing potential image in is_image() for column text, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl_nlp/validation/ohsumed_cmu/Fever of unknown origin in an elderly patient diagnosed at postmortem examination as multifocal angiofollicular lymph node hyperplasia. Cutson TM  Lomasney JW  Schmader KE.'
+While assessing potential image in is_image() for column text, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl_nlp/validation/ohsumed_cmu/Nucleotide sequence for the murine CD14 cDNA and gene  letter  Matsuura K  Setoguchi M  Nasu N  Yoshida S  Higuchi Y  Akizuki S  Yamamoto S.'
+While assessing potential image in is_image() for column text, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column class, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column class, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column class, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column class, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column class, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column class, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column class, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column class, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column class, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column class, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column text, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column text, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column text, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column text, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column text, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column text, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column text, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column text, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column text, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column text, encountered exception: 'NoneType' object has no attribute 'tell'
+Imbalance in class: minority/majority=0.028154681139755767
+{'hyperopt': {'executor': {'cpu_resources_per_trial': 1,
+                           'num_samples': 5,
+                           'scheduler': {'grace_period': 72,
+                                         'max_t': 7200,
+                                         'reduction_factor': 5,
+                                         'time_attr': 'time_total_s',
+                                         'type': 'async_hyperband'},
                            'time_budget_s': 7200,
                            'type': 'ray'},
               'goal': 'maximize',
@@ -14,20 +77,13 @@ Note: NumExpr detected 16 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing 
                              'trainer.learning_rate': {'categories': [2e-05,
                                                                       3e-05],
                                                        'space': 'choice'}},
-              'sampler': {'num_samples': 5,
-                          'scheduler': {'grace_period': 72,
-                                        'max_t': 7200,
-                                        'reduction_factor': 5,
-                                        'time_attr': 'time_total_s',
-                                        'type': 'async_hyperband'},
-                          'search_alg': {'random_state_seed': 42,
-                                         'type': 'hyperopt'},
-                          'type': 'ray'}},
+              'search_alg': {'random_state_seed': 42, 'type': 'hyperopt'}},
  'input_features': [{'column': 'text',
                      'encoder': 'bert',
                      'name': 'text',
                      'type': 'text'}],
  'output_features': [{'column': 'class', 'name': 'class', 'type': 'category'}],
+ 'preprocessing': {'split': {'column': 'split', 'type': 'fixed'}},
  'trainer': {'batch_size': 'auto',
              'epochs': 5,
              'learning_rate': 'auto',

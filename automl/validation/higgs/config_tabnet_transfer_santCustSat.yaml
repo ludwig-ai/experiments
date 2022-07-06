@@ -59,6 +59,10 @@ output_features:
   - name: label
     type: binary
     weight_regularization: null
+preprocessing:
+  split:
+    type: fixed
+    column: split
 combiner:
   type: tabnet
   size: 24  # N_a

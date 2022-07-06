@@ -1,6 +1,71 @@
-Note: NumExpr detected 16 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
-{'hyperopt': {'executor': {'cpu_resources_per_trial': 16,
-                           'gpu_resources_per_trial': 1,
+NumExpr defaulting to 8 threads.
+Importing GBM requirements failed. Not loading GBM model type. If you want to use GBM, install Ludwig's 'tree' extra.
+Importing GBM requirements failed. Not loading LightGBM trainer. If you want to use LightGBM, install Ludwig's 'tree' extra.
+ImportError (ray.py) from horovod.ray import RayExecutor failed with error: 
+	No module named 'horovod'
+Connecting to existing Ray cluster at address: 127.0.0.1:6379
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl_nlp/validation/reuters_cmu/Neg-'
+While assessing potential image in is_image() for column class, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl_nlp/validation/reuters_cmu/Pos-earn'
+While assessing potential image in is_image() for column class, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column class, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column class, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column class, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl_nlp/validation/reuters_cmu/Pos-housing'
+While assessing potential image in is_image() for column class, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl_nlp/validation/reuters_cmu/Pos-acq'
+While assessing potential image in is_image() for column class, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column class, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column class, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column class, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 63] File name too long: '/Users/anne/ludwig/experiments/automl_nlp/validation/reuters_cmu/2 USX ltX DEBT DOWGRADED BY MOODYS     NEW YORK  Feb 26 - Moodys Investors Service Inc said it lowered the debt and preferred stock ratings of USX Corp and its units About seven billion dlrs of securities is affected     Moodys said Marathon Oil Cos recent establishment of up to one billion dlrs in production payment facilities on its prolific Yates Field has significant negative implications for USXs unsecured creditors     The company appears to have positioned its steel segment for a return to profit by late 1987  Moodys added     Ratings lowered include those on USXs senior debt to BA-1 from BAA-3  Reuter 3'
+While assessing potential image in is_image() for column text, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 63] File name too long: '/Users/anne/ludwig/experiments/automl_nlp/validation/reuters_cmu/2 COBANCO INC ltCBCO YEAR NET     SANTA CRUZ  Calif  Feb 26 -     Shr 34 cts vs 119 dlrs     Net 807 000 vs 2 858 000     Assets 5102 mln vs 4797 mln     Deposits 4723 mln vs 4403 mln     Loans 2992 mln vs 3272 mln     Note 4th qtr not available Year includes 1985 extraordinary gain from tax carry forward of 132 000 dlrs  or five cts per shr  Reuter 3'
+While assessing potential image in is_image() for column text, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 63] File name too long: '/Users/anne/ludwig/experiments/automl_nlp/validation/reuters_cmu/2 BROWN-FORMAN INC ltBFD 4TH QTR NET     LOUISVILLE  Ky  Feb 26 -     Shr one dlr vs 73 cts     Net 126 mln vs 158 mln     Revs 3373 mln vs 3152 mln     Nine mths     Shr 307 dlrs vs 308 dlrs     Net 66 mln vs 662 mln     Revs 159 billion vs 9971 mln  Reuter 3'
+While assessing potential image in is_image() for column text, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 63] File name too long: '/Users/anne/ludwig/experiments/automl_nlp/validation/reuters_cmu/2 HUGHES CAPITAL UNIT SIGNS PACT WITH BEAR STEARNS     FORT LAUDERDALE  Fla  Feb 26 - HughesConserdyne Corp  a unit of ltHughes Capital Corp said it made Bear Stearns and Co Inc ltBSC its exclusive investment banker to develop and market financing for the design and installation of its micro-utility systems for municipalities     The company said these systems are self-contained electrical generating facilities using alternate power sources  such as photovoltaic cells  to replace public utility power sources  Reuter 3'
+While assessing potential image in is_image() for column text, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 63] File name too long: '/Users/anne/ludwig/experiments/automl_nlp/validation/reuters_cmu/2 ESQUIRE RADIO AND ELECTRONICS INC ltEE 4TH QTR     NEW YORK  Feb 26 -     Shr profit 15 cts vs profit four cts     Annual div 72 cts vs 72 cts prior yr     Net profit 72 000 vs profit 16 000     Revs 7 075 000 vs 2 330 000     12 mths     Shr profit 42 cts vs loss 11 cts     Net profit 203 000 vs loss 55 000     Revs 161 mln vs 3 971 000     NOTE annual dividend payable April 10  1987  to stockholders of record on March 27  1987  Reuter 3'
+While assessing potential image in is_image() for column text, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 63] File name too long: '/Users/anne/ludwig/experiments/automl_nlp/validation/reuters_cmu/2 JANUARY HOUSING SALES DROP  REALTY GROUP SAYS     WASHINGTON  Feb 26 - Sales of previously owned homes dropped 145 pct in January to a seasonally adjusted annual rate of 347 mln units  the National Association of Realtors NAR said     But the December rate of 406 mln units had been the highest since the record 415 mln unit sales rate set in November 1978  the group said     The drop in January is not surprising considering that a significant portion of Decembers near-record pace was made up of sellers seeking to get favorable capital gains treatment under the old tax laws  said the NARs John Tuccillo  Reuter 3'
+While assessing potential image in is_image() for column text, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 63] File name too long: '/Users/anne/ludwig/experiments/automl_nlp/validation/reuters_cmu/2 MCLEANS ltMII US LINES SETS ASSET TRANSFER     CRANFORD  NJ  Feb 26 - McLean Industries Incs United States Lines Inc subsidiary said it has agreed in principle to transfer its South American service by arranging for the transfer of certain charters and assets to ltCrowley Mariotime Corps American Transport Lines Inc subsidiary     US Lines said negotiations on the contract are expected to be completed within the next week Terms and conditions of the contract would be subject to approval of various regulatory bodies  including the US Bankruptcy Court  Reuter 3'
+While assessing potential image in is_image() for column text, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 63] File name too long: '/Users/anne/ludwig/experiments/automl_nlp/validation/reuters_cmu/2 BRAZIL ANTI-INFLATION PLAN LIMPS TO ANNIVERSARY     RIO DE JANEIRO  Feb 26 - Brazils Cruzado anti- inflation plan  initially hailed at home and abroad as the saviour of the economy  is limping towards its first anniversary amid soaring prices  widespread shortages and a foreign payments crisis     Announced last February 28 the plan froze prices  fixed the value of the new Cruzado currency and ended widespread indexation of the economy in a bid to halt the countrys 250 pct inflation rate     But within a year the plan has all but collapsed     The situation now is worse than it was Although there was inflation  at least the economy worked  a leading bank economist said     The crumbling of the plan has been accompanied by a dramatic reversal in the foreign trade account In 1984 and 1985 Brazils annual trade surpluses had been sufficient to cover the 12 billion dlrs needed to service its 109 billion dlr foreign debt     For the first nine months of 1986 all seemed to be on target for a repeat  with monthly surpluses averaging one billion dlrs But as exports were diverted and imports increased to avoid further domestic shortages the trade surplus plunged to 211 mln dlrs in October and since then has averaged under 150 mln  Reuter 3'
+While assessing potential image in is_image() for column text, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 63] File name too long: '/Users/anne/ludwig/experiments/automl_nlp/validation/reuters_cmu/2 AMERICA FIRST MORTGAGE SETS SPECIAL PAYOUT     OMAHA  Neb  Feb 26 - ltAmerica First Federally Guaranteed Mortgage Fund Two said it is making a special distribution of 716 cts per exchangeable unit  which includes 6762 cts from return on capital and 398 cts from income gains  Reuter 3'
+While assessing potential image in is_image() for column text, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 63] File name too long: '/Users/anne/ludwig/experiments/automl_nlp/validation/reuters_cmu/2 CCC CREDITS FOR HONDURAS SWITCHED TO WHITE CORN     WASHINGTON  Feb 26 - The Commodity Credit Corporation CCC announced 15 mln dlrs in credit guarantees previously earmarked to cover sales of dry edible beans to Honduras have been switched to cover sales of white corn  the US Agriculture Department said     The department said the action reduces coverage for sales of dry edible beans to 500 000 dlrs and creates the new line of 15 mln dlrs for sales of white corn     All sales under the credit guarantee line must be registered  and shipped by September 30  1987  it said  Reuter 3'
+While assessing potential image in is_image() for column text, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column class, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column class, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column class, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column class, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column class, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column class, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column class, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column class, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column class, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column class, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column text, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column text, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column text, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column text, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column text, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column text, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column text, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column text, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column text, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column text, encountered exception: 'NoneType' object has no attribute 'tell'
+Imbalance in class: minority/majority=0.002073613271124935
+{'hyperopt': {'executor': {'cpu_resources_per_trial': 1,
+                           'num_samples': 5,
+                           'scheduler': {'grace_period': 72,
+                                         'max_t': 7200,
+                                         'reduction_factor': 5,
+                                         'time_attr': 'time_total_s',
+                                         'type': 'async_hyperband'},
                            'time_budget_s': 7200,
                            'type': 'ray'},
               'goal': 'maximize',
@@ -14,20 +79,13 @@ Note: NumExpr detected 16 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing 
                              'trainer.learning_rate': {'categories': [2e-05,
                                                                       3e-05],
                                                        'space': 'choice'}},
-              'sampler': {'num_samples': 5,
-                          'scheduler': {'grace_period': 72,
-                                        'max_t': 7200,
-                                        'reduction_factor': 5,
-                                        'time_attr': 'time_total_s',
-                                        'type': 'async_hyperband'},
-                          'search_alg': {'random_state_seed': 42,
-                                         'type': 'hyperopt'},
-                          'type': 'ray'}},
+              'search_alg': {'random_state_seed': 42, 'type': 'hyperopt'}},
  'input_features': [{'column': 'text',
                      'encoder': 'bert',
                      'name': 'text',
                      'type': 'text'}],
  'output_features': [{'column': 'class', 'name': 'class', 'type': 'category'}],
+ 'preprocessing': {'split': {'column': 'split', 'type': 'fixed'}},
  'trainer': {'batch_size': 'auto',
              'epochs': 5,
              'learning_rate': 'auto',

@@ -1,3 +1,35 @@
+NumExpr defaulting to 8 threads.
+Importing GBM requirements failed. Not loading GBM model type. If you want to use GBM, install Ludwig's 'tree' extra.
+Importing GBM requirements failed. Not loading LightGBM trainer. If you want to use LightGBM, install Ludwig's 'tree' extra.
+ImportError (ray.py) from horovod.ray import RayExecutor failed with error: 
+	No module named 'horovod'
+Connecting to existing Ray cluster at address: 127.0.0.1:6379
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl/heuristics/otto_group_product/Class_4'
+While assessing potential image in is_image() for column target, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column target, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl/heuristics/otto_group_product/Class_6'
+While assessing potential image in is_image() for column target, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl/heuristics/otto_group_product/Class_7'
+While assessing potential image in is_image() for column target, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl/heuristics/otto_group_product/Class_9'
+While assessing potential image in is_image() for column target, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column target, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl/heuristics/otto_group_product/Class_3'
+While assessing potential image in is_image() for column target, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column target, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column target, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl/heuristics/otto_group_product/Class_2'
+While assessing potential image in is_image() for column target, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column target, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column target, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column target, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column target, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column target, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column target, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column target, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column target, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column target, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column target, encountered exception: 'NoneType' object has no attribute 'tell'
 {'combiner': {'type': 'tabnet'},
  'hyperopt': {'executor': {'cpu_resources_per_trial': 1,
                            'num_samples': 10,
@@ -11,12 +43,12 @@
               'goal': 'maximize',
               'metric': 'accuracy',
               'output_feature': 'target',
-              'parameters': {'combiner.bn_momentum': {'categories': [0.6,
-                                                                     0.7,
-                                                                     0.8,
-                                                                     0.9,
-                                                                     0.95,
-                                                                     0.98],
+              'parameters': {'combiner.bn_momentum': {'categories': [0.4,
+                                                                     0.3,
+                                                                     0.2,
+                                                                     0.1,
+                                                                     0.05,
+                                                                     0.02],
                                                       'space': 'choice'},
                              'combiner.bn_virtual_bs': {'categories': [256,
                                                                        512,
@@ -58,13 +90,6 @@
                                                                   0.01,
                                                                   0.1],
                                                    'space': 'choice'},
-                             'trainer.batch_size': {'categories': [256,
-                                                                   512,
-                                                                   1024,
-                                                                   2048,
-                                                                   4096,
-                                                                   8192],
-                                                    'space': 'choice'},
                              'trainer.decay_rate': {'categories': [0.8,
                                                                    0.9,
                                                                    0.95],
@@ -84,7 +109,7 @@
  'input_features': [{'column': 'feat_1', 'name': 'feat_1', 'type': 'number'},
                     {'column': 'feat_2', 'name': 'feat_2', 'type': 'number'},
                     {'column': 'feat_3', 'name': 'feat_3', 'type': 'number'},
-                    {'column': 'feat_4', 'name': 'feat_4', 'type': 'category'},
+                    {'column': 'feat_4', 'name': 'feat_4', 'type': 'number'},
                     {'column': 'feat_5', 'name': 'feat_5', 'type': 'number'},
                     {'column': 'feat_6', 'name': 'feat_6', 'type': 'number'},
                     {'column': 'feat_7', 'name': 'feat_7', 'type': 'number'},
@@ -96,11 +121,11 @@
                     {'column': 'feat_13', 'name': 'feat_13', 'type': 'number'},
                     {'column': 'feat_14', 'name': 'feat_14', 'type': 'number'},
                     {'column': 'feat_15', 'name': 'feat_15', 'type': 'number'},
-                    {'column': 'feat_16', 'name': 'feat_16', 'type': 'number'},
-                    {'column': 'feat_17', 'name': 'feat_17', 'type': 'number'},
-                    {'column': 'feat_18',
-                     'name': 'feat_18',
+                    {'column': 'feat_16',
+                     'name': 'feat_16',
                      'type': 'category'},
+                    {'column': 'feat_17', 'name': 'feat_17', 'type': 'number'},
+                    {'column': 'feat_18', 'name': 'feat_18', 'type': 'number'},
                     {'column': 'feat_19', 'name': 'feat_19', 'type': 'number'},
                     {'column': 'feat_20', 'name': 'feat_20', 'type': 'number'},
                     {'column': 'feat_21', 'name': 'feat_21', 'type': 'number'},
@@ -109,27 +134,21 @@
                      'type': 'category'},
                     {'column': 'feat_23', 'name': 'feat_23', 'type': 'number'},
                     {'column': 'feat_24', 'name': 'feat_24', 'type': 'number'},
-                    {'column': 'feat_25',
-                     'name': 'feat_25',
-                     'type': 'category'},
+                    {'column': 'feat_25', 'name': 'feat_25', 'type': 'number'},
                     {'column': 'feat_26', 'name': 'feat_26', 'type': 'number'},
-                    {'column': 'feat_27',
-                     'name': 'feat_27',
-                     'type': 'category'},
+                    {'column': 'feat_27', 'name': 'feat_27', 'type': 'number'},
                     {'column': 'feat_28', 'name': 'feat_28', 'type': 'number'},
                     {'column': 'feat_29', 'name': 'feat_29', 'type': 'number'},
                     {'column': 'feat_30', 'name': 'feat_30', 'type': 'number'},
                     {'column': 'feat_31', 'name': 'feat_31', 'type': 'number'},
                     {'column': 'feat_32', 'name': 'feat_32', 'type': 'number'},
-                    {'column': 'feat_33', 'name': 'feat_33', 'type': 'number'},
+                    {'column': 'feat_33',
+                     'name': 'feat_33',
+                     'type': 'category'},
                     {'column': 'feat_34', 'name': 'feat_34', 'type': 'number'},
-                    {'column': 'feat_35',
-                     'name': 'feat_35',
-                     'type': 'category'},
+                    {'column': 'feat_35', 'name': 'feat_35', 'type': 'number'},
                     {'column': 'feat_36', 'name': 'feat_36', 'type': 'number'},
-                    {'column': 'feat_37',
-                     'name': 'feat_37',
-                     'type': 'category'},
+                    {'column': 'feat_37', 'name': 'feat_37', 'type': 'number'},
                     {'column': 'feat_38', 'name': 'feat_38', 'type': 'number'},
                     {'column': 'feat_39', 'name': 'feat_39', 'type': 'number'},
                     {'column': 'feat_40', 'name': 'feat_40', 'type': 'number'},
@@ -141,9 +160,7 @@
                     {'column': 'feat_46', 'name': 'feat_46', 'type': 'number'},
                     {'column': 'feat_47', 'name': 'feat_47', 'type': 'number'},
                     {'column': 'feat_48', 'name': 'feat_48', 'type': 'number'},
-                    {'column': 'feat_49',
-                     'name': 'feat_49',
-                     'type': 'category'},
+                    {'column': 'feat_49', 'name': 'feat_49', 'type': 'number'},
                     {'column': 'feat_50', 'name': 'feat_50', 'type': 'number'},
                     {'column': 'feat_51', 'name': 'feat_51', 'type': 'number'},
                     {'column': 'feat_52', 'name': 'feat_52', 'type': 'number'},
@@ -153,22 +170,14 @@
                     {'column': 'feat_56', 'name': 'feat_56', 'type': 'number'},
                     {'column': 'feat_57', 'name': 'feat_57', 'type': 'number'},
                     {'column': 'feat_58', 'name': 'feat_58', 'type': 'number'},
-                    {'column': 'feat_59',
-                     'name': 'feat_59',
-                     'type': 'category'},
+                    {'column': 'feat_59', 'name': 'feat_59', 'type': 'number'},
                     {'column': 'feat_60', 'name': 'feat_60', 'type': 'number'},
-                    {'column': 'feat_61',
-                     'name': 'feat_61',
-                     'type': 'category'},
+                    {'column': 'feat_61', 'name': 'feat_61', 'type': 'number'},
                     {'column': 'feat_62', 'name': 'feat_62', 'type': 'number'},
                     {'column': 'feat_63', 'name': 'feat_63', 'type': 'number'},
-                    {'column': 'feat_64',
-                     'name': 'feat_64',
-                     'type': 'category'},
+                    {'column': 'feat_64', 'name': 'feat_64', 'type': 'number'},
                     {'column': 'feat_65', 'name': 'feat_65', 'type': 'number'},
-                    {'column': 'feat_66',
-                     'name': 'feat_66',
-                     'type': 'category'},
+                    {'column': 'feat_66', 'name': 'feat_66', 'type': 'number'},
                     {'column': 'feat_67', 'name': 'feat_67', 'type': 'number'},
                     {'column': 'feat_68', 'name': 'feat_68', 'type': 'number'},
                     {'column': 'feat_69', 'name': 'feat_69', 'type': 'number'},
@@ -177,9 +186,7 @@
                     {'column': 'feat_72', 'name': 'feat_72', 'type': 'number'},
                     {'column': 'feat_73', 'name': 'feat_73', 'type': 'number'},
                     {'column': 'feat_74', 'name': 'feat_74', 'type': 'number'},
-                    {'column': 'feat_75',
-                     'name': 'feat_75',
-                     'type': 'category'},
+                    {'column': 'feat_75', 'name': 'feat_75', 'type': 'number'},
                     {'column': 'feat_76', 'name': 'feat_76', 'type': 'number'},
                     {'column': 'feat_77', 'name': 'feat_77', 'type': 'number'},
                     {'column': 'feat_78', 'name': 'feat_78', 'type': 'number'},
@@ -190,9 +197,7 @@
                     {'column': 'feat_83', 'name': 'feat_83', 'type': 'number'},
                     {'column': 'feat_84', 'name': 'feat_84', 'type': 'number'},
                     {'column': 'feat_85', 'name': 'feat_85', 'type': 'number'},
-                    {'column': 'feat_86',
-                     'name': 'feat_86',
-                     'type': 'category'},
+                    {'column': 'feat_86', 'name': 'feat_86', 'type': 'number'},
                     {'column': 'feat_87', 'name': 'feat_87', 'type': 'number'},
                     {'column': 'feat_88', 'name': 'feat_88', 'type': 'number'},
                     {'column': 'feat_89', 'name': 'feat_89', 'type': 'number'},
@@ -203,6 +208,7 @@
  'output_features': [{'column': 'target',
                       'name': 'target',
                       'type': 'category'}],
+ 'preprocessing': {'split': {'column': 'split', 'type': 'fixed'}},
  'trainer': {'batch_size': 'auto',
              'decay': True,
              'decay_rate': 0.8,
@@ -210,7 +216,5 @@
              'learning_rate': 'auto',
              'learning_rate_scaling': 'sqrt',
              'optimizer': {'type': 'adam'},
-             'tune_batch_size': {'substitute_with_max': True,
-                                 'type': 'bin_search'},
              'validation_field': 'target',
              'validation_metric': 'accuracy'}}

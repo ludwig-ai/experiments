@@ -1111,7 +1111,10 @@ input_features:
     name: var38
     type: number
 preprocessing:
-    oversample_minority: 1.00
+  oversample_minority: 1.00
+  split:
+    type: fixed
+    column: split
 combiner:
   type: tabnet
   size: 24  # N_a
