@@ -16,8 +16,8 @@ auto_train_results = auto_train(
     target='class_index',
     time_limit_s=7200,
     tune_for_memory=True,
-    user_config={'preprocessing': {'text': {'word_sequence_length_limit': 81}},
-        'preprocessing': {'split': {'column': 'split', 'type': 'fixed'}}},
+    user_config={'preprocessing': {'text': {'word_sequence_length_limit': 81},
+        'split': {'column': 'split', 'type': 'fixed'}}},
 )
 
 pprint.pprint(auto_train_results)

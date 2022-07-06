@@ -1,17 +1,20 @@
 import logging
 import pprint
 
-from ludwig.datasets import forest_cover
 from ludwig.automl import auto_train
+from ludwig.datasets import forest_cover
+from ludwig.utils.dataset_utils import get_repeatable_train_val_test_split
 
-forest_cover_df = forest_cover.load()
+forest_df = forest_cover.load(use_tabnet_split=True)
+forest_cover_df = get_repeatable_train_val_test_split(forest_df, 'Cover_Type', random_seed=42)
 
 auto_train_results = auto_train(
     dataset=forest_cover_df,
     target='Cover_Type',
     time_limit_s=3600,
     tune_for_memory=False,
-    user_config={'hyperopt': {'sampler': {'search_alg': {'type': 'random', 'points_to_evaluate': [{
+    user_config={'preprocessing': {'split': {'column': 'split', 'type': 'fixed'}},
+        'hyperopt': {'sampler': {'search_alg': {'type': 'random', 'points_to_evaluate': [{
         'combiner.bn_momentum': 0.6,
         'combiner.bn_virtual_bs': 4096,
         'combiner.num_steps': 4,

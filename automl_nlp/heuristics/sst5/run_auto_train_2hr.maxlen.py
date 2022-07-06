@@ -11,7 +11,8 @@ auto_train_results = auto_train(
     target='label',
     time_limit_s=7200,
     tune_for_memory=False,
-    user_config={'preprocessing': {'text': {'word_sequence_length_limit': 44}}}
+    user_config={'preprocessing': {'text': {'word_sequence_length_limit': 44},
+        'split': {'column': 'split', 'type': 'fixed'}}},
 )
 
 pprint.pprint(auto_train_results)

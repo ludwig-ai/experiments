@@ -1,3 +1,39 @@
+NumExpr defaulting to 8 threads.
+Importing GBM requirements failed. Not loading GBM model type. If you want to use GBM, install Ludwig's 'tree' extra.
+Importing GBM requirements failed. Not loading LightGBM trainer. If you want to use LightGBM, install Ludwig's 'tree' extra.
+ImportError (ray.py) from horovod.ray import RayExecutor failed with error: 
+	No module named 'horovod'
+Connecting to existing Ray cluster at address: 127.0.0.1:6379
+[Errno 2] No such file or directory: "/Users/anne/ludwig/experiments/automl_nlp/heuristics/sst2/The Rock is destined to be the 21st Century 's new `` Conan '' and that he 's going to make a splash even greater than Arnold Schwarzenegger , Jean-Claud Van Damme or Steven Segal ."
+While assessing potential image in is_image() for column sentence, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: "/Users/anne/ludwig/experiments/automl_nlp/heuristics/sst2/The gorgeously elaborate continuation of `` The Lord of the Rings '' trilogy is so huge that a column of words can not adequately describe co-writer\\/director Peter Jackson 's expanded vision of J.R.R. Tolkien 's Middle-earth ."
+While assessing potential image in is_image() for column sentence, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl_nlp/heuristics/sst2/Singer\\/composer Bryan Adams contributes a slew of songs -- a few potential hits , a few more simply intrusive to the story -- but the whole package certainly captures the intended , er , spirit of the piece .'
+While assessing potential image in is_image() for column sentence, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl_nlp/heuristics/sst2/Yet the act is still charming here .'
+While assessing potential image in is_image() for column sentence, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: "/Users/anne/ludwig/experiments/automl_nlp/heuristics/sst2/Whether or not you 're enlightened by any of Derrida 's lectures on `` the other '' and `` the self , '' Derrida is an undeniably fascinating and playful fellow ."
+While assessing potential image in is_image() for column sentence, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl_nlp/heuristics/sst2/Just the labour involved in creating the layered richness of the imagery in this chiaroscuro of madness and light is astonishing .'
+While assessing potential image in is_image() for column sentence, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl_nlp/heuristics/sst2/Part of the charm of Satin Rouge is that it avoids the obvious with humour and lightness .'
+While assessing potential image in is_image() for column sentence, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: "/Users/anne/ludwig/experiments/automl_nlp/heuristics/sst2/a screenplay more ingeniously constructed than `` Memento ''"
+While assessing potential image in is_image() for column sentence, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: "/Users/anne/ludwig/experiments/automl_nlp/heuristics/sst2/`` Extreme Ops '' exceeds expectations ."
+While assessing potential image in is_image() for column sentence, encountered exception: 'NoneType' object has no attribute 'tell'
+[Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl_nlp/heuristics/sst2/Good fun , good action , good acting , good dialogue , good pace , good cinematography .'
+While assessing potential image in is_image() for column sentence, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column sentence, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column sentence, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column sentence, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column sentence, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column sentence, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column sentence, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column sentence, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column sentence, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column sentence, encountered exception: 'NoneType' object has no attribute 'tell'
+While assessing potential image in is_image() for column sentence, encountered exception: 'NoneType' object has no attribute 'tell'
 {'hyperopt': {'executor': {'cpu_resources_per_trial': 1,
                            'num_samples': 5,
                            'scheduler': {'grace_period': 72,
@@ -24,6 +60,7 @@
                      'name': 'sentence',
                      'type': 'text'}],
  'output_features': [{'column': 'label', 'name': 'label', 'type': 'binary'}],
+ 'preprocessing': {'split': {'column': 'split', 'type': 'fixed'}},
  'trainer': {'batch_size': 'auto',
              'epochs': 5,
              'learning_rate': 'auto',
