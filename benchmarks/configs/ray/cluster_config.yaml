@@ -1,0 +1,65 @@
+cluster_name: shreya-ludwig-ray-c5_9xlarge
+
+max_workers: 3
+
+docker:
+    image: "ludwigai/ludwig-ray:master"
+    # image: "ludwigai/ludwig-ray:sha-1db913b"
+    container_name: "ray_container"
+    pull_before_run: True
+    run_options:   # Extra options to pass into "docker run"
+        - --ulimit nofile=65536:65536
+        - --cap-add SYS_PTRACE
+
+provider:
+    type: aws
+    region: us-west-2
+    availability_zone: us-west-2a
+    cache_stopped_nodes: False
+
+available_node_types:
+    ray.head.default:
+        resources: {}
+        node_config:
+            InstanceType: c5.9xlarge
+            ImageId: latest_dlami
+            BlockDeviceMappings:
+                - DeviceName: /dev/sda1
+                  Ebs:
+                      VolumeSize: 200
+    ray.worker.default:
+        min_workers: 0
+        max_workers: 0
+        resources: {}
+        node_config:
+            InstanceType: c5.9xlarge
+            ImageId: latest_dlami
+
+head_node_type: ray.head.default
+
+file_mounts: {
+  /home/ubuntu/ludwig/: /Users/shreyarajpal/Predibase/predibase/ludwig,
+  /home/ubuntu/benchmarks/: /Users/shreyarajpal/Predibase/benchmarks,
+  /home/ray/.aws: /Users/shreyarajpal/.aws,
+}
+
+rsync_exclude:
+    - "**/.git"
+    - "**/.git/**"
+
+rsync_filter:
+    - ".gitignore"
+
+setup_commands:
+    - pip uninstall -y ludwig && pip install -e /home/ubuntu/ludwig/.
+    - pip install s3fs==2021.10.0 aiobotocore==1.4.2 boto3==1.17.106
+    - pip install pandas==1.1.4
+    - pip install hydra-core --upgrade
+
+head_start_ray_commands:
+    - ray stop --force
+    - ray start --head --port=6379 --object-manager-port=8076 --autoscaling-config=~/ray_bootstrap_config.yaml
+
+worker_start_ray_commands:
+    - ray stop --force
+    - ray start --address=$RAY_HEAD_IP:6379 --object-manager-port=8076

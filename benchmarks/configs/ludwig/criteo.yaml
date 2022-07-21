@@ -1,0 +1,146 @@
+input_features:
+  -
+    name: numerical_1
+    type: numerical
+  -
+    name: numerical_2
+    type: numerical
+  - 
+    name: numerical_3
+    type: numerical
+  -
+    name: numerical_4
+    type: numerical
+  -
+    name: numerical_5
+    type: numerical
+  -
+    name: numerical_6
+    type: numerical
+  -
+    name: numerical_7
+    type: numerical
+  -
+    name: numerical_8
+    type: numerical
+  -
+    name: numerical_9
+    type: numerical
+  -
+    name: numerical_10
+    type: numerical
+  -
+    name: numerical_11
+    type: numerical
+  -
+    name: numerical_12
+    type: numerical
+  -
+    name: numerical_13
+    type: numerical
+  -
+    name: categorical_1
+    type: category
+  -
+    name: categorical_2
+    type: category
+  -
+    name: categorical_3
+    type: category
+  -
+    name: categorical_4
+    type: category
+  -
+    name: categorical_5
+    type: category
+  -
+    name: categorical_6
+    type: category
+  -
+    name: categorical_7
+    type: category
+  - 
+    name: categorical_8
+    type: category
+  -
+    name: categorical_9
+    type: category
+  -
+    name: categorical_10
+    type: category
+  -
+    name: categorical_11
+    type: category
+  -
+    name: categorical_12
+    type: category
+  -
+    name: categorical_13
+    type: category
+  -
+    name: categorical_14
+    type: category
+  -
+    name: categorical_15
+    type: category
+  -
+    name: categorical_16
+    type: category
+  -
+    name: categorical_17
+    type: category
+  -
+    name: categorical_18
+    type: category
+  -
+    name: categorical_19
+    type: category
+  -
+    name: categorical_20
+    type: category
+  -
+    name: categorical_21
+    type: category
+  -
+    name: categorical_22
+    type: category
+  -
+    name: categorical_23
+    type: category
+  -
+    name: categorical_24
+    type: category
+  -
+    name: categorical_25
+    type: category
+  -
+    name: categorical_26
+    type: category
+output_features:
+  -
+    name: label
+    type: binary
+combiner:
+  type: tabnet
+  bn_momentum: 0.95
+  bn_virtual_bs: 1024
+  dropout: 0.05252744300130521
+  fc_size: 128
+  num_fc_layers: 3
+  num_steps: 3
+  output_size: 128
+  relaxation_factor: 1.5
+  size: 32
+  sparsity: 0.0001
+trainer:
+  batch_size: 32768
+backend:
+  type: ray
+  processor:
+    type: modin
+  # cache_dir: s3://ludwig-cache.us-west-2.predibase.com/criteo
+  trainer:
+    num_workers: 4
+    resources_per_worker:
+      GPU: 1
+dataset_size: 10GB
