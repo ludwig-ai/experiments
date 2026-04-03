@@ -49,22 +49,32 @@ def build_result(
     """Build a standardized result dict from Ludwig training outputs."""
     import ludwig
 
-    # Extract metrics from eval_stats
+    # Extract ALL metrics from eval_stats for ALL output features
     metrics = {}
-    if eval_stats and primary_output in eval_stats:
-        metrics["test"] = {k: v for k, v in eval_stats[primary_output].items() if isinstance(v, (int, float))}
+    if eval_stats:
+        test_metrics = {}
+        for feat_name, feat_metrics in eval_stats.items():
+            if isinstance(feat_metrics, dict):
+                scalar_metrics = {k: v for k, v in feat_metrics.items() if isinstance(v, (int, float))}
+                if scalar_metrics:
+                    test_metrics[feat_name] = scalar_metrics
+        metrics["test"] = test_metrics
 
-    # Extract validation metrics from train_stats
+    # Extract validation metrics from train_stats for ALL output features
     if train_stats and hasattr(train_stats, "validation"):
-        val_metrics = train_stats.validation.get(primary_output, {})
-        val_best = {}
-        for metric_name, values in val_metrics.items():
-            if values:
-                if "loss" in metric_name or "error" in metric_name:
-                    val_best[metric_name] = min(values)
-                else:
-                    val_best[metric_name] = max(values)
-        metrics["validation"] = val_best
+        val_best_all = {}
+        for feat_name, feat_val_metrics in train_stats.validation.items():
+            if isinstance(feat_val_metrics, dict):
+                val_best = {}
+                for metric_name, values in feat_val_metrics.items():
+                    if values and isinstance(values, list) and isinstance(values[0], (int, float)):
+                        if "loss" in metric_name or "error" in metric_name:
+                            val_best[metric_name] = min(values)
+                        else:
+                            val_best[metric_name] = max(values)
+                if val_best:
+                    val_best_all[feat_name] = val_best
+        metrics["validation"] = val_best_all
 
     # Count epochs trained
     epochs_trained = 0
@@ -83,8 +93,8 @@ def build_result(
         "config": config,
         "metrics": metrics,
         "primary_metric": primary_metric,
-        "primary_value": metrics.get("validation", {}).get(primary_metric)
-        or metrics.get("test", {}).get(primary_metric),
+        "primary_value": metrics.get("validation", {}).get(primary_output, {}).get(primary_metric)
+        or metrics.get("test", {}).get(primary_output, {}).get(primary_metric),
         "training_time_seconds": round(training_time, 2),
         "epochs_trained": epochs_trained,
         "seed": seed,
@@ -133,8 +143,20 @@ def update_leaderboard(result: dict, base_dir: str, is_minimize: bool = False):
         is_better = (value < old_val) if is_minimize else (value > old_val)
 
     if is_better:
+        # Store all test metrics for the primary output alongside the primary metric
+        all_test = result.get("metrics", {}).get("test", {}).get(result.get("dataset", ""), {})
+        if not all_test:
+            # Fallback: get from any output feature
+            test_metrics = result.get("metrics", {}).get("test", {})
+            for feat_name, feat_metrics in test_metrics.items():
+                if isinstance(feat_metrics, dict):
+                    all_test = feat_metrics
+                    break
+
         lb[dataset][model] = {
+            "primary_metric": metric,
             metric: value,
+            "all_test_metrics": all_test,
             "run": result["timestamp"],
             "config_hash": result["config_hash"],
             "seed": result["seed"],
@@ -170,16 +192,47 @@ def print_leaderboard(base_dir: str):
 
 
 def print_comparison(base_dir: str, dataset_name: str):
-    """Print comparison table for all models on a single dataset."""
+    """Print comparison table for all models on a single dataset with all metrics."""
     lb = load_leaderboard(base_dir)
     if dataset_name not in lb:
         print(f"No results for dataset '{dataset_name}'.")
         return
 
     entries = lb[dataset_name]
-    print(f"\n{'Model':<25s} {'Metric':<20s} {'Value':>12s} {'Seed':>6s}")
-    print("-" * 65)
-    for model in sorted(entries):
+
+    # Print primary metric ranking
+    primary_metric = None
+    for entry in entries.values():
+        primary_metric = entry.get("primary_metric")
+        if primary_metric:
+            break
+
+    print(f"\nDataset: {dataset_name}")
+    print(f"Primary metric: {primary_metric}")
+    print(f"\n{'Model':<25s} {'Primary':>12s}", end="")
+
+    # Collect all test metric names across all models
+    all_metric_names = set()
+    for entry in entries.values():
+        all_test = entry.get("all_test_metrics", {})
+        all_metric_names.update(all_test.keys())
+    all_metric_names.discard(primary_metric)
+    other_metrics = sorted(all_metric_names)
+
+    for m in other_metrics:
+        print(f" {m:>12s}", end="")
+    print()
+    print("-" * (25 + 13 + 13 * len(other_metrics)))
+
+    for model in sorted(entries, key=lambda m: entries[m].get(primary_metric, 0), reverse=True):
         entry = entries[model]
-        metric_name = [k for k in entry if k not in ("run", "config_hash", "seed")][0]
-        print(f"{model:<25s} {metric_name:<20s} {entry[metric_name]:>12.6f} {entry.get('seed', ''):>6}")
+        pval = entry.get(primary_metric, float("nan"))
+        print(f"{model:<25s} {pval:>12.6f}", end="")
+        all_test = entry.get("all_test_metrics", {})
+        for m in other_metrics:
+            val = all_test.get(m)
+            if val is not None and isinstance(val, (int, float)):
+                print(f" {val:>12.6f}", end="")
+            else:
+                print(f" {'—':>12s}", end="")
+        print()
