@@ -9,6 +9,7 @@ Usage:
 """
 
 import argparse
+import concurrent.futures
 import logging
 import os
 import sys
@@ -74,6 +75,18 @@ class ExperimentRunner:
         self.base_dir = base_dir
         self.registry = Registry(base_dir)
 
+    @staticmethod
+    def _get_num_gpus() -> int:
+        """Detect number of available GPUs."""
+        try:
+            import torch
+
+            if torch.cuda.is_available():
+                return torch.cuda.device_count()
+        except ImportError:
+            pass
+        return 0
+
     def run(
         self,
         datasets: str | list[str] = None,
@@ -81,8 +94,12 @@ class ExperimentRunner:
         seeds: list[int] = None,
         epochs_override: int = None,
         gpu: bool = True,
+        max_parallel: int = None,
     ) -> list[dict]:
         """Run experiments for given dataset/model combinations.
+
+        When multiple GPUs are available, runs up to N experiments in parallel (one per GPU).
+        Each experiment is pinned to a specific GPU via CUDA_VISIBLE_DEVICES.
 
         Args:
             datasets: Dataset name(s). None = all registered datasets.
@@ -90,6 +107,7 @@ class ExperimentRunner:
             seeds: Random seeds to run. Default [42].
             epochs_override: Override epochs in trainer config.
             gpu: Whether to use GPU if available.
+            max_parallel: Max parallel experiments. Default = number of GPUs (or 1 if CPU).
 
         Returns:
             List of result dicts.
@@ -107,37 +125,80 @@ class ExperimentRunner:
         if seeds is None:
             seeds = [42]
 
-        results = []
-        total = len(datasets) * len(models) * len(seeds)
-        i = 0
-
+        # Build job list
+        jobs = []
         for dataset_name in datasets:
             for model_name in models:
                 for seed in seeds:
-                    i += 1
-                    print(f"\n[{i}/{total}] {dataset_name} / {model_name} (seed={seed})")
-                    try:
-                        result = self._run_one(
-                            dataset_name, model_name, seed, epochs_override, gpu
-                        )
-                        results.append(result)
+                    jobs.append((dataset_name, model_name, seed))
 
-                        # Save and update leaderboard
-                        path = save_result(result, self.base_dir)
-                        ds_config = self.registry.get_dataset(dataset_name)
-                        is_minimize = ds_config.get("minimize", False)
-                        update_leaderboard(result, self.base_dir, is_minimize)
+        total = len(jobs)
+        num_gpus = self._get_num_gpus() if gpu else 0
+        if max_parallel is None:
+            max_parallel = max(num_gpus, 1)
 
-                        val = result.get("primary_value")
-                        metric = result.get("primary_metric", "?")
-                        elapsed = result.get("training_time_seconds", 0)
-                        print(f"  {metric}={val:.6f} ({elapsed:.1f}s) -> {path}")
+        print(f"Running {total} experiments ({max_parallel} parallel, {num_gpus} GPUs detected)")
 
-                    except Exception as e:
-                        print(f"  FAILED: {e}")
-                        logger.exception(f"Experiment failed: {dataset_name}/{model_name}")
+        if max_parallel <= 1:
+            # Sequential execution
+            return self._run_sequential(jobs, epochs_override, gpu)
+        else:
+            # Parallel execution with GPU pinning
+            return self._run_parallel(jobs, epochs_override, num_gpus, max_parallel)
+
+    def _run_sequential(self, jobs, epochs_override, gpu) -> list[dict]:
+        """Run jobs one at a time."""
+        results = []
+        for i, (dataset_name, model_name, seed) in enumerate(jobs, 1):
+            print(f"\n[{i}/{len(jobs)}] {dataset_name} / {model_name} (seed={seed})")
+            try:
+                result = self._run_one(dataset_name, model_name, seed, epochs_override, gpu)
+                results.append(result)
+                self._save_and_report(result, dataset_name)
+            except Exception as e:
+                print(f"  FAILED: {e}")
+                logger.exception(f"Experiment failed: {dataset_name}/{model_name}")
+        return results
+
+    def _run_parallel(self, jobs, epochs_override, num_gpus, max_parallel) -> list[dict]:
+        """Run jobs in parallel, pinning each to a specific GPU."""
+        results = []
+        gpu_semaphores = list(range(num_gpus)) if num_gpus > 0 else [None]
+
+        def run_with_gpu(args):
+            idx, (dataset_name, model_name, seed) = args
+            gpu_id = gpu_semaphores[idx % len(gpu_semaphores)]
+            if gpu_id is not None:
+                os.environ["CUDA_VISIBLE_DEVICES"] = str(gpu_id)
+            print(f"  [{idx + 1}/{len(jobs)}] {dataset_name}/{model_name} seed={seed} gpu={gpu_id}")
+            return self._run_one(dataset_name, model_name, seed, epochs_override, gpu=gpu_id is not None)
+
+        with concurrent.futures.ThreadPoolExecutor(max_workers=max_parallel) as executor:
+            futures = {
+                executor.submit(run_with_gpu, (i, job)): job for i, job in enumerate(jobs)
+            }
+            for future in concurrent.futures.as_completed(futures):
+                dataset_name, model_name, seed = futures[future]
+                try:
+                    result = future.result()
+                    results.append(result)
+                    self._save_and_report(result, dataset_name)
+                except Exception as e:
+                    print(f"  FAILED {dataset_name}/{model_name}: {e}")
+                    logger.exception(f"Experiment failed: {dataset_name}/{model_name}")
 
         return results
+
+    def _save_and_report(self, result, dataset_name):
+        """Save result and update leaderboard."""
+        path = save_result(result, self.base_dir)
+        ds_config = self.registry.get_dataset(dataset_name)
+        is_minimize = ds_config.get("minimize", False)
+        update_leaderboard(result, self.base_dir, is_minimize)
+        val = result.get("primary_value")
+        metric = result.get("primary_metric", "?")
+        elapsed = result.get("training_time_seconds", 0)
+        print(f"  {metric}={val:.6f} ({elapsed:.1f}s) -> {path}")
 
     def _run_one(
         self,
@@ -204,6 +265,7 @@ def main():
     parser.add_argument("--seeds", nargs="*", type=int, default=[42], help="Random seeds.")
     parser.add_argument("--epochs", type=int, default=None, help="Override epochs.")
     parser.add_argument("--no-gpu", action="store_true", help="Force CPU.")
+    parser.add_argument("--max-parallel", type=int, default=None, help="Max parallel experiments (default: num GPUs).")
     parser.add_argument("--leaderboard", action="store_true", help="Print leaderboard.")
     parser.add_argument("--compare", type=str, help="Compare models on a dataset.")
     parser.add_argument("--base-dir", type=str, default=None, help="Experiments repo root.")
@@ -230,6 +292,7 @@ def main():
         seeds=args.seeds,
         epochs_override=args.epochs,
         gpu=not args.no_gpu,
+        max_parallel=args.max_parallel,
     )
 
     print("\n" + "=" * 60)
