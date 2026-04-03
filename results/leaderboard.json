@@ -42,5 +42,43 @@
       "run": "2026-04-03T20:27:13.863227+00:00",
       "seed": 42
     }
+  },
+  "california_housing": {
+    "concat_baseline": {
+      "config_hash": "70dd2ed1a620",
+      "root_mean_squared_error": 0.49125951528549194,
+      "run": "2026-04-03T20:50:08.461447+00:00",
+      "seed": 42
+    },
+    "cross_attention": {
+      "config_hash": "36478a8d0d08",
+      "root_mean_squared_error": 0.47712570428848267,
+      "run": "2026-04-03T21:03:39.050546+00:00",
+      "seed": 42
+    },
+    "ft_transformer": {
+      "config_hash": "6f8f4595c627",
+      "root_mean_squared_error": 0.4605657458305359,
+      "run": "2026-04-03T20:57:00.519655+00:00",
+      "seed": 42
+    },
+    "perceiver": {
+      "config_hash": "a764f3b7fa22",
+      "root_mean_squared_error": 0.47680187225341797,
+      "run": "2026-04-03T21:07:05.945014+00:00",
+      "seed": 42
+    },
+    "periodic_concat": {
+      "config_hash": "28227d0361b6",
+      "root_mean_squared_error": 0.4664521813392639,
+      "run": "2026-04-03T21:08:05.945400+00:00",
+      "seed": 42
+    },
+    "transformer": {
+      "config_hash": "5001ef974454",
+      "root_mean_squared_error": 0.46874651312828064,
+      "run": "2026-04-03T20:53:13.072767+00:00",
+      "seed": 42
+    }
   }
 }

@@ -1,0 +1,142 @@
+{
+  "dataset": "california_housing",
+  "model": "periodic_concat",
+  "timestamp": "2026-04-03T21:08:05.945400+00:00",
+  "ludwig_version": "0.11.4",
+  "hardware": {
+    "cpu": "x86_64",
+    "platform": "Linux-6.8.0-107-generic-x86_64-with-glibc2.39",
+    "gpu": "NVIDIA GeForce RTX 2080 Ti",
+    "gpu_count": 1,
+    "gpu_memory_mb": 10821,
+    "ram_gb": 31.3
+  },
+  "config_hash": "28227d0361b6",
+  "config": {
+    "input_features": [
+      {
+        "name": "MedInc",
+        "type": "number",
+        "encoder": {
+          "type": "periodic",
+          "num_frequencies": 64,
+          "output_size": 128
+        }
+      },
+      {
+        "name": "HouseAge",
+        "type": "number",
+        "encoder": {
+          "type": "periodic",
+          "num_frequencies": 64,
+          "output_size": 128
+        }
+      },
+      {
+        "name": "AveRooms",
+        "type": "number",
+        "encoder": {
+          "type": "periodic",
+          "num_frequencies": 64,
+          "output_size": 128
+        }
+      },
+      {
+        "name": "AveBedrms",
+        "type": "number",
+        "encoder": {
+          "type": "periodic",
+          "num_frequencies": 64,
+          "output_size": 128
+        }
+      },
+      {
+        "name": "Population",
+        "type": "number",
+        "encoder": {
+          "type": "periodic",
+          "num_frequencies": 64,
+          "output_size": 128
+        }
+      },
+      {
+        "name": "AveOccup",
+        "type": "number",
+        "encoder": {
+          "type": "periodic",
+          "num_frequencies": 64,
+          "output_size": 128
+        }
+      },
+      {
+        "name": "Latitude",
+        "type": "number",
+        "encoder": {
+          "type": "periodic",
+          "num_frequencies": 64,
+          "output_size": 128
+        }
+      },
+      {
+        "name": "Longitude",
+        "type": "number",
+        "encoder": {
+          "type": "periodic",
+          "num_frequencies": 64,
+          "output_size": 128
+        }
+      }
+    ],
+    "output_features": [
+      {
+        "name": "target",
+        "type": "number"
+      }
+    ],
+    "combiner": {
+      "type": "concat",
+      "num_fc_layers": 3,
+      "output_size": 128,
+      "activation": "relu",
+      "dropout": 0.1
+    },
+    "trainer": {
+      "learning_rate": 0.001,
+      "batch_size": 256,
+      "epochs": 200,
+      "early_stop": 16,
+      "evaluate_training_set": false,
+      "optimizer": {
+        "type": "adam"
+      }
+    },
+    "backend": {
+      "type": "local"
+    }
+  },
+  "metrics": {
+    "test": {
+      "loss": 0.14741456508636475,
+      "root_mean_squared_error": 0.3839460611343384,
+      "root_mean_squared_percentage_error": 0.23752759397029877,
+      "r2": 0.8892908692359924,
+      "mean_absolute_error": 0.26092272996902466,
+      "mean_squared_error": 0.14741457998752594,
+      "mean_absolute_percentage_error": 0.14214323461055756
+    },
+    "validation": {
+      "loss": 0.21757763624191284,
+      "mean_absolute_error": 0.3176604211330414,
+      "mean_absolute_percentage_error": 0.1720900982618332,
+      "mean_squared_error": 0.21757765114307404,
+      "r2": 0.8349897861480713,
+      "root_mean_squared_error": 0.4664521813392639,
+      "root_mean_squared_percentage_error": 0.3048512935638428
+    }
+  },
+  "primary_metric": "root_mean_squared_error",
+  "primary_value": 0.4664521813392639,
+  "training_time_seconds": 59.99,
+  "epochs_trained": 49,
+  "seed": 42
+}
