@@ -1,0 +1,126 @@
+{
+  "dataset": "adult_census_income",
+  "model": "cross_attention",
+  "timestamp": "2026-04-03T20:36:59.438150+00:00",
+  "ludwig_version": "0.11.4",
+  "hardware": {
+    "cpu": "x86_64",
+    "platform": "Linux-6.8.0-107-generic-x86_64-with-glibc2.39",
+    "gpu": "NVIDIA GeForce RTX 2080 Ti",
+    "gpu_count": 1,
+    "gpu_memory_mb": 10821,
+    "ram_gb": 31.3
+  },
+  "config_hash": "2b64ea6535cf",
+  "config": {
+    "input_features": [
+      {
+        "name": "age",
+        "type": "number"
+      },
+      {
+        "name": "workclass",
+        "type": "category"
+      },
+      {
+        "name": "fnlwgt",
+        "type": "number"
+      },
+      {
+        "name": "education",
+        "type": "category"
+      },
+      {
+        "name": "education-num",
+        "type": "number"
+      },
+      {
+        "name": "marital-status",
+        "type": "category"
+      },
+      {
+        "name": "occupation",
+        "type": "category"
+      },
+      {
+        "name": "relationship",
+        "type": "category"
+      },
+      {
+        "name": "race",
+        "type": "category"
+      },
+      {
+        "name": "sex",
+        "type": "category"
+      },
+      {
+        "name": "capital-gain",
+        "type": "number"
+      },
+      {
+        "name": "capital-loss",
+        "type": "number"
+      },
+      {
+        "name": "hours-per-week",
+        "type": "number"
+      },
+      {
+        "name": "native-country",
+        "type": "category"
+      }
+    ],
+    "output_features": [
+      {
+        "name": "income",
+        "type": "binary"
+      }
+    ],
+    "combiner": {
+      "type": "cross_attention",
+      "hidden_size": 128,
+      "num_heads": 8,
+      "num_layers": 1,
+      "dropout": 0.1,
+      "output_size": 128
+    },
+    "trainer": {
+      "learning_rate": 0.0001,
+      "batch_size": 256,
+      "epochs": 200,
+      "early_stop": 16,
+      "evaluate_training_set": false,
+      "optimizer": {
+        "type": "adamw",
+        "weight_decay": 1e-05
+      }
+    },
+    "backend": {
+      "type": "local"
+    }
+  },
+  "metrics": {
+    "test": {
+      "loss": 0.29461193084716797,
+      "precision": 0.8900396227836609,
+      "recall": 0.9368018507957458,
+      "roc_auc": 0.9194650053977966,
+      "specificity": 0.6320698261260986,
+      "accuracy": 0.8638820648193359
+    },
+    "validation": {
+      "accuracy": 0.8605651259422302,
+      "loss": 0.29564833641052246,
+      "precision": 0.9073614478111267,
+      "recall": 0.9563330411911011,
+      "roc_auc": 0.915980875492096,
+      "specificity": 0.719298243522644
+    }
+  },
+  "primary_metric": "roc_auc",
+  "primary_value": 0.915980875492096,
+  "training_time_seconds": 342.97,
+  "epochs_trained": 38,
+  "seed": 42
+}

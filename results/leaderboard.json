@@ -1,0 +1,46 @@
+{
+  "adult_census_income": {
+    "concat_baseline": {
+      "config_hash": "ca17e72456bd",
+      "roc_auc": 0.9110729694366455,
+      "run": "2026-04-03T20:21:32.338344+00:00",
+      "seed": 42
+    },
+    "cross_attention": {
+      "config_hash": "2b64ea6535cf",
+      "roc_auc": 0.915980875492096,
+      "run": "2026-04-03T20:36:59.438150+00:00",
+      "seed": 42
+    },
+    "ft_transformer": {
+      "config_hash": "92de50c42d69",
+      "roc_auc": 0.9186434745788574,
+      "run": "2026-04-03T20:31:04.468519+00:00",
+      "seed": 42
+    },
+    "gated_fusion": {
+      "config_hash": "829fd725faad",
+      "roc_auc": 0.9055123329162598,
+      "run": "2026-04-03T20:45:02.005392+00:00",
+      "seed": 42
+    },
+    "perceiver": {
+      "config_hash": "ae5ccf7e00c3",
+      "roc_auc": 0.9159135222434998,
+      "run": "2026-04-03T20:41:07.349667+00:00",
+      "seed": 42
+    },
+    "periodic_concat": {
+      "config_hash": "185d97b0f0dc",
+      "roc_auc": 0.9165893793106079,
+      "run": "2026-04-03T20:46:25.226262+00:00",
+      "seed": 42
+    },
+    "transformer": {
+      "config_hash": "8bf7f30dcadf",
+      "roc_auc": 0.917596161365509,
+      "run": "2026-04-03T20:27:13.863227+00:00",
+      "seed": 42
+    }
+  }
+}
