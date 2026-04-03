@@ -1,0 +1,20 @@
+name: cross_attention
+description: "CrossAttentionCombiner — pairwise cross-attention between features"
+
+combiner:
+  type: cross_attention
+  hidden_size: 128
+  num_heads: 8
+  num_layers: 1
+  dropout: 0.1
+  output_size: 128
+
+trainer:
+  learning_rate: 0.0001
+  batch_size: 256
+  epochs: 200
+  early_stop: 16
+  evaluate_training_set: false
+  optimizer:
+    type: adamw
+    weight_decay: 0.00001

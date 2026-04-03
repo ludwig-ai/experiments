@@ -1,0 +1,18 @@
+name: concat_baseline
+description: "ConcatCombiner baseline — simple concatenation + FC stack"
+
+combiner:
+  type: concat
+  num_fc_layers: 3
+  output_size: 128
+  activation: relu
+  dropout: 0.1
+
+trainer:
+  learning_rate: 0.001
+  batch_size: 256
+  epochs: 200
+  early_stop: 16
+  evaluate_training_set: false
+  optimizer:
+    type: adam
