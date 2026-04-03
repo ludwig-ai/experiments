@@ -184,8 +184,12 @@ def print_leaderboard(base_dir: str):
         for model in all_models:
             entry = lb[dataset].get(model)
             if entry:
-                metric_name = [k for k in entry if k not in ("run", "config_hash", "seed")][0]
-                row += f"{entry[metric_name]:>20.6f}"
+                pm = entry.get("primary_metric", "")
+                val = entry.get(pm)
+                if val is not None:
+                    row += f"{val:>20.6f}"
+                else:
+                    row += f"{'—':>20s}"
             else:
                 row += f"{'—':>20s}"
         print(row)

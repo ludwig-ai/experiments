@@ -1,7 +1,7 @@
 {
   "dataset": "adult_census_income",
   "model": "ft_transformer",
-  "timestamp": "2026-04-03T20:31:04.468519+00:00",
+  "timestamp": "2026-04-03T22:09:14.332646+00:00",
   "ludwig_version": "0.11.4",
   "hardware": {
     "cpu": "x86_64",
@@ -104,25 +104,35 @@
   },
   "metrics": {
     "test": {
-      "loss": 0.28438830375671387,
-      "precision": 0.8952945470809937,
-      "recall": 0.9346216917037964,
-      "roc_auc": 0.9245398044586182,
-      "specificity": 0.6525198817253113,
-      "accuracy": 0.8671171069145203
+      "income": {
+        "loss": 0.2844737768173218,
+        "precision": 0.8952945470809937,
+        "recall": 0.9346216917037964,
+        "roc_auc": 0.9245398044586182,
+        "specificity": 0.6525198817253113,
+        "accuracy": 0.8671171069145203
+      },
+      "combined": {
+        "loss": 0.2844737768173218
+      }
     },
     "validation": {
-      "accuracy": 0.8628173470497131,
-      "loss": 0.29455503821372986,
-      "precision": 0.9033870100975037,
-      "recall": 0.960943877696991,
-      "roc_auc": 0.9186434745788574,
-      "specificity": 0.7092731595039368
+      "income": {
+        "accuracy": 0.8628173470497131,
+        "loss": 0.29236900806427,
+        "precision": 0.9033870100975037,
+        "recall": 0.960943877696991,
+        "roc_auc": 0.9186434745788574,
+        "specificity": 0.7092731595039368
+      },
+      "combined": {
+        "loss": 0.29236900806427
+      }
     }
   },
   "primary_metric": "roc_auc",
   "primary_value": 0.9186434745788574,
-  "training_time_seconds": 218.37,
+  "training_time_seconds": 235.5,
   "epochs_trained": 44,
   "seed": 42
 }
