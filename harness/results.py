@@ -16,8 +16,10 @@ def get_hardware_info() -> dict:
         if torch.cuda.is_available():
             info["gpu"] = torch.cuda.get_device_name(0)
             info["gpu_count"] = torch.cuda.device_count()
-            info["gpu_memory_mb"] = torch.cuda.get_device_properties(0).total_mem // (1024 * 1024)
-    except ImportError:
+            props = torch.cuda.get_device_properties(0)
+            mem = getattr(props, "total_memory", None) or getattr(props, "total_mem", 0)
+            info["gpu_memory_mb"] = mem // (1024 * 1024)
+    except (ImportError, Exception):
         pass
     try:
         import psutil
