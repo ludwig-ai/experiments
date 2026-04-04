@@ -1,0 +1,24 @@
+name: ft_transformer
+description: "FT-Transformer (Gorishniy et al., NeurIPS 2021) — [CLS] token + Transformer self-attention"
+# Paper hyperparameters: d_token=192, n_heads=8, n_layers=3, dropout=0.2
+# activation=reglu, prenormalization=true, optimizer=adamw, patience=16
+
+combiner:
+  type: ft_transformer
+  hidden_size: 192
+  num_heads: 8
+  num_layers: 3
+  dropout: 0.2
+  fc_dropout: 0.1
+  transformer_output_size: 192
+  output_size: 192
+
+trainer:
+  learning_rate: 0.0001
+  batch_size: 256
+  epochs: 500
+  early_stop: 16
+  evaluate_training_set: false
+  optimizer:
+    type: adamw
+    weight_decay: 0.00001

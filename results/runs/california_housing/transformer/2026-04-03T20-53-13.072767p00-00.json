@@ -1,0 +1,104 @@
+{
+  "dataset": "california_housing",
+  "model": "transformer",
+  "timestamp": "2026-04-03T20:53:13.072767+00:00",
+  "ludwig_version": "0.11.4",
+  "hardware": {
+    "cpu": "x86_64",
+    "platform": "Linux-6.8.0-107-generic-x86_64-with-glibc2.39",
+    "gpu": "NVIDIA GeForce RTX 2080 Ti",
+    "gpu_count": 1,
+    "gpu_memory_mb": 10821,
+    "ram_gb": 31.3
+  },
+  "config_hash": "5001ef974454",
+  "config": {
+    "input_features": [
+      {
+        "name": "MedInc",
+        "type": "number"
+      },
+      {
+        "name": "HouseAge",
+        "type": "number"
+      },
+      {
+        "name": "AveRooms",
+        "type": "number"
+      },
+      {
+        "name": "AveBedrms",
+        "type": "number"
+      },
+      {
+        "name": "Population",
+        "type": "number"
+      },
+      {
+        "name": "AveOccup",
+        "type": "number"
+      },
+      {
+        "name": "Latitude",
+        "type": "number"
+      },
+      {
+        "name": "Longitude",
+        "type": "number"
+      }
+    ],
+    "output_features": [
+      {
+        "name": "target",
+        "type": "number"
+      }
+    ],
+    "combiner": {
+      "type": "transformer",
+      "hidden_size": 128,
+      "num_heads": 8,
+      "num_layers": 2,
+      "dropout": 0.1,
+      "output_size": 128
+    },
+    "trainer": {
+      "learning_rate": 0.0001,
+      "batch_size": 256,
+      "epochs": 200,
+      "early_stop": 16,
+      "evaluate_training_set": false,
+      "optimizer": {
+        "type": "adamw",
+        "weight_decay": 1e-05
+      }
+    },
+    "backend": {
+      "type": "local"
+    }
+  },
+  "metrics": {
+    "test": {
+      "loss": 0.22567732632160187,
+      "root_mean_squared_error": 0.47505515813827515,
+      "root_mean_squared_percentage_error": 0.3026719391345978,
+      "r2": 0.8305150270462036,
+      "mean_absolute_error": 0.3181157410144806,
+      "mean_squared_error": 0.22567740082740784,
+      "mean_absolute_percentage_error": 0.17600437998771667
+    },
+    "validation": {
+      "loss": 0.21972326934337616,
+      "mean_absolute_error": 0.31814882159233093,
+      "mean_absolute_percentage_error": 0.17974954843521118,
+      "mean_squared_error": 0.21972328424453735,
+      "r2": 0.8333625793457031,
+      "root_mean_squared_error": 0.46874651312828064,
+      "root_mean_squared_percentage_error": 0.36391985416412354
+    }
+  },
+  "primary_metric": "root_mean_squared_error",
+  "primary_value": 0.46874651312828064,
+  "training_time_seconds": 184.6,
+  "epochs_trained": 119,
+  "seed": 42
+}

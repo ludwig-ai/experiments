@@ -1,0 +1,22 @@
+name: walmart_recruiting
+loader: ludwig
+loader_args:
+  module: walmart_recruiting
+task: multiclass_classification
+primary_metric: accuracy
+primary_output: TripType
+minimize: false
+input_features:
+- name: VisitNumber
+  type: number
+- name: Weekday
+  type: category
+- name: Upc
+  type: number
+- name: ScanCount
+  type: number
+- name: FinelineNumber
+  type: number
+output_features:
+- name: TripType
+  type: category

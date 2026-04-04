@@ -1,0 +1,30 @@
+name: california_housing
+loader: ludwig
+loader_args:
+  module: california_housing
+task: regression
+primary_metric: root_mean_squared_error
+primary_output: target
+minimize: true
+
+input_features:
+  - name: MedInc
+    type: number
+  - name: HouseAge
+    type: number
+  - name: AveRooms
+    type: number
+  - name: AveBedrms
+    type: number
+  - name: Population
+    type: number
+  - name: AveOccup
+    type: number
+  - name: Latitude
+    type: number
+  - name: Longitude
+    type: number
+
+output_features:
+  - name: target
+    type: number

@@ -1,0 +1,565 @@
+{
+    "hyperopt_config": {
+        "executor": {
+            "cpu_resources_per_trial": 16,
+            "gpu_resources_per_trial": 1,
+            "time_budget_s": 14400,
+            "type": "ray"
+        },
+        "goal": "minimize",
+        "metric": "loss",
+        "output_feature": "combined",
+        "parameters": {
+            "combiner.dropout": {
+                "lower": 0.0,
+                "space": "uniform",
+                "type": "float",
+                "upper": 0.1
+            },
+            "combiner.fc_size": {
+                "categories": [
+                    128,
+                    256
+                ],
+                "space": "choice"
+            },
+            "combiner.num_fc_layers": {
+                "lower": 1,
+                "space": "randint",
+                "type": "int",
+                "upper": 4
+            },
+            "training.batch_size": {
+                "categories": [
+                    64,
+                    128,
+                    256,
+                    512,
+                    1024
+                ],
+                "space": "choice"
+            },
+            "training.learning_rate": {
+                "lower": 2e-05,
+                "space": "loguniform",
+                "type": "float",
+                "upper": 0.001
+            }
+        },
+        "sampler": {
+            "num_samples": 10,
+            "scheduler": {
+                "grace_period": 72,
+                "max_t": 14400,
+                "reduction_factor": 5,
+                "time_attr": "time_total_s",
+                "type": "async_hyperband"
+            },
+            "search_alg": {},
+            "type": "ray"
+        },
+        "split": "validation"
+    },
+    "hyperopt_results": [
+        {
+            "eval_stats": {
+                "combined": {
+                    "loss": []
+                },
+                "label": {
+                    "accuracy": [],
+                    "loss": [],
+                    "roc_auc": []
+                }
+            },
+            "metric_score": 0.6377494931221008,
+            "parameters": {
+                "combiner.dropout": 0.06440877582934094,
+                "combiner.fc_size": 128,
+                "combiner.num_fc_layers": 3,
+                "training.batch_size": 64,
+                "training.learning_rate": 0.00019961625670286457
+            },
+            "training_stats": {
+                "combined": {
+                    "loss": [
+                        0.6412578821182251,
+                        0.6381790041923523,
+                        0.6377042531967163,
+                        0.6376413702964783,
+                        0.6375873684883118,
+                        0.6377966403961182,
+                        0.6376041769981384,
+                        0.637719988822937,
+                        0.6376478672027588,
+                        0.6376235485076904,
+                        0.6375811100006104,
+                        0.6375761032104492,
+                        0.6375899910926819,
+                        0.6377606987953186,
+                        0.6376837491989136
+                    ]
+                },
+                "label": {
+                    "accuracy": [
+                        0.6303052306175232,
+                        0.6370768547058105,
+                        0.6399851441383362,
+                        0.6405659914016724,
+                        0.6411651372909546,
+                        0.6406750679016113,
+                        0.6415202021598816,
+                        0.6415907740592957,
+                        0.6415026783943176,
+                        0.6415852308273315,
+                        0.6417091488838196,
+                        0.6416633129119873,
+                        0.6418721079826355,
+                        0.6413276195526123,
+                        0.641448974609375
+                    ],
+                    "loss": [
+                        0.6412578821182251,
+                        0.6381790041923523,
+                        0.6377042531967163,
+                        0.6376413702964783,
+                        0.6375873684883118,
+                        0.6377966403961182,
+                        0.6376041769981384,
+                        0.637719988822937,
+                        0.6376478672027588,
+                        0.6376235485076904,
+                        0.6375811100006104,
+                        0.6375761032104492,
+                        0.6375899910926819,
+                        0.6377606987953186,
+                        0.6376837491989136
+                    ],
+                    "roc_auc": [
+                        0.624279260635376,
+                        0.63124018907547,
+                        0.6333875060081482,
+                        0.634941816329956,
+                        0.6350014805793762,
+                        0.6357992887496948,
+                        0.6351862549781799,
+                        0.6341108679771423,
+                        0.634406566619873,
+                        0.6357012391090393,
+                        0.6354103088378906,
+                        0.6351832151412964,
+                        0.6351381540298462,
+                        0.6361876130104065,
+                        0.6341804265975952
+                    ]
+                }
+            }
+        },
+        {
+            "eval_stats": {
+                "combined": {
+                    "loss": []
+                },
+                "label": {
+                    "accuracy": [],
+                    "loss": [],
+                    "roc_auc": []
+                }
+            },
+            "metric_score": 0.6378019452095032,
+            "parameters": {
+                "combiner.dropout": 0.034942857423712885,
+                "combiner.fc_size": 128,
+                "combiner.num_fc_layers": 2,
+                "training.batch_size": 64,
+                "training.learning_rate": 0.0006162265199500742
+            },
+            "training_stats": {
+                "combined": {
+                    "loss": [
+                        0.6383029818534851,
+                        0.6377084851264954,
+                        0.6377087831497192,
+                        0.6377571821212769,
+                        0.6379468441009521,
+                        0.6379907131195068,
+                        0.637636125087738,
+                        0.637977659702301,
+                        0.6376655101776123,
+                        0.6378127932548523
+                    ]
+                },
+                "label": {
+                    "accuracy": [
+                        0.6378046870231628,
+                        0.6409544944763184,
+                        0.6413046717643738,
+                        0.6410741209983826,
+                        0.6404380202293396,
+                        0.6404992341995239,
+                        0.6415418386459351,
+                        0.6414429545402527,
+                        0.6414682865142822,
+                        0.641183614730835
+                    ],
+                    "loss": [
+                        0.6383029818534851,
+                        0.6377084851264954,
+                        0.6377087831497192,
+                        0.6377571821212769,
+                        0.6379468441009521,
+                        0.6379907131195068,
+                        0.637636125087738,
+                        0.637977659702301,
+                        0.6376655101776123,
+                        0.6378127932548523
+                    ],
+                    "roc_auc": [
+                        0.6302419900894165,
+                        0.634756326675415,
+                        0.6351116895675659,
+                        0.6356068849563599,
+                        0.6358093619346619,
+                        0.6356871128082275,
+                        0.6354939937591553,
+                        0.6335185170173645,
+                        0.6350390315055847,
+                        0.6359203457832336
+                    ]
+                }
+            }
+        },
+        {
+            "eval_stats": {
+                "combined": {
+                    "loss": []
+                },
+                "label": {
+                    "accuracy": [],
+                    "loss": [],
+                    "roc_auc": []
+                }
+            },
+            "metric_score": 0.637893557548523,
+            "parameters": {
+                "combiner.dropout": 0.033221173997797795,
+                "combiner.fc_size": 128,
+                "combiner.num_fc_layers": 2,
+                "training.batch_size": 128,
+                "training.learning_rate": 0.0009865764094048246
+            },
+            "training_stats": {
+                "combined": {
+                    "loss": [
+                        0.6382326483726501,
+                        0.6377202868461609,
+                        0.6377221941947937,
+                        0.6377604603767395
+                    ]
+                },
+                "label": {
+                    "accuracy": [
+                        0.6383165717124939,
+                        0.641055166721344,
+                        0.6412718892097473,
+                        0.6411203145980835
+                    ],
+                    "loss": [
+                        0.6382326483726501,
+                        0.6377202868461609,
+                        0.6377221941947937,
+                        0.6377604603767395
+                    ],
+                    "roc_auc": [
+                        0.6305652260780334,
+                        0.6346629858016968,
+                        0.6349427103996277,
+                        0.6355447769165039
+                    ]
+                }
+            }
+        },
+        {
+            "eval_stats": {
+                "combined": {
+                    "loss": []
+                },
+                "label": {
+                    "accuracy": [],
+                    "loss": [],
+                    "roc_auc": []
+                }
+            },
+            "metric_score": 0.6379298567771912,
+            "parameters": {
+                "combiner.dropout": 0.05405868874309934,
+                "combiner.fc_size": 256,
+                "combiner.num_fc_layers": 1,
+                "training.batch_size": 64,
+                "training.learning_rate": 0.000793262654933234
+            },
+            "training_stats": {
+                "combined": {
+                    "loss": [
+                        0.6381428837776184,
+                        0.6377286314964294
+                    ]
+                },
+                "label": {
+                    "accuracy": [
+                        0.6389636993408203,
+                        0.6411092281341553
+                    ],
+                    "loss": [
+                        0.6381428837776184,
+                        0.6377286314964294
+                    ],
+                    "roc_auc": [
+                        0.6311094760894775,
+                        0.6348963975906372
+                    ]
+                }
+            }
+        },
+        {
+            "eval_stats": {
+                "combined": {
+                    "loss": []
+                },
+                "label": {
+                    "accuracy": [],
+                    "loss": [],
+                    "roc_auc": []
+                }
+            },
+            "metric_score": 0.6383334398269653,
+            "parameters": {
+                "combiner.dropout": 0.09822324841951872,
+                "combiner.fc_size": 128,
+                "combiner.num_fc_layers": 3,
+                "training.batch_size": 128,
+                "training.learning_rate": 0.00011040735091918043
+            },
+            "training_stats": {
+                "combined": {
+                    "loss": [
+                        0.6457024216651917,
+                        0.64063960313797,
+                        0.6389862895011902,
+                        0.6382798552513123
+                    ]
+                },
+                "label": {
+                    "accuracy": [
+                        0.624035120010376,
+                        0.6310656070709229,
+                        0.6348839998245239,
+                        0.6367566585540771
+                    ],
+                    "loss": [
+                        0.6457024216651917,
+                        0.64063960313797,
+                        0.6389862895011902,
+                        0.6382798552513123
+                    ],
+                    "roc_auc": [
+                        0.6185706853866577,
+                        0.6251285076141357,
+                        0.6285295486450195,
+                        0.630874514579773
+                    ]
+                }
+            }
+        },
+        {
+            "eval_stats": {
+                "combined": {
+                    "loss": []
+                },
+                "label": {
+                    "accuracy": [],
+                    "loss": [],
+                    "roc_auc": []
+                }
+            },
+            "metric_score": 0.6394465565681458,
+            "parameters": {
+                "combiner.dropout": 0.06410155064275762,
+                "combiner.fc_size": 256,
+                "combiner.num_fc_layers": 1,
+                "training.batch_size": 256,
+                "training.learning_rate": 0.000702303926626547
+            },
+            "training_stats": {
+                "combined": {
+                    "loss": [
+                        0.6394385695457458
+                    ]
+                },
+                "label": {
+                    "accuracy": [
+                        0.633872926235199
+                    ],
+                    "loss": [
+                        0.6394385695457458
+                    ],
+                    "roc_auc": [
+                        0.6279868483543396
+                    ]
+                }
+            }
+        },
+        {
+            "eval_stats": {
+                "combined": {
+                    "loss": []
+                },
+                "label": {
+                    "accuracy": [],
+                    "loss": [],
+                    "roc_auc": []
+                }
+            },
+            "metric_score": 0.6394820809364319,
+            "parameters": {
+                "combiner.dropout": 0.09605141143542743,
+                "combiner.fc_size": 128,
+                "combiner.num_fc_layers": 3,
+                "training.batch_size": 64,
+                "training.learning_rate": 0.00033074782084669
+            },
+            "training_stats": {
+                "combined": {
+                    "loss": [
+                        0.639491856098175
+                    ]
+                },
+                "label": {
+                    "accuracy": [
+                        0.6339333057403564
+                    ],
+                    "loss": [
+                        0.639491856098175
+                    ],
+                    "roc_auc": [
+                        0.6273145079612732
+                    ]
+                }
+            }
+        },
+        {
+            "eval_stats": {
+                "combined": {
+                    "loss": []
+                },
+                "label": {
+                    "accuracy": [],
+                    "loss": [],
+                    "roc_auc": []
+                }
+            },
+            "metric_score": 0.64087975025177,
+            "parameters": {
+                "combiner.dropout": 0.05229265135620623,
+                "combiner.fc_size": 128,
+                "combiner.num_fc_layers": 1,
+                "training.batch_size": 128,
+                "training.learning_rate": 0.00031265818360083256
+            },
+            "training_stats": {
+                "combined": {
+                    "loss": [
+                        0.6409174203872681
+                    ]
+                },
+                "label": {
+                    "accuracy": [
+                        0.6308060884475708
+                    ],
+                    "loss": [
+                        0.6409174203872681
+                    ],
+                    "roc_auc": [
+                        0.6249172687530518
+                    ]
+                }
+            }
+        },
+        {
+            "eval_stats": {
+                "combined": {
+                    "loss": []
+                },
+                "label": {
+                    "accuracy": [],
+                    "loss": [],
+                    "roc_auc": []
+                }
+            },
+            "metric_score": 0.6488479971885681,
+            "parameters": {
+                "combiner.dropout": 0.05611247997516843,
+                "combiner.fc_size": 128,
+                "combiner.num_fc_layers": 2,
+                "training.batch_size": 256,
+                "training.learning_rate": 0.00010002421759007846
+            },
+            "training_stats": {
+                "combined": {
+                    "loss": [
+                        0.6489145159721375
+                    ]
+                },
+                "label": {
+                    "accuracy": [
+                        0.6216856241226196
+                    ],
+                    "loss": [
+                        0.6489145159721375
+                    ],
+                    "roc_auc": [
+                        0.6160112619400024
+                    ]
+                }
+            }
+        },
+        {
+            "eval_stats": {
+                "combined": {
+                    "loss": []
+                },
+                "label": {
+                    "accuracy": [],
+                    "loss": [],
+                    "roc_auc": []
+                }
+            },
+            "metric_score": 0.6537283658981323,
+            "parameters": {
+                "combiner.dropout": 0.009669558211377794,
+                "combiner.fc_size": 256,
+                "combiner.num_fc_layers": 3,
+                "training.batch_size": 256,
+                "training.learning_rate": 6.258818898425624e-05
+            },
+            "training_stats": {
+                "combined": {
+                    "loss": [
+                        0.6538145542144775
+                    ]
+                },
+                "label": {
+                    "accuracy": [
+                        0.6190298795700073
+                    ],
+                    "loss": [
+                        0.6538145542144775
+                    ],
+                    "roc_auc": [
+                        0.6127945780754089
+                    ]
+                }
+            }
+        }
+    ]
+}

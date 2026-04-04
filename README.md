@@ -1,40 +1,98 @@
-# experiments
-Reproducible benchmark experiment scripts and results for Ludwig
+# Ludwig Experiments
 
-Utilities for experiments are in the __utils__ directory.
-* __best_hyperopt_statistics.py__ fetches from the specified hyperopt_statistics.json file the combined loss and specified metric for the best model found by the hyperparameter search.
+Standardized experiment harness for benchmarking Ludwig models across datasets.
 
-Scripts and results for automl experiments are in the __automl__ directory.
-* The __heuristics__ subdirectory contains subdirectories for each dataset used to run extensive hyperparameter searches from which to derive automl heuristics.
-* The __validation__ subdirectory contains subdirectories for each dataset used to validate the derived heuristics.
+## Structure
 
-Each __dataset__ subdirectory contains the following scripts and configuration files, as appropriate:
-* __Training__
-  * Simple train validation of __concat__ model type:
-    * Script w/Configuration: **train_concat_sanity_laptop.py**, **config_concat_sanity_laptop.yaml**
-  * Simple train validation of __tabnet__ model type:
-    * Script w/Configuration: **train_tabnet_sanity_laptop.py**, **config_tabnet_sanity_laptop.yaml**
-  * Simple train validation of __transformer__ model type:
-    * Script w/Configuration: **train_transf_sanity_laptop.py**, **config_transf_sanity_laptop.yaml**
-  * Train validation of __best tabnet__ model configuration found in heuristics search runs
-    * Script w/Configuration: **train_tabnet_reference_laptop.py**, **config_tabnet_reference_laptop.yaml**
-  * Train validation of best tabnet model configuration found in heuristics search runs using __updated__ automatic feature type selection (if impacted)
-    * Script w/Configuration: **train_tabnet_reference_auto.py**, **config_tabnet_reference_auto.yaml**
+```
+datasets/           # One dir per dataset with dataset.yaml
+models/             # One dir per model with model.yaml (combiner + trainer config)
+harness/            # Python package: runner, registry, results management
+results/            # Collected results (runs + leaderboard)
+```
 
+## Quick Start
 
-* __AutoML__
-  * Automatically generate configuration for hyperparameter search via create_auto_config API 
-    * Script: **get_auto_train_config.py**
-    * Output for original feature type selection code: **auto_config.json.orig**
-    * Output for updated feature type selection code: **auto_config.json.update**
-    * Output for updated feature type selection code + automl code w/heuristics: **auto_config.json.automl**
-  * Automatically generate and run configuration for hyperparameter search via auto_train API w/1hr time limit
-    * Script: **run_auto_train_1hr.py**
-    * Output: **hyperopt_statistics.json.1hr**
-  * Automatically generate and run configuration for hyperparameter search via auto_train API w/2hr time limit
-    * Script: **run_auto_train_2hr.py**
-    * Output: **hyperopt_statistics.json.2hr**
-  * Automatically generate and run configuration for hyperparameter search via auto_train API w/4hr time limit
-    * Script: **run_auto_train_4hr.py**
-    * Output: **hyperopt_statistics.json.4hr**
+```bash
+# Run one model on one dataset
+python -m harness.runner --dataset adult_census_income --model ft_transformer
 
+# Run all models on one dataset
+python -m harness.runner --dataset adult_census_income
+
+# Run one model on all datasets
+python -m harness.runner --model ft_transformer
+
+# Run everything
+python -m harness.runner
+
+# Multi-seed for statistical significance
+python -m harness.runner --dataset adult_census_income --model ft_transformer --seeds 42 43 44 45 46
+
+# View leaderboard
+python -m harness.runner --leaderboard
+
+# Compare models on a dataset
+python -m harness.runner --compare adult_census_income
+```
+
+## Adding a Dataset
+
+Create `datasets/{name}/dataset.yaml`:
+
+```yaml
+name: my_dataset
+loader: ludwig              # ludwig, sklearn, or csv
+loader_args:
+  module: my_dataset        # ludwig.datasets module name
+task: binary_classification
+primary_metric: roc_auc
+primary_output: target_col
+minimize: false
+input_features:
+  - name: feature1
+    type: number
+output_features:
+  - name: target_col
+    type: binary
+```
+
+## Adding a Model
+
+Create `models/{name}/model.yaml`:
+
+```yaml
+name: my_model
+description: "My custom model configuration"
+combiner:
+  type: ft_transformer
+  hidden_size: 192
+trainer:
+  learning_rate: 0.0001
+  batch_size: 256
+encoder_overrides:       # Optional: apply encoder to all features of a type
+  number:
+    type: ple
+    num_bins: 64
+```
+
+## Available Datasets
+
+| Dataset | Task | Metric | Features |
+|---------|------|--------|----------|
+| adult_census_income | Binary classification | ROC AUC | 14 mixed |
+| california_housing | Regression | RMSE | 8 numerical |
+| higgs | Binary classification | ROC AUC | 28 numerical |
+
+## Available Models
+
+| Model | Source Paper | Combiner |
+|-------|------------|----------|
+| concat_baseline | — | ConcatCombiner |
+| transformer | — | TransformerCombiner |
+| ft_transformer | Gorishniy et al., NeurIPS 2021 | FTTransformerCombiner |
+| cross_attention | Cross-attention literature | CrossAttentionCombiner |
+| perceiver | Jaegle et al., ICML 2022 | PerceiverCombiner |
+| gated_fusion | Alayrac et al., NeurIPS 2022 | GatedFusionCombiner |
+| ple_concat | Gorishniy et al., NeurIPS 2022 | PLE encoder + Concat |
+| periodic_concat | Gorishniy et al., NeurIPS 2022 | Periodic encoder + Concat |

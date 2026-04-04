@@ -1,0 +1,44 @@
+name: rossman_store_sales
+loader: ludwig
+loader_args:
+  module: rossman_store_sales
+task: regression
+primary_metric: root_mean_squared_error
+primary_output: Sales
+minimize: true
+input_features:
+- name: Store
+  type: category
+- name: DayOfWeek
+  type: category
+- name: Customers
+  type: number
+- name: Open
+  type: binary
+- name: Promo
+  type: binary
+- name: SchoolHoliday
+  type: binary
+- name: StateHoliday
+  type: category
+- name: Year
+  type: number
+- name: Month
+  type: category
+- name: Day
+  type: category
+- name: CompetitionDistance
+  type: number
+- name: CompetitionOpenSinceMonth
+  type: number
+- name: CompetitionOpenSinceYear
+  type: number
+- name: Promo2
+  type: number
+- name: Promo2SinceWeek
+  type: number
+- name: Promo2SinceYear
+  type: number
+output_features:
+- name: Sales
+  type: number

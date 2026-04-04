@@ -1,0 +1,34 @@
+{
+  "adult_census_income": {
+    "concat_baseline": {
+      "all_test_metrics": {
+        "accuracy": 0.8648034334182739,
+        "loss": 0.2951489984989166,
+        "precision": 0.8907648921012878,
+        "recall": 0.9372056126594543,
+        "roc_auc": 0.9217358827590942,
+        "specificity": 0.6346367597579956
+      },
+      "config_hash": "ca17e72456bd",
+      "primary_metric": "roc_auc",
+      "roc_auc": 0.9110729694366455,
+      "run": "2026-04-03T22:05:18.797785+00:00",
+      "seed": 42
+    },
+    "ft_transformer": {
+      "all_test_metrics": {
+        "accuracy": 0.8671171069145203,
+        "loss": 0.2844737768173218,
+        "precision": 0.8952945470809937,
+        "recall": 0.9346216917037964,
+        "roc_auc": 0.9245398044586182,
+        "specificity": 0.6525198817253113
+      },
+      "config_hash": "92de50c42d69",
+      "primary_metric": "roc_auc",
+      "roc_auc": 0.9186434745788574,
+      "run": "2026-04-03T22:09:14.332646+00:00",
+      "seed": 42
+    }
+  }
+}
