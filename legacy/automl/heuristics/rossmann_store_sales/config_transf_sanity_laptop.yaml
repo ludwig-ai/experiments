@@ -1,6 +1,6 @@
 output_features:
   - name: Sales
-    type: numerical 
+    type: numerical
 input_features:
   - name: Store
     type: category

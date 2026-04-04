@@ -6,7 +6,7 @@ cd dbpedia
 python3 run_auto_train_standard.title.py >run.standard 2>&1
 cd ..
 #
-cd yelp_polarity 
+cd yelp_polarity
 python3 run_auto_train_standard.py >run.standard 2>&1
 cd ..
 #

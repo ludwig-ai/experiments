@@ -1,7 +1,7 @@
 NumExpr defaulting to 8 threads.
 Importing GBM requirements failed. Not loading GBM model type. If you want to use GBM, install Ludwig's 'tree' extra.
 Importing GBM requirements failed. Not loading LightGBM trainer. If you want to use LightGBM, install Ludwig's 'tree' extra.
-ImportError (ray.py) from horovod.ray import RayExecutor failed with error: 
+ImportError (ray.py) from horovod.ray import RayExecutor failed with error:
 	No module named 'horovod'
 Connecting to existing Ray cluster at address: 127.0.0.1:6379
 [Errno 63] File name too long: "/Users/anne/ludwig/experiments/automl_nlp/validation/imdb/A police officer (Robert Forster) in a crime ridden city has his wife attacked and young son killed after she dares to stand up to a thug at a petrol station. After the murderers get off scot-free thanks to a corrupt judge and he himself is jailed for 30 days for contempt of court, he decides to take matters into his own hands by joining a group of vigilantes led by a grizzled looking Fred Williamson. These Robin Hood types sort out any criminal that the law is unwilling to prosecute, and with their help he attempts to track down those that wronged him..<br /><br />This film is nothing but a big bag o'clichés. The only thing out of the ordinary is the on-screen slaying of a two year old boy, which was pretty sick. Otherwise it's business as usual for this genre e.g involves lots of car chases, beatings and shootings mixed in with plenty of male posturing. I could have done without the prison fight in the shower involving all those bare-a**ed inmates, though. Also, did they run out of money before filming the last scenes"

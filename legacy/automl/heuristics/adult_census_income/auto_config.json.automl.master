@@ -1,7 +1,7 @@
 NumExpr defaulting to 8 threads.
 Importing GBM requirements failed. Not loading GBM model type. If you want to use GBM, install Ludwig's 'tree' extra.
 Importing GBM requirements failed. Not loading LightGBM trainer. If you want to use LightGBM, install Ludwig's 'tree' extra.
-ImportError (ray.py) from horovod.ray import RayExecutor failed with error: 
+ImportError (ray.py) from horovod.ray import RayExecutor failed with error:
 	No module named 'horovod'
 Connecting to existing Ray cluster at address: 127.0.0.1:6379
 [Errno 2] No such file or directory: '/Users/anne/ludwig/experiments/automl/heuristics/adult_census_income/ State-gov'

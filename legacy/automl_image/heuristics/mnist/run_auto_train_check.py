@@ -4,7 +4,7 @@ import pprint
 from ludwig.automl import auto_train
 from ludwig.datasets import mnist
 from ludwig.utils.dataset_utils import get_repeatable_train_val_test_split
- 
+
 m_df = mnist.load(split=False)
 mnist_df = get_repeatable_train_val_test_split(m_df, 'label', random_seed=42)
 
