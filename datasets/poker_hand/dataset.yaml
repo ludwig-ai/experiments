@@ -1,0 +1,32 @@
+name: poker_hand
+loader: ludwig
+loader_args:
+  module: poker_hand
+task: multiclass_classification
+primary_metric: accuracy
+primary_output: hand
+minimize: false
+input_features:
+- name: S1
+  type: category
+- name: C1
+  type: category
+- name: S2
+  type: category
+- name: C2
+  type: category
+- name: S3
+  type: category
+- name: C3
+  type: category
+- name: S4
+  type: category
+- name: C4
+  type: category
+- name: S5
+  type: category
+- name: C5
+  type: category
+output_features:
+- name: hand
+  type: category

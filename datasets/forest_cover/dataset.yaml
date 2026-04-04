@@ -1,0 +1,36 @@
+name: forest_cover
+loader: ludwig
+loader_args:
+  module: forest_cover
+task: multiclass_classification
+primary_metric: accuracy
+primary_output: Cover_Type
+minimize: false
+input_features:
+- name: Elevation
+  type: number
+- name: Aspect
+  type: number
+- name: Slope
+  type: number
+- name: Horizontal_Distance_To_Hydrology
+  type: number
+- name: Vertical_Distance_To_Hydrology
+  type: number
+- name: Horizontal_Distance_To_Roadways
+  type: number
+- name: Hillshade_9am
+  type: number
+- name: Hillshade_Noon
+  type: number
+- name: Hillshade_3pm
+  type: number
+- name: Horizontal_Distance_To_Fire_Points
+  type: number
+- name: Wilderness_Area
+  type: category
+- name: Soil_Type
+  type: category
+output_features:
+- name: Cover_Type
+  type: category
