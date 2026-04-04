@@ -1,7 +1,7 @@
-name: rossmann_store_sales
+name: rossman_store_sales
 loader: ludwig
 loader_args:
-  module: rossmann_store_sales
+  module: rossman_store_sales
 task: regression
 primary_metric: root_mean_squared_error
 primary_output: Sales

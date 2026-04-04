@@ -1,8 +1,7 @@
 name: california_housing
-loader: sklearn
+loader: ludwig
 loader_args:
-  function: fetch_california_housing
-  target_column: target
+  module: california_housing
 task: regression
 primary_metric: root_mean_squared_error
 primary_output: target
